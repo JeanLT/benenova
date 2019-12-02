@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
-  has_many :missions, through: :bookings, 
+  has_many :missions, through: :bookings
 
   validates :first_name, uniqueness: { scope: :last_name }
-  validates :last_name, uniqueness: { scope: :first_name }
+  validates :last_name, presence: true
   validates :address, uniqueness: true, presence: true
   validates :email, uniqueness: true, presence: true
   validates :birth, uniqueness: true, presence: true
