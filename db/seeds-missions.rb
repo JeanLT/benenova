@@ -349,4 +349,58 @@ mission21 = Mission.new(
 mission21.remote_picture_url = "https://www.oui.sncf/assets/styles/ratio_2_1_max_width_961/public/media/2018-12/istock-538358346.jpg?h=e3be1056&itok=VSxBNeNN"
 mission21.save!
 
+## PARIS ##
+
+mission22 = Mission.new(
+  title: "Maraîchage et chantier à la ferme pédagogique !",
+  city: "Paris",
+  datetime: DateTime.parse("2019-12-18 9:30"),
+  duration: 3,
+  description: "L'équipe organise tous les jeudis matins des activités ouvertes à tou.te.s : jardinage agroécologique et chantiers participatifs avec construction en matériel de récupération ! L’idée, c’est de créer un échange entre l'équipe du Paysan Urbain avec leurs savoir-faire et leurs produits, et des bénévoles qui veulent mettre le main à la terre et participer au projet en donnant un coup de main ! :)",
+  cause: "Environnement",
+  address: "64 avenue Gaston Roussel, 93230 Romainville",
+  mincapacity: 2,
+  maxcapacity: 4,
+  supernova: user3,
+  partner: partner13,
+)
+mission22.remote_picture_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O000005DC1AQAW&oid=00D0O000000rjwMUAQ"
+mission22.save!
+
+## ANGERS ##
+
+mission23 = Mission.new(
+  title: "Initiation yoga/danse",
+  city: "Angers",
+  datetime: DateTime.parse("2019-01-8 18:30"),
+  duration: 1,
+  description: "L'association recherche un bénévole titulaire d'un diplôme ou en cours de formation pour initier au yoga et/ou différents types de danse, un groupe d'adultes.",
+  cause: "Arts, culture et loisirs",
+  address: "2 rue Guillaume Lekeu, 49000 Angers",
+  mincapacity: 4,
+  maxcapacity: 10,
+  supernova: user1,
+  partner: partner14,
+)
+mission23.remote_picture_url = "https://yogamariechristineparis.fr/wp-content/uploads/2017/05/yoga-marie-christine-paris-yoga-danse-1.jpg"
+mission23.save!
+
+## LILLE ##
+
+mission24 = Mission.new(
+  title: "Fête de Solstice d'Hiver 2019",
+  city: "Lille",
+  datetime: DateTime.parse("2019-12-15 12:00"),
+  duration: 4,
+  description: "Lisières organise dans le jardin écologique de Lille, 'La fête du Solstice d'hiver', un évènement autour du bien-être et de la nature. Rejoignez leur équipe de bénévoles pour cet évènement !",
+  cause: "Arts, culture et loisirs",
+  address: "74, rue royale, 59000 Lille",
+  mincapacity: 2,
+  maxcapacity: 4,
+  supernova: user2,
+  partner: partner15,
+)
+mission24.remote_picture_url = "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/p720x720/61838245_1802245616588664_5815768366010335232_o.jpg?_nc_cat=107&_nc_oc=AQkZJwDIYbnsw02gpxmCYGXdSZMedl8NnFPs4lzC4TaQm78LQ5yx4molO8e-QyEmTAI&_nc_ht=scontent-cdt1-1.xx&oh=55926568d1232d691f72fcc388f29c5a&oe=5E4B15A3"
+mission24.save!
+
 
