@@ -1,5 +1,5 @@
 class Mission < ApplicationRecord
-  mount_uploader :picture, PhotoUploader
+  mount_uploader :picture, PictureUploader
 
 	belongs_to :partner
 	belongs_to :supernova, class_name: "User"
