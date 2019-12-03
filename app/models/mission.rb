@@ -1,19 +1,19 @@
 class Mission < ApplicationRecord
-	belongs_to :association
-	belongs_to :partenaire
+	belongs_to :partner
+	belongs_to :supernova, class_name: "User"
 	has_many :bookings, dependent: :destroy
 	has_many :users, through: :bookings
 
-	validates :title, presence: true
-	validates :city, presence: true
-	validates :datetime, presence: true
-	validates :duration, presence: true
-	validates :description, presence: true
-	validates :picture, presence: true
-	validates :cause, presence: true
-	validates :address, presence: true
-	validates :max_capacity, presence: true
-	validates :min_capacity, presence: true
-	validates :partenaire, presence: true
+validates :status, presence: true
+validates :title, uniqueness: true
+validates :datetime, presence: true
+validates :description, presence: true
+validates :picture, presence: true
+validates :cause, presence: true
+validates :address, presence: true
+validates :latitude, presence: true
+validates :longitude, presence: true
+validates :maxcapicity, presence: true
+validates :mincapicity, presence: true
 
 end
