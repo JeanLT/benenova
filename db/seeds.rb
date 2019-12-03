@@ -47,4 +47,5 @@ user10.remote_avatar_url = "https://images.unsplash.com/photo-1557773092-edb2806
 user10.save!
 
 
+
 puts "Finished !"
