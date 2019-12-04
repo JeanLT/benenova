@@ -4,7 +4,6 @@ Mission.destroy_all
 Partner.destroy_all
 User.destroy_all
 
-
 puts 'Creating users...'
 
 user1 = User.new(email: "theo.leroy@exemple.com", password: "secret", first_name: "Théo", last_name: "Leroy", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
