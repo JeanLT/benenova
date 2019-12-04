@@ -65,7 +65,7 @@ partner3.save!
 
 partner4 = Partner.new(
   name: "Les Rencontres Enchantées",
-  description: "L'association "Les Rencontres Enchantées" a pour objectif de mieux s'exprimer dans les domaines artistiques et culturels. Elle propose à tous les premiers vendredis de chaque mois des soirées à thèmes avec une scène ouverte ainsi qu'une restauration sur place.",
+  description: "L'association 'Les Rencontres Enchantées' a pour objectif de mieux s'exprimer dans les domaines artistiques et culturels. Elle propose à tous les premiers vendredis de chaque mois des soirées à thèmes avec une scène ouverte ainsi qu'une restauration sur place.",
   address: "147 Route de Sainte-Luce, 44300 Nantes"
 )
 partner4.remote_logo_url = "https://cdn0.handsonconnect.org/0234/logo%20rencontres%20enchantees.png_1"
@@ -356,6 +356,7 @@ mission15 = Mission.new(
   maxcapacity: 15,
   supernova: user1,
   partner: partner8,
+)
 mission15.remote_picture_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LxWQAU&oid=00D0O000000rjwMUAQ"
 mission15.save!
 
@@ -499,7 +500,7 @@ mission21 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2019-03-5 18:30"),
   duration: 2,
-  description: "Le secteur "Ce Soir Je Sors" de VSArt propose à des personnes à mobilité réduite un service de réservationde places et d'accompagnement à des spectacles, expositions ou promenades culturelles.",
+  description: "Le secteur 'Ce Soir Je Sors' de VSArt propose à des personnes à mobilité réduite un service de réservationde places et d'accompagnement à des spectacles, expositions ou promenades culturelles.",
   cause: "Arts, culture et loisirs",
   address: "21 Quai des Antilles, 44200 Nantes",
   mincapacity: 2,
