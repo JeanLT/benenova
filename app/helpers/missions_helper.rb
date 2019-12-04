@@ -12,6 +12,6 @@ module MissionsHelper
     when mission. cause == "Handicap"
       return image_tag
       return "Handicap"
-
+    end
   end
 end
