@@ -203,7 +203,7 @@ mission14 = Mission.new(
   duration: 1,
   description: "Chaque personne dispose de capacités différentes, avec des degrés d'autonomie variable réclamant plus d’attention. Le groupe est composé d'une vingtaine de sportifs avec 1 coach bénévole pour 5 personnes. Venez jouer les assistants afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité !",
   cause: "Handicap",
-  address: "1 rue koufra, 44300 Nantes",
+  address: "6 rue des artisans, 44300 Nantes",
   mincapacity: 1,
   maxcapacity: 3,
   supernova: user3,
