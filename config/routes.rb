@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :missions, only:[:show, :index] do
-    resources :bookings, only:[:create]   
+    resources :bookings, only:[:create]
   end
 
   get "/dashboard", to: "users#dashboard"
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [] do
   	member do
   		patch "cancel"
-  	end 
+  	end
 	end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
