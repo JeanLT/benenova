@@ -6,13 +6,13 @@ User.destroy_all
 
 puts 'Creating users...'
 
-user1 = User.new(email: "theo.leroy@exemple.com", password: "secret", first_name: "Théo", last_name: "Leroy", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
+user1 = User.new(email: "theo.leroy@exemple.com", password: "secret", supernova: true, first_name: "Théo", last_name: "Leroy", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
 user1.remote_avatar_url = "https://images.unsplash.com/photo-1571453680473-b7a403230375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
 user1.save!
-user2 = User.new(email: "sarah.lambert@exemple.com", password: "secret", first_name: "Sarah", last_name: "Lambert", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
+user2 = User.new(email: "sarah.lambert@exemple.com", password: "secret", supernova: true, first_name: "Sarah", last_name: "Lambert", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
 user2.remote_avatar_url = "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80"
 user2.save!
-user3 = User.new(email: "david.fournier@exemple.com", password: "secret", first_name: "David", last_name: "Fournier", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
+user3 = User.new(email: "david.fournier@exemple.com", password: "secret", supernova: true, first_name: "David", last_name: "Fournier", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
 user3.remote_avatar_url = "https://live.staticflickr.com/3100/2363332757_997502c729_c.jpg"
 user3.save!
 user4 = User.new(email: "lucie.guerin@exemple.com", password: "secret", first_name: "Lucie", last_name: "Guerin", address: "8 rue du Haut Moreau", birth: "31/12/1984", favorite_city: "Nantes", favorite_cause: "Arts,culture et loisirs", phone_number: "0291923848")
