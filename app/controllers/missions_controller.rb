@@ -17,7 +17,8 @@ class MissionsController < ApplicationController
   	@mission = Mission.find(params[:id])
     @partner = @mission.partner
     @booking = Booking.new
-    @markers = [{ lng: @mission.longitude, lat: @mission.latitude }]
+    @markers = [{ lng: @mission.longitude, lat: @mission.latitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }) }]
   end
 
 end

@@ -13,3 +13,32 @@
 		font-weight: bold;  
 	}
 }
+
+.mission-details {
+	background-color: $white; 
+	padding: 15px 15px 2px 15px;
+	border-radius: 4px;
+	position: relative; 
+	margin-top: -34px;  
+}
+
+
+
+.alignement-description-logo {
+	display: flex; 
+}
+
+.partner-logo{
+	border: 2px solid $green;
+}
+
+.mission-infos {
+	background-color: $white; 
+	padding: 15px 15px 2px 15px;
+	border-radius: 4px; 
+	margin-top: 12px; 
+	margin-bottom: 12px; 
+}
+
+
+

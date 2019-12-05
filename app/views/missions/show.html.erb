@@ -11,11 +11,12 @@
 	<div class="mission-details">
 		<h3><%= @mission.title %></h3>
 		<p><%= @mission.description %></p>
-	</div>
-
-	<div class="partner-details">
+		<hr>
 		<h3><%= @partner.name %></h3>
-		<p><%= @partner.description %></p>
+		<div class="alignement-description-logo">
+			<p><%= @partner.description %></p>
+			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
+		</div>
 	</div>
 
 	<div class="mission-infos">
