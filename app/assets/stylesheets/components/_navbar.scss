@@ -1,11 +1,11 @@
-a {
-	color: $white !important ;
-	text-decoration: none !important;
-}
-
 .navbar {
 	color: $white !important ;
 	justify-content: space-between;
+	background: $green;
+  a {
+  	color: $white !important ;
+  	text-decoration: none !important;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

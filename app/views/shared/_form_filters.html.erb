@@ -1,0 +1,41 @@
+<%= form_tag missions_path, method: :get do %>
+  <%= label_tag(:starting_date, "Dates") %>
+  <%= date_field_tag :starting_date,
+    params[:starting_date],
+    class: "form-control",
+    placeholder: "Date de début"
+  %>
+  <%= date_field_tag :ending_date,
+    params[:ending_date],
+    class: "form-control",
+    placeholder: "Date de fin"
+  %>
+  <%= label_tag(:address, "Adresse") %>
+  <%= text_field_tag :address,
+    params[:address],
+    class: "form-control",
+    placeholder: "Adresse"
+  %>
+  <%= label_tag(:radius, "Dans un rayon de") %>
+  <%= text_field_tag :radius,
+    params[:radius],
+    class: "form-control",
+    placeholder: "Dans un rayon de"
+  %>
+  <%= label_tag(:duration, "Pour une durée de") %>
+  <%= text_field_tag :duration,
+    params[:duration],
+    class: "form-control",
+    placeholder: "Pour une durée de"
+  %>
+  <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
+  <ul>
+    <% Mission::CAUSES.each do |cause| %>
+        <li>
+          <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause) %>
+          <%= h cause %>
+        </li>
+    <% end %>
+  </ul>
+  <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
+<% end %>

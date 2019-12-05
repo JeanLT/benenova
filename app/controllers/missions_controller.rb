@@ -1,7 +1,16 @@
 class MissionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @missions = Mission.geocoded
+    ### FORM ###
+
+    @missions = Mission.geocoded.within_time_range(params[:starting_date], params[:ending_date])
+                                .nearby(params[:address], params[:radius])
+                                .max_duration(params[:duration])
+                                .causes_selection(params[:causes])
+
+
+    ### GEOCODING ###
 
     @markers = @missions.map do |mission|
       {
@@ -14,7 +23,6 @@ class MissionsController < ApplicationController
   end
 
   def show
-  	@mission = Mission.find(params[:id])
+    @mission = Mission.find(params[:id])
   end
-
 end

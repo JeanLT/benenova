@@ -1,5 +1,17 @@
 <h1>Missions</h1>
 
+<!-- FORM DROPDOWN -->
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filtres
+  </button>
+  <div class="dropdown-menu">
+  <%= render 'shared/form_filters' %>
+</div>
+
+<!-- MAP -->
+
 <div
   id="map"
   style="width: 100%;
@@ -8,11 +20,34 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<div>
-  <% @missions.each do |mission| %>
-    <%= cl_image_tag(mission.picture, height: 700, crop: :fill) %>
-    <p><%= display_date(mission.datetime, mission.duration) %> </p>
-    <h2><%= mission.title.capitalize %></h2>
-    <p><%= mission.description.capitalize %></p>
-  <% end %>
+<!-- MISSIONS INDEX -->
+
+<% if @missions.any? %>
+<div class="cards">
+  <div class="row">
+    <% @missions.each do |mission| %>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <%= link_to mission_path(mission) do %>
+          <div class="card-mission">
+            <div class="card-picture">
+              <%= cl_image_tag(mission.picture, height: 200, crop: :fill) %>
+              <p><%= display_picto_cause(mission.cause) %></p>
+              <h3><%= mission.maxcapacity %> places restantes</h3>
+            </div>
+            <div class="card-misson-infos">
+              <div>
+                <p><%= display_date(mission.datetime, mission.duration) %></p>
+                <h2><%= mission.title.capitalize %></h2>
+                <p><%= mission.description.capitalize %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
+<% else %>
+  <p>Pas de missions 😳</p>
+<% end %>
+
