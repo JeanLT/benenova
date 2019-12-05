@@ -3,27 +3,21 @@ class MissionsController < ApplicationController
 
   def index
 
+
     ### DATE ###
 
     if params[:starting_date].present? && params[:ending_date].present?
       @missions = Mission.geocoded.where({datetime: DateTime.parse(params[:starting_date])..DateTime.parse(params[:ending_date])}).order(:datetime)
+    elsif params[:address].present? && params[:radius].present?
+      @missions = Mission.near(params[:address], params[:radius])
+    elsif params[:duration].present?
+      @missions = Mission.where("duration <= ?", params[:duration])
     else
       @missions = Mission.geocoded
     end
 
 
-    ### ADRESSE ###
-
-    # if params[:city].present?
-    #   @missions = Mission.where(city: params[:city])
-    # else
-    #   return "No missions, sorry"
-    # end
-# Mission.near(params[:address], params[:radius])
-
     ### GEOCODING ###
-
-    # @missions = Mission.geocoded
 
     @markers = @missions.map do |mission|
       {
@@ -33,6 +27,14 @@ class MissionsController < ApplicationController
         # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
+
+
+
+    ### CAUSES ###
+
+
+
+
   end
 
   def show

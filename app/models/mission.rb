@@ -1,6 +1,8 @@
 class Mission < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
+  CAUSES = ["Handicap", "Education", "Arts, culture et loisirs", "Environnement", "Précarité", "Lien intergénérationnel"]
+
 	belongs_to :partner
 	belongs_to :supernova, class_name: "User"
 	has_many :bookings, dependent: :destroy

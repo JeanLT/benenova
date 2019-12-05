@@ -28,11 +28,14 @@
     class: "form-control",
     placeholder: "Pour une durée de"
   %>
-  <%= label_tag(:cause, "Cause (plusieurs choix possibles)") %>
-  <%= text_field_tag :cause,
-    params[:cause],
-    class: "form-control",
-    placeholder: "Cause (plusieurs choix possibles)"
-  %>
+  <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
+  <ul>
+    <% Mission::CAUSES.each do |cause| %>
+        <li>
+          <%= check_box_tag 'causes[]', cause %>
+          <%= h cause %>
+        </li>
+    <% end %>
+  </ul>
   <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
 <% end %>

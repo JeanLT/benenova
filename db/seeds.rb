@@ -218,7 +218,7 @@ mission14.save!
 mission2 = Mission.new(
   title: "Pédalons pour les déchets - Agronaute",
   city: "Nantes",
-  datetime: DateTime.parse("2020-12-5 09:00"),
+  datetime: DateTime.parse("2019-12-5 09:00"),
   duration: 3,
   description: "Le rendez-vous se fera au niveau du portail blanc rue du Sénégal (ancien MIN). Ensuite, une personne de l'association vous accompagnera jusqu'au local pour récupérer un vélo. La tournée se dirigera vers l'île de Nantes pour collecter auprès des restaurants les déchets organiques. Une fois la tournée terminée, vous reviendrez au lieu de départ pour décharger les épluchures et nettoyer les bacs.",
   cause: "Environnement",
@@ -234,7 +234,7 @@ mission2.save!
 mission8 = Mission.new(
   title: "Chaud devant",
   city: "Nantes",
-  datetime: DateTime.parse("2020-12-14 12:00"),
+  datetime: DateTime.parse("2019-12-14 12:00"),
   duration: 2,
   description: "La ferme organise des marchés une fois par trimestre et propose un repas aux habitants à la fin de chaque marché, dans le but de permettre à tous de se rencontrer et d'échanger. L'équipe de bénévoles a besoin d'aide pour préparer et accueillir les habitants à ce repas.",
   cause: "Environnement",
