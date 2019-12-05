@@ -15,6 +15,9 @@ class MissionsController < ApplicationController
 
   def show
   	@mission = Mission.find(params[:id])
+    @partner = @mission.partner
+    @booking = Booking.new
+    @markers = [{ lat: @mission.latitude, lng: @mission.longitude }]
   end
 
 end
