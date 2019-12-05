@@ -1,4 +1,5 @@
 module MissionsHelper
+
   def display_date(datetime, duration)
     date = datetime.strftime("%d.%m.%Y")
     start_time = datetime.strftime("%Hh%M")
