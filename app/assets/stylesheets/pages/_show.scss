@@ -22,7 +22,14 @@
 	border-radius: 4px;
 	position: relative; 
 	margin-top: -34px; 
-	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+
+	h4 {
+		font-family: $headers-font; 
+		color: $green; 
+		font-size: 17px; 
+		font-weight: bold; 
+	} 
 }
 
 .association-details {
@@ -33,6 +40,12 @@
 	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
 	margin-top: 12px; 
 	margin-bottom: 12px;
+	h4 {
+		font-family: $headers-font; 
+		color: $green; 
+		font-size: 17px; 
+		font-weight: bold; 
+	} 
 }
 
 .alignement-description-logo {
@@ -53,5 +66,23 @@
 	margin-bottom: 12px;
 }
 
+.time {
+	display: flex; 
+	p {
+		padding-left: 20px; 
+		padding-right: 20px;
+	}
+}
 
+.localisation {
+	display: flex; 
+	p {
+		padding-left: 20px; 
+	}
+}
 
+.icon {
+	height: 30px;
+	width: 30px;  
+	color: $green; 
+}
