@@ -1,9 +1,11 @@
 .mission-couv{
 	height:200px; 
 	width: 100%; 
+	background-color: $green; 
 		img {
 		background-image: cover;
-		margin-left: 0px; 
+		margin-left: auto;
+		margin-right: auto;
 	}
 	p {
 		position:relative; 
