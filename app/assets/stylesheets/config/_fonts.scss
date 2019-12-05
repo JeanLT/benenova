@@ -5,6 +5,12 @@
 $body-font: "Montserrat", "Helvetica", "sans-serif";
 $headers-font: "Karla", "Helvetica", "sans-serif";
 
+h2 {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
