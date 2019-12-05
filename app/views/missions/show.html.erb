@@ -10,7 +10,9 @@
 	<div class="mission-details">
 		<h3><%= @mission.title %></h3>
 		<p><%= @mission.description %></p>
-		<hr>
+	</div>
+
+	<div class="association-details">
 		<h3><%= @partner.name %></h3>
 		<div class="alignement-description-logo">
 			<p><%= @partner.description %></p>
@@ -18,11 +20,15 @@
 		</div>
 	</div>
 
-	<div class="mission-infos">
-		<p><%= @mission.datetime %></p>
-		<p><%= @mission.duration %></p>
-		<p>@mission.address</p>
+
 	</div>
+
+	<div class="mission-infos">
+		<p src="images/adresse-icone-png.png"><%= @mission.datetime %></p>
+		<p><%= @mission.duration %></p>
+		<p><%= @mission.address %></p>
+	</div>
+	
 </div>
 
 <div
