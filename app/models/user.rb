@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
-  has_many :missions, through: :bookings
   has_many :bookings, dependent: :destroy
+  has_many :missions, through: :bookings
   has_many :supernova_missions, foreign_key: "supernova_id", class_name: "Mission"
 
   # validates :first_name, uniqueness: { scope: :last_name }

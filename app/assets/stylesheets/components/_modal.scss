@@ -1,0 +1,14 @@
+.modal-content {
+ background-color: $green-very-light;
+ border-radius: 10px;
+}
+
+.modal-body {
+  color: $green-text;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
