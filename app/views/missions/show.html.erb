@@ -1,7 +1,43 @@
-<div class ="container-fluid">
-	<h1>Missions#show</h1>
-	<p>Find me in app/views/missions/show.html.erb</p>
+<div class="mission-couv banner d-flex " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+	<div class="mission-couv d-flex">
+		<%= cl_image_tag @mission.picture, width: 375, height: 200, crop: :fill, class: "mission-picture" %>
+		<p><%= @mission.cause %></p>
+	</div>
 </div>
+
+
+<div class ="container">
+
+	<div class="mission-details">
+		<h3><%= @mission.title %></h3>
+		<p><%= @mission.description %></p>
+	</div>
+
+	<div class="association-details">
+		<h3><%= @partner.name %></h3>
+		<div class="alignement-description-logo">
+			<p><%= @partner.description %></p>
+			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
+		</div>
+	</div>
+
+
+	</div>
+
+	<div class="mission-infos">
+		<p src="images/adresse-icone-png.png"><%= @mission.datetime %></p>
+		<p><%= @mission.duration %></p>
+		<p><%= @mission.address %></p>
+	</div>
+	
+</div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 250px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-info confirm" data-toggle="modal" data-target="#exampleModalLong">
@@ -27,4 +63,5 @@
       </div>
     </div>
   </div>
+
 </div>
