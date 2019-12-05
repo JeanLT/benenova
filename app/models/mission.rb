@@ -22,4 +22,10 @@ class Mission < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  scope :nearby, ->(address, radius) { near(address, radius) if address.present? && radius.present? }
+  scope :within_time_range, ->(start, ending) {  where({ datetime: DateTime.parse(start)..DateTime.parse(ending) }) if start.present? && ending.present?}
+  scope :max_duration, ->(duration) { where("duration <= ?", duration) if duration.present? }
+  scope :causes_selection, ->(causes) { where(cause: causes) if causes.present? }
+
 end
