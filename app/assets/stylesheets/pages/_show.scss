@@ -1,0 +1,57 @@
+.mission-couv{
+	height:200px; 
+	width: 100%; 
+	background-color: $green; 
+		img {
+		background-image: cover;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	p {
+		position:relative; 
+		color: $white; 
+		top: 17px; 
+		right: 95px;
+		font-weight: bold;  
+	}
+}
+
+.mission-details {
+	background-color: $white; 
+	padding: 15px 15px 2px 15px;
+	border-radius: 4px;
+	position: relative; 
+	margin-top: -34px; 
+	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
+}
+
+.association-details {
+	background-color: $white; 
+	padding: 15px 15px 2px 15px;
+	border-radius: 4px;
+	position: relative; 
+	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
+	margin-top: 12px; 
+	margin-bottom: 12px;
+}
+
+.alignement-description-logo {
+	display: flex; 
+}
+
+.partner-logo{
+	border: 2px solid $green;
+}
+
+.mission-infos {
+	background-color: $white; 
+	padding: 15px 15px 2px 15px;
+	border-radius: 4px;
+	position: relative; 
+	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
+	margin-top: 12px; 
+	margin-bottom: 12px;
+}
+
+
+

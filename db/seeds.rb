@@ -183,7 +183,7 @@ mission1.save!
 mission13 = Mission.new(
   title: "Mapathon",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-5 14:30"),
+  datetime: DateTime.parse("2020-01-5 14:30"),
   duration: 2,
   description: "Handiplanet vous propose une grosse action pour recenser le plus de lieux accessibles aux personnes à mobilité réduite dans le centre-ville de Nantes !",
   cause: "Handicap",
@@ -199,7 +199,7 @@ mission13.save!
 mission14 = Mission.new(
   title: "Danse pour tous",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-28 10:00"),
+  datetime: DateTime.parse("2020-03-28 10:00"),
   duration: 1,
   description: "Chaque personne dispose de capacités différentes, avec des degrés d'autonomie variable réclamant plus d’attention. Le groupe est composé d'une vingtaine de sportifs avec 1 coach bénévole pour 5 personnes. Venez jouer les assistants afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité !",
   cause: "Handicap",
@@ -250,7 +250,7 @@ mission8.save!
 mission9 = Mission.new(
   title: "Renouer avec les bords de Loire",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-07 09:30"),
+  datetime: DateTime.parse("2020-01-07 09:30"),
   duration: 3,
   description: "La Renouée du Japon qui est une plante invasive est présente sur les bords de Loire et il est crucial d'intervenir pour limiter sa propagation. Elle est un vrai fléau pour l'écosystême car elle sécrète des substances qui font mourir les racines des autres plantes et la densité de son feuillage empêche le développement d’autres espèces. Le fauchage est l'un des moyens pour lutter concrètement contre son invasion.",
   cause: "Environnement",
@@ -266,7 +266,7 @@ mission9.save!
 mission10 = Mission.new(
   title: "Entretien des bords de rive",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-13 09:30"),
+  datetime: DateTime.parse("2020-03-13 09:30"),
   duration: 3,
   description: "L'entretien ou la restauration des marais sont cruciaux. Cela permet de conserver leur rôle d'accueil de la biodiversité dont des espèces protégées, de nettoyer l'eau naturellement et de limiter les inondations et la sécheresse.",
   cause: "Environnement",
@@ -282,7 +282,7 @@ mission10.save!
 mission11 = Mission.new(
   title: "Réemploi mode d'emploi",
   city: "Nantes",
-  datetime: DateTime.parse("2019-04-07 09:30"),
+  datetime: DateTime.parse("2020-04-07 09:30"),
   duration: 1,
   description: "Chaque semaine de nombreux produits (accessoires, meubles, jouets, ...) sont apportés à la Ressourcerie de l'île. Une équipe s'occupe de trier tous les produits qui arrivent afin de vérifier s'ils sont vendables ou non.",
   cause: "Environnement",
@@ -298,7 +298,7 @@ mission11.save!
 mission12 = Mission.new(
   title: "Vider vos mails pour sauver la planète",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-24 09:30"),
+  datetime: DateTime.parse("2020-01-24 09:30"),
   duration: 2,
   description: "L'association en partenariat avec l'Ecole Centrale de Nantes a décidé de proposer une action de sensibilisation sur l'impact du numérique et notammant de la pollution que engendre nos boîtes mails. L'objectif est ici de passer un moment sympa pour mieux comprendre comment nos comportements peuvent avoir un impact à grande échelle.",
   cause: "Environnement",
@@ -331,7 +331,7 @@ mission3.save!
 mission5 = Mission.new(
   title: "Préparation de colis",
   city: "Nantes",
-  datetime: DateTime.parse("2019-02-16 14:00"),
+  datetime: DateTime.parse("2020-02-16 14:00"),
   duration: 3,
   description: "Chaque semaine, des centaines de kilos de produits alimentaires ainsi que des vêtements arrivent dans le local du Secours populaire. L'équipe de bénévoles a besoin d'aide pour ranger toute la marchandise par catégorie. Les produits sont ensuite livrés dans les différents lieux de l'association pour assurer les prochaines distributions alimentaires et vestimentaires.",
   cause: "Précarité",
@@ -347,7 +347,7 @@ mission5.save!
 mission15 = Mission.new(
   title: "Plantation de bulbes et nettoyage",
   city: "Nantes",
-  datetime: DateTime.parse("2019-02-23 14:00"),
+  datetime: DateTime.parse("2020-02-23 14:00"),
   duration: 3,
   description: "En partenariat avec le Sevice des Espaces Verts et de l'Environnement de la Mairie, l'association a décidé de lancer une opération plantage de bulbes (tulipes, julipes, ...) pour permettre aux citoyens d'embellir les espaces proches des habitations et sensibiliser à la place du végétal en milieu urbain.",
   cause: "Précarité",
@@ -366,7 +366,7 @@ mission15.save!
 mission4 = Mission.new(
   title: "Rencontres enchantées",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-6 18:45"),
+  datetime: DateTime.parse("2020-01-6 18:45"),
   duration: 3,
   description: "Une scène ouverte est organisée par l'association pour permettre l'expression et la rencontre entre petits et grands, un joyeux temps de partage intergénérationnel.",
   cause: "Lien intergénérationnel",
@@ -382,7 +382,7 @@ mission4.save!
 mission16 = Mission.new(
   title: "Tous en cuisine",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-9 14:30"),
+  datetime: DateTime.parse("2020-01-9 14:30"),
   duration: 3,
   description: "A l'occasion de l'événement : la Journée Mondiale du Bénévolat, l'association Empowernantes vous propose de venir préparer des petits plats et desserts qui seront servis pendant la soirée de clôture.",
   cause: "Lien intergénérationnel",
@@ -398,7 +398,7 @@ mission16.save!
 mission17 = Mission.new(
   title: "Création d'un conte avec des résidents",
   city: "Nantes",
-  datetime: DateTime.parse("2019-01-9 14:15"),
+  datetime: DateTime.parse("2020-01-9 14:15"),
   duration: 1,
   description: "Les résidents et l'équipe d'animation ont décidé de créer un conte pour les fêtes de fin d'année. Ce projet sera organisé avec plusieurs ateliers (atelier d'écriture, image, chanson, jeux, ...) pour permettre l'expression de tous.  L'équipe d'animation a besoin d'aide pour accompagner le groupe de 5/10 résidents à créer ce conte.",
   cause: "Lien intergénérationnel",
@@ -432,7 +432,7 @@ mission6.save!
 mission18 = Mission.new(
   title: "Apprentissage du numérique",
   city: "Nantes",
-  datetime: DateTime.parse("2019-02-20 19:00"),
+  datetime: DateTime.parse("2020-02-20 19:00"),
   duration: 2,
   description: "D'ici 2022, l'ensemble des démarches administratives seront dématérialisées. La Cantine numérique souhaite préparer ses bénéficiaires en luttant activement contre la fracture numérique, et lance ses ateliers numériques sur tablettes et smartphones. Pour que ces ateliers se développent et soient un succès, le foyer a besoin d'un coup de main ! :)",
   cause: "Education",
@@ -448,7 +448,7 @@ mission18.save!
 mission19 = Mission.new(
   title: "Accompagnement à la scolarité",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-10 16:30"),
+  datetime: DateTime.parse("2020-03-10 16:30"),
   duration: 2,
   description: "Avec le soutien d'un animateur, le bénévole ccompagne les enfants du CP à la sixième dans l'aide aux devoirs et encadre des temps d'animations.",
   cause: "Education",
@@ -466,7 +466,7 @@ mission19.save!
 mission7 = Mission.new(
   title: "Accompagnateur de sorties et d'animation",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-19 10:30"),
+  datetime: DateTime.parse("2020-03-19 10:30"),
   duration: 3,
   description: "Enrichir l'accompagnement par des animations ponctuelles ou régulières. Animer des activités variées auprès de personnes âgées ou de jeunes enfants.",
   cause: "Arts, culture et loisirs",
@@ -482,7 +482,7 @@ mission7.save!
 mission20 = Mission.new(
   title: "Conférencier",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-16 16:30"),
+  datetime: DateTime.parse("2020-03-16 16:30"),
   duration: 1,
   description: "Vous connaissez bien un sujet, une grande figure de l'histoire, un pays, une ville, un monument..., vous avez envie de partager vos connaissances avec des résidents d'hôpitaux ou de maisons de retraite. Vous ferez des conférences d'une heure avec l'appui d'images numérisées.",
   cause: "Arts, culture et loisirs",
@@ -498,7 +498,7 @@ mission20.save!
 mission21 = Mission.new(
   title: "Organisateur(rice) de sorties culturelles",
   city: "Nantes",
-  datetime: DateTime.parse("2019-03-5 18:30"),
+  datetime: DateTime.parse("2020-03-5 18:30"),
   duration: 2,
   description: "Le secteur 'Ce Soir Je Sors' de VSArt propose à des personnes à mobilité réduite un service de réservationde places et d'accompagnement à des spectacles, expositions ou promenades culturelles.",
   cause: "Arts, culture et loisirs",
@@ -534,7 +534,7 @@ mission22.save!
 mission23 = Mission.new(
   title: "Initiation yoga/danse",
   city: "Angers",
-  datetime: DateTime.parse("2019-01-8 18:30"),
+  datetime: DateTime.parse("2020-01-8 18:30"),
   duration: 1,
   description: "L'association recherche un bénévole titulaire d'un diplôme ou en cours de formation pour initier au yoga et/ou différents types de danse, un groupe d'adultes.",
   cause: "Arts, culture et loisirs",
