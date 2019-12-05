@@ -1,3 +1,15 @@
-.row {
-	background-color: blue;
+.mission-couv{
+	height:200px; 
+	width: 100%; 
+		img {
+		background-image: cover;
+		margin-left: 0px; 
+	}
+	p {
+		position:relative; 
+		color: $white; 
+		top: 17px; 
+		right: 95px;
+		font-weight: bold;  
+	}
 }

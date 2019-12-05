@@ -17,7 +17,7 @@ class MissionsController < ApplicationController
   	@mission = Mission.find(params[:id])
     @partner = @mission.partner
     @booking = Booking.new
-    @markers = [{ lat: @mission.latitude, lng: @mission.longitude }]
+    @markers = [{ lng: @mission.longitude, lat: @mission.latitude }]
   end
 
 end

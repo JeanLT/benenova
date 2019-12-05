@@ -1,30 +1,27 @@
-<div class="img-couv-mission">
-	<%= cl_image_tag @mission.picture, crop: :thumb, gravity: :face, width: 40, height: 40, class: "full-picture-mission" %>
-	<p><%= @mission.cause %></p>
+
+<div class="mission-couv d-flex">
+	<div class="mission-couv d-flex">
+		<%= cl_image_tag @mission.picture, width: 375, height: 200, crop: :fill, class: "mission-picture" %>
+		<p><%= @mission.cause %></p>
+	</div>
 </div>
 
 <div class ="container">
 
-	<div class="row justify-content-center">
-		<div class="col-12 col-lg-8">
-			<h3><%= @mission.title %></h3>
-			<p><%= @mission.description %></p>
-		</div>
+	<div class="mission-details">
+		<h3><%= @mission.title %></h3>
+		<p><%= @mission.description %></p>
 	</div>
 
-	<div class="row justify-content-center">
-		<div class="col-12 col-lg-8">
-			<h3><%= @partner.name %></h3>
-			<p><%= @partner.description %></p>
-		</div>
+	<div class="partner-details">
+		<h3><%= @partner.name %></h3>
+		<p><%= @partner.description %></p>
 	</div>
 
-	<div class="row justify-content-center">
-		<div class="col-12 col-lg-8">
-			<p><%= @mission.datetime %></p>
-			<p><%= @mission.duration %></p>
-			<p>@mission.address</p>
-		</div>
+	<div class="mission-infos">
+		<p><%= @mission.datetime %></p>
+		<p><%= @mission.duration %></p>
+		<p>@mission.address</p>
 	</div>
 </div>
 
