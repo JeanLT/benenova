@@ -1,11 +1,11 @@
 <div class ="container-fluid">
-  <div class="background-card">
-    <h2>Mon tableau de bord</h2>
+   <h2>Mon tableau de bord</h2>
     <div class="profil">
       <%= cl_image_tag current_user.avatar, crop: :thumb, gravity: :face, width: 50, height: 50, class: "avatar" %>
-      <%= current_user.last_name %>
-      <%= current_user.first_name %>
-    </div>
+      <p>
+        <%= current_user.last_name %>
+        <%= current_user.first_name %>
+      </p>
   </div>
 </div>
 
