@@ -1,6 +1,7 @@
 .confirm {
   border-radius: 10px;
   color: $green-text;
+  font-weight: bold;
   width: 100%;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
   flex-grow: 1;
@@ -15,6 +16,9 @@
 
 .oui {
   border-radius: 10px;
+}
+
+.oui p {
   color: $green-text;
 }
 

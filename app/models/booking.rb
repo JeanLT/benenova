@@ -3,6 +3,6 @@ class Booking < ApplicationRecord
   belongs_to :mission
 
   validates :status, presence: true
-  validates :number_volunteers, presence: true
+  # validates :number_volunteers, presence: true
 
 end
