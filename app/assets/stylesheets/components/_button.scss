@@ -1,0 +1,25 @@
+.confirm {
+  border-radius: 10px;
+  color: $green-text;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
+  flex-grow: 1;
+  // padding-right: 12px;
+  // padding-left: 12px;
+}
+
+.non {
+  width: 123px;
+  border-radius: 10px;
+}
+
+.oui {
+  border-radius: 10px;
+  color: $green-text;
+}
+
+.croix {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
