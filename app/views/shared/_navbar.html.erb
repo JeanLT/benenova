@@ -9,18 +9,23 @@
     </span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Editer mon profil", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Mon tableau de bord", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Déconnexion", "#", class: "nav-link" %>
-      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Mon tableau de bord", dashboard_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Editer mon profil", edit_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Déconnexion", destroy_user_session_path, class: "nav-link"%>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Connexion", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>
