@@ -1,14 +1,20 @@
-<h1>Missions</h1>
-
 <!-- FORM DROPDOWN -->
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filtres
-  </button>
-  <div class="dropdown-menu">
-  <%= render 'shared/form_filters' %>
+<div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Filtres
+    </button>
+    <div class="dropdown-menu">
+    <%= render 'shared/form_filters' %>
+  </div>
 </div>
+
+<div>
+  <p><%= params[:starting_date] %> --> <%= params[:ending_date] %></p>
+  <p><%= params[:duration] %> h</p>
+</div>
+
 
 <!-- MAP -->
 
@@ -20,34 +26,39 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<!-- MISSIONS INDEX -->
 
-<% if @missions.any? %>
-<div class="cards">
-  <div class="row">
-    <% @missions.each do |mission| %>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <%= link_to mission_path(mission) do %>
-          <div class="card-mission">
-            <div class="card-picture">
-              <%= cl_image_tag(mission.picture, height: 200, crop: :fill) %>
-              <p><%= display_picto_cause(mission.cause) %></p>
-              <h3><%= mission.maxcapacity %> places restantes</h3>
-            </div>
-            <div class="card-misson-infos">
-              <div>
-                <p><%= display_date(mission.datetime, mission.duration) %></p>
-                <h2><%= mission.title.capitalize %></h2>
-                <p><%= mission.description.capitalize %></p>
+<!-- SELECTION FILTRES -->
+
+
+<div class="container">
+  <% if @missions.any? %>
+  <div class="cards">
+    <div class="row">
+      <% @missions.each do |mission| %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <%= link_to mission_path(mission) do %>
+            <div class="card-mission">
+              <div class="card-picture">
+                <%= cl_image_tag(mission.picture, height: 200, crop: :fill) %>
+                <p><%= display_picto_cause(mission.cause) %></p>
+                <h3><%= mission.maxcapacity %> places restantes</h3>
+              </div>
+              <div class="card-misson-infos">
+                <div>
+                  <h4><%= display_date(mission.datetime, mission.duration) %></h4>
+                  <h2><%= mission.title.capitalize %></h2>
+                  <p><%= mission.description.capitalize %></p>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
+  <% else %>
+    <p>Pas de missions 😳</p>
+  <% end %>
 </div>
-<% else %>
-  <p>Pas de missions 😳</p>
-<% end %>
+
 
