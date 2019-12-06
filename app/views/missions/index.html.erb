@@ -1,8 +1,8 @@
 <!-- FORM DROPDOWN -->
 
-<div>
+<div class="card-filters">
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn dropdown-toggle white" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Filtres
     </button>
     <div class="dropdown-menu">
@@ -10,9 +10,15 @@
   </div>
 </div>
 
-<div>
-  <p><%= params[:starting_date] %> --> <%= params[:ending_date] %></p>
-  <p><%= params[:duration] %> h</p>
+<div class="filter-container text-center">
+  <div class="resume-filters">
+    <% if params[:starting_date].present? || params[:ending_date].present? %>
+      <p><%= DateTime.parse(params[:starting_date]).strftime("%d-%m-%Y") %> --> <%= DateTime.parse(params[:ending_date]).strftime("%d-%m-%Y") %></p>
+    <% end %>
+    <% if params[:duration].present? %>
+      <p><%= params[:duration] %> h</p>
+    <% end %>
+  </div>
 </div>
 
 
@@ -30,7 +36,7 @@
 <!-- SELECTION FILTRES -->
 
 
-<div class="container">
+<div class="cards-container">
   <% if @missions.any? %>
   <div class="cards">
     <div class="row">
@@ -38,10 +44,12 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <%= link_to mission_path(mission) do %>
             <div class="card-mission">
-              <div class="card-picture">
-                <%= cl_image_tag(mission.picture, height: 200, crop: :fill) %>
-                <p><%= display_picto_cause(mission.cause) %></p>
-                <h3><%= mission.maxcapacity %> places restantes</h3>
+              <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
+                <%= display_picto_cause(mission.cause) %>
+                <div class="card-count-places">
+                  <h2><%= mission.maxcapacity %></h2>
+                  <h3>places restantes</h3>
+                </div>
               </div>
               <div class="card-misson-infos">
                 <div>
@@ -60,5 +68,6 @@
     <p>Pas de missions 😳</p>
   <% end %>
 </div>
+
 
 
