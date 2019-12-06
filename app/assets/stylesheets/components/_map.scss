@@ -15,3 +15,10 @@
   color: #319795;
 }
 
+#map {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  position: absolue;
+  z-index: 5;
+}
