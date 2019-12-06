@@ -1,50 +1,49 @@
+<!-- BANNER -->
 <div class="mission-couv banner d-flex " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
 	<div class="mission-couv d-flex">
 		<%= cl_image_tag @mission.picture, width: 375, height: 200, crop: :fill, class: "mission-picture" %>
-		<p><%= @mission.cause %></p>
+		<p><%= display_picto_cause(@mission.cause) %></p>
 	</div>
 </div>
 
-
+<!-- CARDS -->
 <div class ="container">
-
 	<div class="mission-details">
 		<h3><%= @mission.title %></h3>
 		<h4>MISSION</h4>
 		<p><%= @mission.description %></p>
 	</div>
-
-
 	<div class="association-details">
 		<h3><%= @partner.name %></h3>
 		<h4>PARTENAIRE</h4>
 		<div class="alignement-description-logo">
+			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
 			<p><%= @partner.description %></p>
-			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
 		</div>
 	</div>
-
-
 	<div class="mission-infos">
 		<div class="time">
-
 			<%= image_tag "calendar.png", class: "icon" %>
 			<p><%= @mission.datetime %></p>
-
 			<%= image_tag "heure.png", class: "icon" %>
 			<p><%= @mission.duration %></p>
-
 		</div>
 		<div class="localisation">
-
 			<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
 			<p><%= @mission.address %></p>
-
 		</div>
 	</div>
-
 </div>
 
+
+<!-- BUTTON -->
+
+<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+  Je m'engage
+</button>
+
+
+<!-- MAP -->
 <div
   id="map"
   style="width: 100%;
@@ -52,10 +51,6 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-info confirm" data-toggle="modal" data-target="#exampleModalLong">
-  Je m'engage
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
