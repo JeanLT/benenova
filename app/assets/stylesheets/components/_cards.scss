@@ -10,6 +10,7 @@
   border-radius: 4px;
   padding: 15px;
   margin-top: 12px;
+  margin-bottom: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
@@ -96,7 +97,17 @@
   }
 }
 
-.card-filters {
+.filter-container{
+  width: 100%;
+  display: block;
+}
 
+.resume-filters {
+  background-color: $green-very-light;
+  width: 250px;
+  // margin-left: 12px;
+  border-radius: 4px;
+  padding: 0 5px;
+  margin: auto;
 }
 

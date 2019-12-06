@@ -2,7 +2,7 @@
 
 <div class="card-filters">
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn dropdown-toggle white" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Filtres
     </button>
     <div class="dropdown-menu">
@@ -10,13 +10,15 @@
   </div>
 </div>
 
-<div>
-  <% if params[:starting_date].present? || params[:ending_date].present? %>
-    <p><%= params[:starting_date] %> --> <%= params[:ending_date] %></p>
-  <% end %>
-  <% if params[:duration].present? %>
-    <p><%= params[:duration] %> h</p>
-  <% end %>
+<div class="filter-container text-center">
+  <div class="resume-filters">
+    <% if params[:starting_date].present? || params[:ending_date].present? %>
+      <p><%= DateTime.parse(params[:starting_date]).strftime("%d-%m-%Y") %> --> <%= DateTime.parse(params[:ending_date]).strftime("%d-%m-%Y") %></p>
+    <% end %>
+    <% if params[:duration].present? %>
+      <p><%= params[:duration] %> h</p>
+    <% end %>
+  </div>
 </div>
 
 
