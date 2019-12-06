@@ -11,8 +11,12 @@
 </div>
 
 <div>
-  <p><%= params[:starting_date] %> --> <%= params[:ending_date] %></p>
-  <p><%= params[:duration] %> h</p>
+  <% if params[:starting_date].present? || params[:ending_date].present? %>
+    <p><%= params[:starting_date] %> --> <%= params[:ending_date] %></p>
+  <% end %>
+  <% if params[:duration].present? %>
+    <p><%= params[:duration] %> h</p>
+  <% end %>
 </div>
 
 
@@ -38,10 +42,12 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <%= link_to mission_path(mission) do %>
             <div class="card-mission">
-              <div class="card-picture">
-                <%= cl_image_tag(mission.picture, height: 200, crop: :fill) %>
-                <p><%= display_picto_cause(mission.cause) %></p>
-                <h3><%= mission.maxcapacity %> places restantes</h3>
+              <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
+                <%= display_picto_cause(mission.cause) %>
+                <div class="card-count-places">
+                  <h2><%= mission.maxcapacity %></h2>
+                  <h3>places restantes</h3>
+                </div>
               </div>
               <div class="card-misson-infos">
                 <div>
@@ -60,5 +66,6 @@
     <p>Pas de missions 😳</p>
   <% end %>
 </div>
+
 
 
