@@ -48,12 +48,17 @@
 	} 
 }
 
-.alignement-description-logo {
-	display: flex; 
+.alignement-description-logo p {
+
+	
 }
 
 .partner-logo{
 	border: 1.5px solid $green;
+	float:left;   
+	margin-right: 10px; 
+	margin-top: 3px; 
+
 }
 
 .mission-infos {

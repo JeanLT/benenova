@@ -19,8 +19,8 @@
 		<h3><%= @partner.name %></h3>
 		<h4>PARTENAIRE</h4>
 		<div class="alignement-description-logo">
+			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
 			<p><%= @partner.description %></p>
-			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
 		</div>
 	</div>
 
