@@ -10,11 +10,14 @@
 
 	<div class="mission-details">
 		<h3><%= @mission.title %></h3>
+		<h4>MISSION</h4>
 		<p><%= @mission.description %></p>
 	</div>
 
+
 	<div class="association-details">
 		<h3><%= @partner.name %></h3>
+		<h4>PARTENAIRE</h4>
 		<div class="alignement-description-logo">
 			<p><%= @partner.description %></p>
 			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
@@ -22,14 +25,24 @@
 	</div>
 
 
+	<div class="mission-infos">
+		<div class="time">
+
+			<%= image_tag "calendar.png", class: "icon" %>
+			<p><%= @mission.datetime %></p>
+
+			<%= image_tag "heure.png", class: "icon" %>
+			<p><%= @mission.duration %></p>
+
+		</div>
+		<div class="localisation">
+
+			<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
+			<p><%= @mission.address %></p>
+
+		</div>
 	</div>
 
-	<div class="mission-infos">
-		<p src="images/adresse-icone-png.png"><%= @mission.datetime %></p>
-		<p><%= @mission.duration %></p>
-		<p><%= @mission.address %></p>
-	</div>
-	
 </div>
 
 <div
