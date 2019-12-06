@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-pic">
+  <h1>Benenova</h1>
+    <%= link_to "Nantes", missions_path(address: "Nantes", radius: 5), class: "btn btn-info city" %>
+    <%= link_to "Paris", missions_path(address: "Paris", radius: 5), class: "btn btn-info city" %>
+    <%= link_to "Angers", missions_path(address: "Angers", radius: 5), class: "btn btn-info city" %>
+    <%= link_to "Lille", missions_path(address: "Lille", radius: 5), class: "btn btn-info city" %>
+  <h4>S’engager n’a jamais été aussi simple</h2>
+</div>
