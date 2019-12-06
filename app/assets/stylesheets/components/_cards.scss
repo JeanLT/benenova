@@ -1,3 +1,19 @@
 .card-mission{
   background-color: white;
 }
+
+.card-picture{
+  display: flex;
+}
+
+.card-misson-infos{
+  h2{
+    color: black;
+    font-family: Karla;
+    text-align: left;
+  }
+  h4{
+    font-size: 15px;
+    color: gray;
+  }
+}
