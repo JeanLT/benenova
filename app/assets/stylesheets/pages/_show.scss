@@ -32,6 +32,9 @@
 		font-size: 17px; 
 		font-weight: bold; 
 	} 
+	p {
+		text-align: justify;
+	}
 }
 
 .association-details {
@@ -48,6 +51,9 @@
 		font-size: 17px; 
 		font-weight: bold; 
 	} 
+	p {
+		text-align: justify;
+	}
 }
 
 .alignement-description-logo p {
@@ -101,6 +107,8 @@
 	position: -webkit-sticky;
 	position: sticky;
 	bottom: 1rem;
-	align-self: flex-end;  
-
+	align-self: flex-end;
+	width: 90%;
+	margin-left: 20px; 
+	margin-bottom: 10px; 
 }
