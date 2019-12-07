@@ -1,22 +1,22 @@
 
+// BANNER
 
 .mission-couv{
 	height:200px; 
 	width: 100%; 
 	background-color: $green; 
-		img {
-		background-image: cover;
-		margin-left: auto;
-		margin-right: 30px;
+	img {
+		margin-left: -16px; 
 	}
 	p {
 		position:relative; 
 		color: $white; 
 		top: 17px; 
-		right: 95px;
+		right: 40px; 
 		font-weight: bold;  
 	}
 }
+
 
 .mission-details {
 	background-color: $white; 
@@ -54,11 +54,6 @@
 	p {
 		text-align: justify;
 	}
-}
-
-.alignement-description-logo p {
-
-	
 }
 
 .partner-logo{
