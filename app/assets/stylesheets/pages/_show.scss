@@ -1,22 +1,38 @@
 
-// BANNER
+//CONTAINER
 
-.mission-couv{
-	height:200px; 
-	width: 100%; 
-	background-color: $green; 
-	img {
-		margin-left: -16px; 
-	}
-	p {
-		position:relative; 
-		color: $white; 
-		top: 17px; 
-		right: 40px; 
-		font-weight: bold;  
-	}
+.container {
+	margin-right: 0px; 
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+// BANNER
+
+.mission-banner{
+  border-radius: 4px;
+  height: 200px;
+  position: relative;
+  background-size: cover;
+  margin-left: -16px; 
+  margin-right: -16px; 
+
+  img {
+    position: absolute;
+    right: 21px;
+    top: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    
+  }
+}
+
+// MISSION
 
 .mission-details {
 	background-color: $white; 
@@ -32,10 +48,13 @@
 		font-size: 17px; 
 		font-weight: bold; 
 	} 
+
 	p {
 		text-align: justify;
 	}
 }
+
+// PARTNER
 
 .association-details {
 	background-color: $white; 
@@ -64,6 +83,7 @@
 
 }
 
+// DETAILS MISSION 
 
 .mission-infos {
 	background-color: $white; 
@@ -106,4 +126,10 @@
 	width: 90%;
 	margin-left: 20px; 
 	margin-bottom: 10px; 
+}
+
+MAP
+
+#map{
+	width:100%; 
 }
