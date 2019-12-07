@@ -6,6 +6,10 @@
 			<div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
 		            <%= display_picto_cause(@mission.cause) %>
+		            <div class="card-count-places">
+		              <h2><%= @mission.maxcapacity %></h2>
+		              <h3>places restantes</h3>
+		            </div>
 				</div>
 			</div>
 			<div class="mission-details">

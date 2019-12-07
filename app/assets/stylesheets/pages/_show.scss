@@ -28,6 +28,35 @@
   }
 }
 
+.card-count-places{
+    background-color: $green;
+    text-align: center;
+    justify-content: center;
+    width:  70px;
+    height:   60px;
+    border-radius: 4px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+    margin-bottom: 37px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+
+  h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-size: 0.8rem;
+    color: white;
+    margin: 0;
+  }
+}
+
 // MISSION
 
 .mission-details {
