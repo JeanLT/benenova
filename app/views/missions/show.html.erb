@@ -8,7 +8,7 @@
 		            <%= display_picto_cause(@mission.cause) %>
 		            <div class="card-count-places">
 		              <h2><%= remaining_places(@mission.maxcapacity) %></h2>
-		              <h2><%= @number_volunteers %></h2>
+		              <h2><%= @booking.number_volunteers %></h2>
 		              <h3>places restantes</h3>
 		            </div>
 				</div>
@@ -58,10 +58,8 @@
 	</div>
 </div>
 
-
-
-
 <!-- Modal -->
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
