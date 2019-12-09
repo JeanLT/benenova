@@ -100,11 +100,11 @@
 	}
 }
 
-.partner-logo{
+.alignement-description-logo > .partner-logo{
+	margin-top: 10px; 
 	border: 1.5px solid $green;
 	float:left;   
-	margin-right: 10px; 
-	margin-top: 3px; 
+	margin-right: 20px; 
 
 }
 
@@ -120,26 +120,22 @@
 	margin-bottom: 12px;
 }
 
-.time {
+.datetime, .duration, .address {
 	display: flex; 
+
+	.far, .fas {
+		color: $middle-gray; 
+		font-size: 25px;  
+	}
+
 	p {
-		padding-left: 20px; 
-		padding-right: 20px;
+		margin-top: 4px; 
+		margin-left: 13px; 
+		color: $gray; 
 	}
 }
 
-.localisation {
-	display: flex; 
-	p {
-		padding-left: 20px; 
-	}
-}
 
-.icon {
-	height: 30px;
-	width: 30px;  
-	color: $green; 
-}
 
 //--- BUTTON ----
 
@@ -148,8 +144,6 @@
 	position: sticky;
 	bottom: 1rem;
 	align-self: flex-end;
-
-
 	width: 100%;
 }
 
