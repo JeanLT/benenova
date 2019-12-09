@@ -7,9 +7,8 @@
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
 		            <%= display_picto_cause(@mission.cause) %>
 		            <div class="card-count-places">
-		              <h2><%= remaining_places(@mission.maxcapacity) %></h2>
-		              <h2><%=  %></h2>
-		              <h3>places restantes</h3>
+		              <h3>Places restantes</h3>
+		              <p><%= @mission.remaining_places %></p>
 		            </div>
 				</div>
 			</div>
@@ -29,7 +28,8 @@
 			<div class="mission-infos">
 				<div class="datetime">
 					<i class="far fa-calendar-alt"></i>
-					<p><%= @mission.datetime %></p>
+					<p><%= @mission.datetime.strftime("%d.%m.%Y") %></p>
+
 				</div>
 				<div class="duration">
 					<i class="fas fa-history"></i>
@@ -40,9 +40,11 @@
 					<p><%= @mission.address %></p>
 				</div>
 			</div>
-			<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
-			  Je m'engage
-			</button>
+			<div class="">
+				<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+				  Je m'engage
+				</button>
+			</div>
 			</br>
 			</br>
 		</div>
@@ -85,14 +87,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- <div
-	id="map"
-	style="width: 100%;
-	height: 250px;"
-	data-markers="<%#= @markers.to_json %>"
-	data-mapbox-api-key="<%#= ENV['MAPBOX_API_KEY'] %>">
-
-</div>
- -->

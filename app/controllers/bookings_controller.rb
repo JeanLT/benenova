@@ -21,6 +21,4 @@ class BookingsController < ApplicationController
     @markers = [{ lng: @mission.longitude, lat: @mission.latitude,
         infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }) }]
   end
-
-
 end

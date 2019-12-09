@@ -28,7 +28,7 @@ class Mission < ApplicationRecord
   scope :max_duration, ->(duration) { where("duration <= ?", duration) if duration.present? }
   scope :causes_selection, ->(causes) { where(cause: causes) if causes.present? }
 
-  def remaing_places
+  def remaining_places
     self.maxcapacity - self.bookings.where(status: 'accepted').count
   end
-end
+end 
