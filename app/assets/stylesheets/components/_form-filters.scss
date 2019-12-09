@@ -1,0 +1,79 @@
+// MODAL
+
+.modal-content-filters {
+ background-color: $green;
+ border-radius: 10px;
+ margin: 0;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+.modal-body {
+  color: $green-text;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+#ma-recherche{
+  color: white;
+}
+
+.close-filters{
+  color: white;
+}
+
+// FILTERS
+
+.field-block{
+    display: block;
+    background-color: $green-very-light;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.field-label{
+  color: $green;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.form-button-filters{
+  text-align: left;
+
+}
+
+.duration-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -12px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+

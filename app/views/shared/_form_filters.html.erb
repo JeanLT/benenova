@@ -1,41 +1,107 @@
 <%= form_tag missions_path, method: :get do %>
-  <%= label_tag(:starting_date, "Dates") %>
-  <%= date_field_tag :starting_date,
-    params[:starting_date],
-    class: "form-control",
-    placeholder: "Date de début"
-  %>
-  <%= date_field_tag :ending_date,
-    params[:ending_date],
-    class: "form-control",
-    placeholder: "Date de fin"
-  %>
-  <%= label_tag(:address, "Adresse") %>
-  <%= text_field_tag :address,
-    params[:address],
-    class: "form-control",
-    placeholder: "Adresse"
-  %>
-  <%= label_tag(:radius, "Dans un rayon de") %>
-  <%= text_field_tag :radius,
-    params[:radius],
-    class: "form-control",
-    placeholder: "Dans un rayon de"
-  %>
-  <%= label_tag(:duration, "Pour une durée de") %>
-  <%= text_field_tag :duration,
-    params[:duration],
-    class: "form-control",
-    placeholder: "Pour une durée de"
-  %>
-  <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
-  <ul>
-    <% Mission::CAUSES.each do |cause| %>
-        <li>
-          <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause) %>
-          <%= h cause %>
-        </li>
-    <% end %>
-  </ul>
-  <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:starting_date, "Dates") %>
+    </div>
+    <%= date_field_tag :starting_date,
+      params[:starting_date],
+      class: "form-control",
+      placeholder: "Date de début"
+    %>
+    <%= date_field_tag :ending_date,
+      params[:ending_date],
+      class: "form-control",
+      placeholder: "Date de fin"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:address, "Adresse") %>
+    </div>
+    <%= text_field_tag :address,
+      params[:address],
+      class: "form-control",
+      placeholder: "Adresse"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:radius, "Dans un rayon de") %>
+    </div>
+    <%= text_field_tag :radius,
+      params[:radius],
+      class: "form-control",
+      placeholder: "Dans un rayon de"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:duration, "Pour une durée maximum de") %>
+    </div>
+    <%= number_field_tag :duration,
+      params[:duration],
+      class: "form-control"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
+    </div>
+    <div class="causes-picto">
+      <ul>
+        <% Mission::CAUSES.each do |cause| %>
+            <li>
+              <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause) %>
+              <%= h cause %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="btn btn-info confirm commitment">
+      <%= submit_tag "C'est parti !"%>
+    </div>
+  </div>
 <% end %>
+
+
+
+
+<!-- TEST -->
+
+<div>
+  <label for="radius">Dans un rayon de</label>
+  <input type="range" class="custom-range" name="radius"
+         min="0" max="50" step="5">
+</div>
+
+<div class="field-block">
+
+  <div class="field-label">
+    <label for="duration">Pour une durée maximum de</label>
+  </div>
+
+  <div class="duration-text">
+    <p>1h</p>
+    <p>2h</p>
+    <p>3h</p>
+    <p>4h</p>
+  </div>
+
+  <div class="duration-range">
+    <input type="range" class="custom-range" name="duration"
+           min="1" max="4" step="1">
+  </div>
+
+</div>
+
+
+
+
+
+
+

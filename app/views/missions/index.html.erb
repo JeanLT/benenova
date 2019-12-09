@@ -1,16 +1,29 @@
 <!-- FORM DROPDOWN -->
 
-<div class="card-filters">
-  <div class="dropdown">
-    <button class="btn dropdown-toggle white" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Filtres
-    </button>
-    <div class="dropdown-menu">
-    <%= render 'shared/form_filters' %>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Recherche
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-filters">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ma-recherche">Ma recherche</h5>
+        <button type="button" class="close-filters" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <%= render 'shared/form_filters' %>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="filter-container text-center">
+
+<!-- <div class="filter-container text-center">
   <div class="resume-filters">
     <% if params[:starting_date].present? || params[:ending_date].present? %>
       <p><%= DateTime.parse(params[:starting_date]).strftime("%d-%m-%Y") %> --> <%= DateTime.parse(params[:ending_date]).strftime("%d-%m-%Y") %></p>
@@ -19,7 +32,9 @@
       <p><%= params[:duration] %> h</p>
     <% end %>
   </div>
-</div>
+</div> -->
+
+
 
 
 <!-- MAP -->
