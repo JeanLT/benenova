@@ -7,16 +7,15 @@
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
 		            <%= display_picto_cause(@mission.cause) %>
 		            <div class="card-count-places">
-		              <h2><%= remaining_places(@mission.maxcapacity) %></h2>
-		              <h2><%= @booking.number_volunteers %></h2>
-		              <h3>places restantes</h3>
+		              <h3>Places restantes</h3>
+		              <p><%= @mission.remaining_places %></p>
 		            </div>
 				</div>
 			</div>
 			<div class="mission-details">
 				<h3><%= @mission.title %></h3>
 				<h4><%= @mission.cause.upcase %></h4>
-				<p><%= @mission.description %></p>
+				<p><%=  @mission.description %></p>
 			</div>
 			<div class="association-details">
 				<h3><%= @partner.name %></h3>
@@ -27,29 +26,37 @@
 				</div>
 			</div>
 			<div class="mission-infos">
-				<div class="time">
-					<%= image_tag "calendar.png", class: "icon" %>
-					<p><%= @mission.datetime %></p>
-					<%= image_tag "heure.png", class: "icon" %> 
-					<p><%= @mission.duration %></p>Heures
+				<div class="datetime">
+					<i class="far fa-calendar-alt"></i>
+					<p><%= @mission.datetime.strftime("%d.%m.%Y") %></p>
+
 				</div>
-				<div class="localisation">
-					<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
+				<div class="duration">
+					<i class="fas fa-history"></i>
+					<p><%= @mission.duration %>  Heures</p>
+				</div>
+				<div class="address">
+					<i class="fas fa-map-marker-alt"></i>
 					<p><%= @mission.address %></p>
 				</div>
 			</div>
-				<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
-				  Je m'engage
-				</button>
-			</br>
-			</br>
+				<div class=" sticky-button">
+					
+					<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+					  Je m'engage
+					</button>
+
+				</div>
+			
+
 		</div>
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
-			<div class="show-map">
+			<div class="show-map" style="height: 100%">
 				<div
 				  id="map"
 				  style="width: 100%;
-				  height: 250px;"
+				  height: 100%;
+				  min-height: 250px;"
 				  data-markers="<%= @markers.to_json %>"
 				  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 				</div>
@@ -58,22 +65,6 @@
 	</div>
 </div>
 
-<!-- BUTTON -->
-
-<button type="button" class="btn btn-info confirm extra-large" data-toggle="modal" data-target="#exampleModalLong">
-  Je m'engage
-</button>
-
-<!-- MAP -->
-<br>
-<div
-  id="map"
-  style="width: 100%;
-  height: 250px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-
-</div>
 
 <!-- Modal -->
 
@@ -96,7 +87,3 @@
     </div>
   </div>
 </div>
-
-
-
-
