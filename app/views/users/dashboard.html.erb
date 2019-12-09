@@ -1,12 +1,13 @@
 <div class ="container-fluid">
-   <h3>Mon tableau de bord</h3>
-    <div class="profil">
+   <h3>Mes missions</h3>
+   <p>Vous vous êtes engagés pour les missions qui suivent !</p>
+<!--     <div class="profil">
       <%= cl_image_tag current_user.avatar, crop: :thumb, gravity: :face, width: 50, height: 50, class: "avatar" %>
       <p>
         <%= current_user.last_name %>
         <%= current_user.first_name %>
       </p>
-    </div>
+    </div> -->
 </div>
 
 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -24,5 +25,39 @@
         Tu vas recevoir un email avec les coordonnées de ton Supernova (ton interlocuteur privilégié).</div>
     </div>
   </div>
+</div>
+
+
+<div class="cards-container">
+  <% if @missions.any? %>
+  <div class="cards">
+    <div class="row">
+      <% @missions.each do |mission| %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <%= link_to mission_path(mission) do %>
+            <div class="card-mission">
+              <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
+                <%= display_picto_cause(mission.cause) %>
+                <div class="card-count-places">
+                  <h2><%= mission.maxcapacity %></h2>
+                  <h3>places restantes</h3>
+                </div>
+              </div>
+              <div class="card-misson-infos">
+                <div>
+                  <h4><%= display_date(mission.datetime, mission.duration) %></h4>
+                  <h2><%= mission.title.capitalize %></h2>
+                  <p><%= mission.description.capitalize %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% else %>
+    <p>Pas de missions 😳</p>
+  <% end %>
 </div>
 

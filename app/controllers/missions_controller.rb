@@ -9,7 +9,6 @@ class MissionsController < ApplicationController
                                 .max_duration(params[:duration])
                                 .causes_selection(params[:causes])
 
-
     ### GEOCODING ###
 
     @markers = @missions.map do |mission|
