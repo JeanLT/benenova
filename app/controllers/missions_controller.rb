@@ -32,8 +32,7 @@ class MissionsController < ApplicationController
 
 
     ## REMAINING PLACES ####
-    @number_volunteers = @booking.number_volunteers
-
+    @remaining_places = @mission.capacity - Booking.number_volunteers
 
   end
 end
