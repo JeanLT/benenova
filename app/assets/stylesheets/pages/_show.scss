@@ -1,56 +1,56 @@
 
 
 .mission-couv{
-	height:200px; 
-	width: 100%; 
-	background-color: $green; 
+	height:200px;
+	width: 100%;
+	background-color: $green;
 		img {
 		background-image: cover;
 		margin-left: auto;
 		margin-right: 30px;
 	}
 	p {
-		position:relative; 
-		color: $white; 
-		top: 17px; 
+		position:relative;
+		color: $white;
+		top: 17px;
 		right: 95px;
-		font-weight: bold;  
+		font-weight: bold;
 	}
 }
 
 .mission-details {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	margin-top: -34px; 
+	position: relative;
+	margin-top: -34px;
 	box-shadow: 0 0 15px rgba(0,0,0,0.6);
 
 	h4 {
-		font-family: $headers-font; 
-		color: $green; 
-		font-size: 17px; 
-		font-weight: bold; 
-	} 
+		font-family: $headers-font;
+		color: $green;
+		font-size: 17px;
+		font-weight: bold;
+	}
 	p {
 		text-align: justify;
 	}
 }
 
 .association-details {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
-	margin-top: 12px; 
+	position: relative;
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+	margin-top: 12px;
 	margin-bottom: 12px;
 	h4 {
-		font-family: $headers-font; 
-		color: $green; 
-		font-size: 17px; 
-		font-weight: bold; 
-	} 
+		font-family: $headers-font;
+		color: $green;
+		font-size: 17px;
+		font-weight: bold;
+	}
 	p {
 		text-align: justify;
 	}
@@ -58,57 +58,46 @@
 
 .alignement-description-logo p {
 
-	
+
 }
 
 .partner-logo{
 	border: 1.5px solid $green;
-	float:left;   
-	margin-right: 10px; 
-	margin-top: 3px; 
+	float:left;
+	margin-right: 10px;
+	margin-top: 3px;
 
 }
 
 
 .mission-infos {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
-	margin-top: 12px; 
+	position: relative;
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+	margin-top: 12px;
 	margin-bottom: 12px;
 }
 
 .time {
-	display: flex; 
+	display: flex;
 	p {
-		padding-left: 20px; 
+		padding-left: 20px;
 		padding-right: 20px;
 	}
 }
 
 .localisation {
-	display: flex; 
+	display: flex;
 	p {
-		padding-left: 20px; 
+		padding-left: 20px;
 	}
 }
 
 .icon {
 	height: 30px;
-	width: 30px;  
-	color: $green; 
+	width: 30px;
+	color: $green;
 }
 
-//--- BUTTON ----
-
-.commitment {
-	position: -webkit-sticky;
-	position: sticky;
-	bottom: 1rem;
-	align-self: flex-end;
-	width: 90%;
-	margin-left: 20px; 
-	margin-bottom: 10px; 
-}

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def dashboard
-    @bookings = current_user.bookings
+    @bookings = current_user.bookings.where(status: "accepted")
   end
 
   # def show

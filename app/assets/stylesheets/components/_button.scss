@@ -9,6 +9,26 @@
   // padding-left: 12px;
 }
 
+.commitment {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+  align-self: flex-end;
+  width: 90%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.cancel {
+  background-color: $green-text;
+  border: $green-text;
+  color: $green-very-light;
+  flex-grow: 1;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
+}
+
 .city {
   margin: 12px;
   margin-top: 16px;
@@ -44,3 +64,4 @@
 .btn {
   color: white;
 }
+
