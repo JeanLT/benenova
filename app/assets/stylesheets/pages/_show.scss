@@ -50,10 +50,15 @@
     margin: 0;
     padding: 0;
   }
+
   h3 {
     font-size: 0.8rem;
     color: white;
     margin: 0;
+  }
+
+  p{	
+    color:$white;
   }
 }
 
@@ -100,11 +105,11 @@
 	}
 }
 
-.partner-logo{
+.alignement-description-logo > .partner-logo{
+	margin-top: 10px; 
 	border: 1.5px solid $green;
 	float:left;   
-	margin-right: 10px; 
-	margin-top: 3px; 
+	margin-right: 20px; 
 
 }
 
@@ -120,39 +125,46 @@
 	margin-bottom: 12px;
 }
 
-.time {
+.datetime, .duration, .address {
 	display: flex; 
+
+	.far, .fas {
+		color: $middle-gray; 
+		font-size: 25px;  
+	}
+
 	p {
-		padding-left: 20px; 
-		padding-right: 20px;
+		margin-top: 4px; 
+		margin-left: 13px; 
+		color: $gray; 
 	}
 }
 
-.localisation {
-	display: flex; 
-	p {
-		padding-left: 20px; 
-	}
-}
 
-.icon {
-	height: 30px;
-	width: 30px;  
-	color: $green; 
-}
 
 //--- BUTTON ----
 
 .commitment {
+	width: 100%;
+}
+
+.sticky-button{
 	position: -webkit-sticky;
 	position: sticky;
 	bottom: 1rem;
 	align-self: flex-end;
 	width: 100%;
+	// background-color: $green; 
+	// box-shadowpadding-top: 15px; 
+	// padding-bottom: 15px; 
+	button {
+
+	box-shadow: 0 19px 15px $green;
+	 }
 }
 
 //--- MAP ---
 .show-map{
-
-
+margin-bottom: 10px; 
+margin-top: 10px; 
 }
