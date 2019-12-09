@@ -1,6 +1,6 @@
 <div class ="container-fluid">
    <h3>Mes missions</h3>
-   <p>Retrouvez le récapitulatif des missions auxquelles vous vous êtes engagées.</p>
+   <p>Voici le récapitulatif des missions auxquelles tu t'es engagé.</p>
 <!--     <div class="profil">
       <%= cl_image_tag current_user.avatar, crop: :thumb, gravity: :face, width: 50, height: 50, class: "avatar" %>
       <p>
@@ -31,32 +31,18 @@
   <% if @bookings.any? %>
   <div class="cards">
     <div class="row">
-      <% @bookings.each do |booking| %>
+      <% if @bookings_realised.each do |booking| %>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-          <%= link_to dashboard_booking_path(booking) do %>
-            <div class="card-mission">
-              <div class="card-picture" style="background-image: url(<%= cl_image_path(booking.mission.picture, height: 200, crop: :fill) %>);">
-                <%= display_picto_cause(booking.mission.cause) %>
-                <div class="card-count-places">
-                  <h2><%= booking.mission.maxcapacity %></h2>
-                  <h3>places restantes</h3>
-                </div>
-              </div>
-              <div class="card-misson-infos">
-                <div>
-                  <h4><%= display_date(booking.mission.datetime, booking.mission.duration) %></h4>
-                  <h2><%= booking.mission.title.capitalize %></h2>
-                  <p><%= booking.mission.description.capitalize %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render 'users/mission' %>
+        </div>
+      <% else booking_to_come.each do |booking| %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <%= render 'users/mission' %>
         </div>
       <% end %>
     </div>
   </div>
   <% else %>
-    <p>Pas de missions 😳</p>
+    <p>Pas de missions en ce moment !</p>
   <% end %>
 </div>
-
