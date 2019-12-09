@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def dashboard
-    @missions = current_user.missions
+    @bookings = current_user.bookings
   end
 
   # def show

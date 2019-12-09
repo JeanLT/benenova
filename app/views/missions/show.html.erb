@@ -68,11 +68,31 @@
           </button>
         <!-- </div> -->
         <div class="modal-body">
-          Etes-vous sûr de vouloir participer à cette action ?
+          Es-tu sûr de vouloir participer à cette action ?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
           <%= link_to "Oui bien sûr", mission_bookings_path(@mission), class: "btn btn-info oui", method: :post %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header"> -->
+          <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+          <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <!-- </div> -->
+        <div class="modal-body">
+          Es-tu sûr sûr sûr d’annuler ??
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
+          <%= link_to "Oui", cancel_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
         </div>
       </div>
     </div>

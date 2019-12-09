@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   end
 
   get "/dashboard", to: "users#dashboard"
+  namespace :dashboard do
+    resources :bookings, only: :show
+  end
   # resource :dashboard, only: :show
   # => GET   /dashboard(.:format)   dashboards#show
 
