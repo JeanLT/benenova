@@ -37,7 +37,7 @@
     </div>
     <%= range_field_tag :radius,
       params[:radius],
-      class: "form-control",
+      # class: "form-control",
       placeholder: "Dans un rayon de",
       class: "custom-range",
       name: "radius",
@@ -46,15 +46,11 @@
       step: "5"
     %>
     <div class="radius-value">
-      <p>5</p>
-      <p>10</p>
-      <p>15</p>
-      <p>20</p>
-      <p>25</p>
-      <p>30</p>
-      <p>35</p>
-      <p>40</p>
-      <p>45</p>
+
+      <% (5..45).step(5).each do |step| %>
+        <% active_class = params[:radius].to_i == step ? "radius-on" : "" %>
+        <p data-radius-value="<%= step %>" class="<%= active_class %>"><%= step %></p>
+      <% end %>
     </div>
   </div>
 
@@ -95,7 +91,6 @@
         <% end %>
       </div>
   </div>
-
 
   <div>
     <button type="sumbit" class="btn btn-info confirm-filters">C'est parti !</button>

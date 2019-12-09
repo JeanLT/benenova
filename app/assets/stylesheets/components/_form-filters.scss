@@ -119,7 +119,7 @@ ul#horizontal-list li {
   justify-content: space-between;
   margin-bottom: -12px;
   font-weight: lighter;
-  color: #234E52;
+  color: $green-very-light;
   font-size: 13px;
   padding-left: 28px;
   padding-right: 20px;
@@ -129,6 +129,10 @@ ul#horizontal-list li {
   p {
     margin: 6px;
   }
+}
+
+.radius-on{
+  color: $green-text;
 }
 
 .duration-text{
