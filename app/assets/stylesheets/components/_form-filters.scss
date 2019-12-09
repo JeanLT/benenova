@@ -1,3 +1,36 @@
+// CHECKBOX
+.causes-picto{
+  display: flex;
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+}
+
+ul#horizontal-list li {
+  display: inline;
+}
+
+// BUTTON
+.confirm-filters {
+  border-radius: 10px;
+  color: $green-text;
+  font-weight: bold;
+  width: 40%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
+  flex-grow: 1;
+  background-color: $yellow;
+  font-size: 20px;
+  }
+
+.recherche {
+  background-color: $yellow;
+  border-radius: 4px;
+  margin: 12px;
+}
+
 // MODAL
 
 .modal-content-filters {
@@ -54,11 +87,21 @@
   color: $green;
   text-align: left;
   font-weight: lighter;
+  margin-bottom: 10px;
 }
 
 .form-button-filters{
   text-align: left;
 
+}
+
+.radius-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -12px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: $green-text;
 }
 
 .duration-text{
@@ -67,10 +110,13 @@
   margin-bottom: -12px;
   padding-top: 10px;
   font-weight: bold;
+  color: $green-text;
 }
 
-
-
+.form-control {
+    border: 0;
+    background-color: $green-very-light;
+}
 
 
 

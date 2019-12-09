@@ -31,10 +31,20 @@
     <div class="field-label">
       <%= label_tag(:radius, "Dans un rayon de") %>
     </div>
-    <%= text_field_tag :radius,
+    <div class="radius-text">
+      <p>0km</p>
+      <p>25km</p>
+      <p>50km</p>
+    </div>
+    <%= range_field_tag :radius,
       params[:radius],
       class: "form-control",
-      placeholder: "Dans un rayon de"
+      placeholder: "Dans un rayon de",
+      class: "custom-range",
+      name: "radius",
+      min: "0",
+      max: "50",
+      step: "5"
     %>
   </div>
 
@@ -42,62 +52,45 @@
     <div class="field-label">
       <%= label_tag(:duration, "Pour une durée maximum de") %>
     </div>
-    <%= number_field_tag :duration,
+    <div class="duration-text">
+      <p>1h</p>
+      <p>2h</p>
+      <p>3h</p>
+      <p>4h</p>
+    </div>
+    <%= range_field_tag :duration,
       params[:duration],
-      class: "form-control"
+      class: "form-control",
+      placeholder: "Dans un rayon de",
+      class: "custom-range",
+      name: "duration",
+      min: "1",
+      max: "4",
+      step: "1"
     %>
   </div>
 
   <div class="field-block">
     <div class="field-label">
-      <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
+      <%= label_tag(:causes, "Cause(s)") %>
     </div>
-    <div class="causes-picto">
-      <ul>
+      <div class="d-flex justify-content-between">
         <% Mission::CAUSES.each do |cause| %>
-            <li>
-              <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause) %>
-              <%= h cause %>
-            </li>
+            <span class="cause-option">
+              <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause), id:'cause_' + cause.parameterize(separator:"_"), hidden: true %>
+              <%= label_tag 'cause_' + cause.parameterize(separator:"_"), class: "picto-cause" do %>
+                <%= render "shared/icons/#{cause.parameterize(separator:"_")}" %>
+              <% end %>
+            </span>
         <% end %>
-      </ul>
-    </div>
-    <div class="btn btn-info confirm commitment">
-      <%= submit_tag "C'est parti !"%>
-    </div>
+      </div>
+  </div>
+
+
+  <div class="">
+    <button type="sumbit" class="btn btn-info confirm-filters">C'est parti !</button>
   </div>
 <% end %>
-
-
-
-
-<!-- TEST -->
-
-<div>
-  <label for="radius">Dans un rayon de</label>
-  <input type="range" class="custom-range" name="radius"
-         min="0" max="50" step="5">
-</div>
-
-<div class="field-block">
-
-  <div class="field-label">
-    <label for="duration">Pour une durée maximum de</label>
-  </div>
-
-  <div class="duration-text">
-    <p>1h</p>
-    <p>2h</p>
-    <p>3h</p>
-    <p>4h</p>
-  </div>
-
-  <div class="duration-range">
-    <input type="range" class="custom-range" name="duration"
-           min="1" max="4" step="1">
-  </div>
-
-</div>
 
 
 

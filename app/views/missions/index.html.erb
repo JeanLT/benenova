@@ -1,14 +1,14 @@
 <!-- FORM DROPDOWN -->
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Recherche
+<button type="button" class="btn recherche" data-toggle="modal" data-target="#exampleModal">
+Affiner ma recherche
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content-filters">
+    <div class="modal-content-filters modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="ma-recherche">Ma recherche</h5>
         <button type="button" class="close-filters" data-dismiss="modal" aria-label="Close">
@@ -16,8 +16,11 @@
         </button>
       </div>
       <div class="modal-body">
-      <%= render 'shared/form_filters' %>
+        <%= render 'shared/form_filters' %>
       </div>
+      <!-- <div class="modal-footer">
+        <button type="sumbit" class="btn btn-info confirm-filters">C'est parti !</button>
+      </div> -->
     </div>
   </div>
 </div>
