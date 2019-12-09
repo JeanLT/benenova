@@ -25,7 +25,9 @@ module MissionsHelper
     end
   end
 
-  # def capacity(bookings, maxcapacity)
-  #   capacity = maxcapacity - bookings.count
-  # end
+  def remaining_places(maxcapacity)
+    remaining = maxcapacity
+    return remaining
+  end
+
 end
