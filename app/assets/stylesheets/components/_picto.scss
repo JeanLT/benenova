@@ -12,6 +12,6 @@
 
 .cause-option {
   input[type="checkbox"]:checked + label.picto-cause {
-    border: 1px solid green;
+    border: 2px solid $green;
   }
 }

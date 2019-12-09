@@ -12,3 +12,4 @@ $(window).on('load',function(){
 import { initAutocomplete } from '../plugins/init_autocomplete';
 initAutocomplete();
 
+import '../components/display_radius';

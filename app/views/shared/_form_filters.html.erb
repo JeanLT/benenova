@@ -33,7 +33,6 @@
     </div>
     <div class="radius-text">
       <p>0km</p>
-      <p>25km</p>
       <p>50km</p>
     </div>
     <%= range_field_tag :radius,
@@ -46,6 +45,17 @@
       max: "50",
       step: "5"
     %>
+    <div class="radius-value">
+      <p>5</p>
+      <p>10</p>
+      <p>15</p>
+      <p>20</p>
+      <p>25</p>
+      <p>30</p>
+      <p>35</p>
+      <p>40</p>
+      <p>45</p>
+    </div>
   </div>
 
   <div class="field-block">
@@ -87,7 +97,7 @@
   </div>
 
 
-  <div class="">
+  <div>
     <button type="sumbit" class="btn btn-info confirm-filters">C'est parti !</button>
   </div>
 <% end %>
