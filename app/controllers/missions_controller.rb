@@ -23,6 +23,7 @@ class MissionsController < ApplicationController
 
   def show
   	@mission = Mission.find(params[:id])
+    @already_volonteer = Booking.where(user: current_user, mission: @mission, status: "accepted").exists?
     @address = @mission.address
     @partner = @mission.partner
     @booking = Booking.new
