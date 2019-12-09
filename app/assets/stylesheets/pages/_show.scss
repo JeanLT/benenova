@@ -1,22 +1,63 @@
 
+//CONTAINER
 
-.mission-couv{
-	height:200px; 
-	width: 100%; 
-	background-color: $green; 
-		img {
-		background-image: cover;
-		margin-left: auto;
-		margin-right: 30px;
-	}
-	p {
-		position:relative; 
-		color: $white; 
-		top: 17px; 
-		right: 95px;
-		font-weight: bold;  
-	}
+.flex-container {
+  display: flex;
+  justify-content: center;
 }
+
+
+// BANNER
+
+.mission-banner{
+  border-radius: 4px;
+  height: 200px;
+  position: relative;
+  background-size: cover;
+  margin-left: -16px; 
+  margin-right: -16px; 
+
+  img {
+    position: absolute;
+    right: 21px;
+    top: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    
+  }
+}
+
+.card-count-places{
+    background-color: $green;
+    text-align: center;
+    justify-content: center;
+    width:  70px;
+    height:   60px;
+    border-radius: 4px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
+    margin-bottom: 37px; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+
+  h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    font-size: 0.8rem;
+    color: white;
+    margin: 0;
+  }
+}
+
+// MISSION
 
 .mission-details {
 	background-color: $white; 
@@ -32,10 +73,13 @@
 		font-size: 17px; 
 		font-weight: bold; 
 	} 
+
 	p {
 		text-align: justify;
 	}
 }
+
+// PARTNER
 
 .association-details {
 	background-color: $white; 
@@ -56,11 +100,6 @@
 	}
 }
 
-.alignement-description-logo p {
-
-	
-}
-
 .partner-logo{
 	border: 1.5px solid $green;
 	float:left;   
@@ -69,6 +108,7 @@
 
 }
 
+// DETAILS MISSION 
 
 .mission-infos {
 	background-color: $white; 
@@ -108,7 +148,10 @@
 	position: sticky;
 	bottom: 1rem;
 	align-self: flex-end;
-	width: 90%;
-	margin-left: 20px; 
-	margin-bottom: 10px; 
+	width: 100%;
+}
+
+//--- MAP ---
+.show-map{
+
 }
