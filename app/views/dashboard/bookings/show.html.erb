@@ -42,14 +42,16 @@
           <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
         </div>
     </div>
+
     <div class="mission-infos">
+
       <div class="datetime">
         <i class="far fa-calendar-alt"></i>
-        <p><%= @booking.mission.datetime.strftime("%d.%m.%Y") %></p>
+        <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
       </div>
       <div class="duration">
         <i class="fas fa-history"></i>
-        <p><%= @booking.mission.duration %>  Heures</p>
+        <p><%= @booking.mission.duration %>  heures</p>
       </div>
       <div class="address">
         <i class="fas fa-map-marker-alt"></i>
