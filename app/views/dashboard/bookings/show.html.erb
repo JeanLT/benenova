@@ -21,21 +21,26 @@
         <p><%= @partner.description %></p>
       </div>
     </div>
+
     <div class="supernova">
     <h4>Votre supernova </h4>
-      <%= @booking.mission.supernova %>
+      <%= @booking.mission.supernova.first_name %>
       <%= @booking.mission.users %>
       <%= @booking.user.phone_number %>
     </div>
+
     <div class="mission-infos">
-      <div class="time">
-        <%= image_tag "calendar.png", class: "icon" %>
-        <p><%= @booking.mission.datetime %></p>
-        <%= image_tag "heure.png", class: "icon" %>
-        <p><%= @booking.mission.duration %></p>
+
+      <div class="datetime">
+        <i class="far fa-calendar-alt"></i>
+        <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
       </div>
-      <div class="localisation">
-        <%= image_tag "adresse-icone-png-7.png", class: "icon" %>
+      <div class="duration">
+        <i class="fas fa-history"></i>
+        <p><%= @booking.mission.duration %>  heures</p>
+      </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
         <p><%= @booking.mission.address %></p>
       </div>
     </div>
@@ -83,13 +88,13 @@
         <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span class="croix" aria-hidden="true">&times;</span>
-                                                                                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                                                                                          <!-- </div> -->
-                                                                                                                                                                                                                                                                                                          <div class="modal-body">
-                                                                                                                                                                                                                                                                                                            N’oublies pas de prévenir ton Supernova
-                                                                                                                                                                                                                                                                                                            <br>
-                                                                                                                                                                                                                                                                                                            <%=                                                                                        %>
-                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                      </div>
-                                                                                                                                                                                                                                                                                                    </div>
+        </button>
+      <!-- </div> -->
+      <div class="modal-body">
+        N’oublies pas de prévenir ton Supernova
+        <br>
+        <%=                                                                                        %>
+      </div>
+    </div>
+  </div>
+</div>

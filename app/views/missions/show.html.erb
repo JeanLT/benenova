@@ -1,41 +1,15 @@
 
 <!-- CARDS -->
-
-<div class ="container">
-	<div class="mission-details">
-		<h4>MISSION</h4>
-		<h3><%= @mission.title %></h3>
-		<p><%= @mission.description %></p>
-	</div>
-	<div class="association-details">
-		<h3><%= @partner.name %></h3>
-		<h4>PARTENAIRE</h4>
-		<div class="alignement-description-logo">
-			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
-			<p><%= @partner.description %></p>
-		</div>
-	</div>
-	<div class="mission-infos">
-		<div class="time">
-			<%= image_tag "calendar.png", class: "icon" %>
-			<p><%= @mission.datetime.strftime("%d.%m.%Y") %></p>
-			<%= image_tag "heure.png", class: "icon" %>
-			<p><%= @mission.duration %> h</p>
-		</div>
-		<div class="localisation">
-			<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
-			<p><%= @mission.address %></p>
-
 <div class ="container flex-container">
 	<div class="row">
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
 			<div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
-		            <%= display_picto_cause(@mission.cause) %>
-		            <div class="card-count-places">
-		              <p><%= @mission.remaining_places %></p>
-		              <h3>Places restantes</h3>
-		            </div>
+          <%= display_picto_cause(@mission.cause) %>
+          <div class="card-count-places">
+            <p><%= @mission.remaining_places %></p>
+            <h3>Places restantes</h3>
+          </div>
 				</div>
 			</div>
 			<div class="mission-details">

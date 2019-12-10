@@ -11,16 +11,17 @@ radius_value_labels = document.querySelectorAll(".radius-value [data-radius-valu
 radius_input = document.querySelector("input[name='radius']")
 // console.log(radius_input)x
 
-radius_input.addEventListener("input", (event) => {
-  radius_value_labels.forEach(label => {
-    label.classList.remove('radius-on')
-  })
+if (radius_input) {
+  radius_input.addEventListener("input", (event) => {
+    radius_value_labels.forEach(label => {
+      label.classList.remove('radius-on')
+    })
 
+    const currentValue   = radius_input.value
+    const labelToDisplay = document.querySelector(`[data-radius-value='${currentValue}']`)
 
-  const currentValue   = radius_input.value
-  const labelToDisplay = document.querySelector(`[data-radius-value='${currentValue}']`)
-
-  if (labelToDisplay) {
-    labelToDisplay.classList.add('radius-on')
-  }
-});
+    if (labelToDisplay) {
+      labelToDisplay.classList.add('radius-on')
+    }
+  });
+}
