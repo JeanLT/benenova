@@ -2,7 +2,7 @@ import Siema from 'siema';
 
 new Siema({
   selector: '.cards-container',
-  duration: 200,
+  duration: 0,
   easing: 'ease-out',
   perPage: 1,
   startIndex: 0,
