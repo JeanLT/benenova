@@ -1,26 +1,43 @@
-<!-- BANNER -->
-<div class="mission-couv banner d-flex " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-  <div class="mission-couv d-flex">
-    <%= cl_image_tag @booking.mission.picture, width: 375, height: 200, crop: :fill, class: "mission-picture" %>
-    <p><%= display_picto_cause(@booking.mission.cause) %></p>
-  </div>
-</div>
-
 <!-- CARDS -->
-  <div class ="container">
-    <div class="mission-details">
-      <h3><%= @booking.mission.title %></h3>
-      <h4>MISSION</h4>
-      <p><%= @booking.mission.description %></p>
-    </div>
-    <div class="association-details">
-      <h3><%= @partner.name %></h3>
-      <h4>PARTENAIRE</h4>
-      <div class="alignement-description-logo">
-        <%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
-        <p><%= @partner.description %></p>
+<div class ="container flex-container">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+        <div class="mission-banner" style="background-image: url(<%= cl_image_path(@booking.mission.picture, width: 377, height: 200, crop: :fill) %>);">
+          <%= display_picto_cause(@booking.mission.cause) %>
+          <div class="card-count-places">
+            <p><%= @booking.mission.remaining_places %></p>
+            <h3>Places restantes</h3>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="mission-details">
+        <h3><%= @booking.mission.title %></h3>
+        <h4><%= @booking.mission.cause.upcase %></h4>
+        <p><%=  @booking.mission.description %></p>
+      </div>
+      <div class="association-details">
+        <h3><%= @partner.name %></h3>
+        <h4>PARTENAIRE</h4>
+        <div class="alignement-description-logo">
+          <%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
+          <p><%= @partner.description %></p>
+        </div>
+      </div>
+      <div class="mission-infos">
+        <div class="datetime">
+          <i class="far fa-calendar-alt"></i>
+          <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
+        </div>
+        <div class="duration">
+          <i class="fas fa-history"></i>
+          <p><%= @booking.mission.duration %>  heures</p>
+        </div>
+        <div class="address">
+          <i class="fas fa-map-marker-alt"></i>
+          <p><%= @booking.mission.address %></p>
+        </div>
+      </div>
     <div class="mission-infos">
       <h3>Votre supernova </h3>
         <p>
@@ -31,37 +48,38 @@
           <div class="card card-body">
             <p>
               Votre <b>supernova</b> qu’est ce que c’est?
+              <br>
               C’est <b>LE bénévole référent</b> présent sur une action pour faire du lien entre les bénévoles, le partenaire et Benenova.
             </p>
           </div>
         </div>
         <div class="supernova">
-          <%= @booking.mission.supernova.first_name %>
-          <%= @booking.mission.supernova.last_name %>
-          <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+          <p>
+            <strong><%= @booking.mission.supernova.first_name %>
+            <%= @booking.mission.supernova.last_name %> :</strong>
+            <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+          </p>
         </div>
     </div>
+    <button type="button" class="btn btn-primary cancel" data-toggle="modal" data-target="#exampleModalLong">
+      Je souhaite annuler
+    </button>
 
-    <div class="mission-infos">
-
-      <div class="datetime">
-        <i class="far fa-calendar-alt"></i>
-        <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
-      </div>
-      <div class="duration">
-        <i class="fas fa-history"></i>
-        <p><%= @booking.mission.duration %>  heures</p>
-      </div>
-      <div class="address">
-        <i class="fas fa-map-marker-alt"></i>
-        <p><%= @booking.mission.address %></p>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="show-map" style="height: 100%">
+        <div
+          id="map"
+          style="width: 100%;
+          height: 100%;
+          min-height: 250px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
     </div>
   </div>
-
-<button type="button" class="btn btn-info confirm commitment cancel" data-toggle="modal" data-target="#exampleModalLong">
-  Je souhaite annuler
-</button>
+</div>
 
 <!-- Modal contact supernova en cas d'annulation -->
 
@@ -71,20 +89,20 @@
       <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-      <div class="modal-body">
-        <p>
-          <strong>N’oublies pas de prévenir ton Supernova :</strong>
-          <br>
-            <%= @booking.mission.supernova.first_name %>
-            <%= @booking.mission.supernova.last_name %>
-            <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
-        </p>
-      </div>
       <div class="modal-footer">
         <p>
           Es-tu sûr sûr sûr de vouloir annuler?
-          <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
-          <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+        </p>
+        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
+        <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+      </div>
+      <div class="modal-body">
+        <p>
+          <strong>Si oui, n’oublies pas de prévenir ton Supernova.</strong>
+          <br>
+            <%= @booking.mission.supernova.first_name %>
+            <%= @booking.mission.supernova.last_name %> :
+            <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
         </p>
       </div>
     </div>
@@ -92,11 +110,11 @@
 </div>
 
 <!-- MAP -->
-<br>
+<!-- <br>
 <div
   id="map"
   style="width: 100%;
   height: 250px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+</div> -->

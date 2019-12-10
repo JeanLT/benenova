@@ -5,7 +5,6 @@
 
 .modal-body {
   color: $green-text;
-  position: relative;
   text-align: center;
   font-size: 16px;
   p {
@@ -21,4 +20,8 @@
 .modal-footer {
   display: flex;
   justify-content: space-evenly;
+  position: relative;
+  p{
+    color: $green-text;
+  }
 }

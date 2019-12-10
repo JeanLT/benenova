@@ -11,7 +11,7 @@
 	height:200px;
 	width: 100%;
 	background-color: $green;
-	
+
 	img {
 		background-image: cover;
 		margin-left: auto;
@@ -41,7 +41,7 @@
 	height:200px;
 	width: 100%;
 	background-color: $green;
-	
+
 	img {
 		background-image: cover;
 		margin-left: auto;
@@ -102,20 +102,20 @@
 // p{
 //   color:$white;
 // }
-  
+
     p, h3{
-    	font-weight: bold; 
+    	font-weight: bold;
     	color: $white;
-    	margin-bottom: 0px; 
+    	margin-bottom: 0px;
     	margin-top: 3px;
     }
 
     p{
-    	margin-top: 3px; 
-    	font-size: 16px; 
+    	margin-top: 3px;
+    	font-size: 16px;
     }
     h3{
-    	font-size: 12px;  
+    	font-size: 12px;
     }
 }
 
@@ -178,6 +178,9 @@
 	box-shadow: 0 0 15px rgba(0,0,0,0.6);
 	margin-top: 12px;
 	margin-bottom: 12px;
+  p {
+    margin: 0px;
+  }
 }
 
 .datetime, .duration, .address {
@@ -209,12 +212,12 @@
 	width: 100%;
 	button {
 	  box-shadow: 0 19px 15px $green;
-	  margin-left: 0px; 
+	  margin-left: 0px;
 	}
 }
 
 //--- MAP ---
 .show-map {
-  margin-bottom: 10px; 
-  margin-top: 10px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
