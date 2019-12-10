@@ -1,56 +1,72 @@
-<!-- BANNER -->
-<div class="mission-couv banner d-flex " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-	<div class="mission-couv d-flex">
-		<%= cl_image_tag @mission.picture, width: 375, height: 200, crop: :fill, class: "mission-picture" %>
-		<p><%= display_picto_cause(@mission.cause) %></p>
+
+<!-- CARDS -->
+<div class ="container flex-container">
+	<div class="row">
+		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
+		            <%= display_picto_cause(@mission.cause) %>
+		            <div class="card-count-places">
+		              <h3>Places restantes</h3>
+		              <p><%= @mission.remaining_places %></p>
+		            </div>
+				</div>
+			</div>
+			<div class="mission-details">
+				<h3><%= @mission.title %></h3>
+				<h4><%= @mission.cause.upcase %></h4>
+				<p><%=  @mission.description %></p>
+			</div>
+			<div class="association-details">
+				<h3><%= @partner.name %></h3>
+				<h4>PARTENAIRE</h4>
+				<div class="alignement-description-logo">
+					<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
+					<p><%= @partner.description %></p>
+				</div>
+			</div>
+			<div class="mission-infos">
+				<div class="datetime">
+					<i class="far fa-calendar-alt"></i>
+					<p><%= @mission.datetime.strftime("%d.%m.%Y") %></p>
+
+				</div>
+				<div class="duration">
+					<i class="fas fa-history"></i>
+					<p><%= @mission.duration %>  Heures</p>
+				</div>
+				<div class="address">
+					<i class="fas fa-map-marker-alt"></i>
+					<p><%= @mission.address %></p>
+				</div>
+			</div>
+				<div class=" sticky-button">
+					
+					<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+					  Je m'engage
+					</button>
+
+				</div>
+			
+
+		</div>
+		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="show-map" style="height: 100%">
+				<div
+				  id="map"
+				  style="width: 100%;
+				  height: 100%;
+				  min-height: 250px;"
+				  data-markers="<%= @markers.to_json %>"
+				  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<!-- CARDS -->
-  <div class ="container-btn">
-  	<div class="mission-details">
-  		<h3><%= @mission.title %></h3>
-  		<h4>MISSION</h4>
-  		<p><%= @mission.description %></p>
-  	</div>
-  	<div class="association-details">
-  		<h3><%= @partner.name %></h3>
-  		<h4>PARTENAIRE</h4>
-  		<div class="alignement-description-logo">
-  			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
-  			<p><%= @partner.description %></p>
-  		</div>
-  	</div>
-  	<div class="mission-infos">
-  		<div class="time">
-  			<%= image_tag "calendar.png", class: "icon" %>
-  			<p><%= @mission.datetime %></p>
-  			<%= image_tag "heure.png", class: "icon" %>
-  			<p><%= @mission.duration %></p>
-  		</div>
-  		<div class="localisation">
-  			<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
-  			<p><%= @mission.address %></p>
-  		</div>
-  	</div>
-  </div>
-
-<!-- BUTTON -->
-  <button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
-    Je m'engage
-  </button>
-
-<!-- MAP -->
-<br>
-<div
-  id="map"
-  style="width: 100%;
-  height: 250px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
 <!-- Modal -->
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
