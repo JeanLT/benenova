@@ -65,7 +65,7 @@
     <div class="radius-value">
 
       <% (5..45).step(5).each do |step| %>
-        <% active_class = params[:radius].to_i == step || step == 25 ? "radius-on" : "" %>
+        <% active_class = params[:radius].to_i == step ? "radius-on" : "" %>
         <p data-radius-value="<%= step %>" class="<%= active_class %>"><%= step %></p>
       <% end %>
     </div>

@@ -5,16 +5,27 @@
 }
 
 
-.card-mission{
+.card-mission {
   background-color: white;
   border-radius: 4px;
   padding: 15px;
   margin-top: 12px;
   margin-bottom: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  order: thick solid $white;
 }
 
-.card-picture{
+.card-mission-yellow {
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  border: thick solid $yellow;
+}
+
+.card-picture {
   border-radius: 4px;
   height: 200px;
   position: relative;
