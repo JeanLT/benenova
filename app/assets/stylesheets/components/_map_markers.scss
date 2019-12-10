@@ -1,0 +1,7 @@
+.mission-marker {
+  position: relative;
+  &.highlight {
+    z-index: 1;
+    background-color: red !important;
+  }
+}

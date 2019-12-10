@@ -41,8 +41,8 @@ Affiner ma recherche
 
 <div class="cards-container">
   <% if @missions.any? %>
-      <% @missions.each do |mission| %>
-        <div class="card-slide-container">
+      <% @missions.each_with_index do |mission, index| %>
+        <div class="card-slide-container" data-card-index="<%= index %>" data-mission-id="<%= mission.id %>">
           <%= link_to mission_path(mission) do %>
             <div class="card-mission">
               <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
