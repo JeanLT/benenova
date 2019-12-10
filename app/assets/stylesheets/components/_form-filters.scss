@@ -83,8 +83,9 @@ ul#horizontal-list li {
 
 // FILTERS
 
-.date-fullday{
+.date-day-and-month{
   font-weight: bold;
+  font-size: 22px;
 }
 
 .dates-start-end{
@@ -103,12 +104,22 @@ ul#horizontal-list li {
   text-align: center;
   width: 100px;
   font-size: 15px;
-  height: 70px;
+  height: 1px;
   background-color: $green-very-light;
   border: none;
 }
 
 #starting_date_label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $green-very-light;
+}
+
+#ending_date_label {
     position: absolute;
     top: 0;
     right: 0;

@@ -5,46 +5,32 @@
       <%= label_tag(:starting_date, "Dates") %>
     </div>
 
-
     <div class="dates-start-end">
-
-
-
       <div class="dates">
           <%= date_field_tag :starting_date,
                              params[:starting_date],
                              class: "date-field"
           %>
         <label for="starting_date" id="starting_date_label">
-          <div class="date-day-and-month">
-          </div>
           <div class="date-fullday">
+          </div>
+          <div class="date-day-and-month">
           </div>
         </label>
       </div>
-
       <div class="dates">
           <%= date_field_tag :ending_date,
                              params[:ending_date],
                              class: "date-field"
           %>
         <label for="ending_date" id="ending_date_label">
-          <div class="date-day-and-month">
-          </div>
           <div class="date-fullday">
+          </div>
+          <div class="date-day-and-month">
           </div>
         </label>
       </div>
-
-
-
-      </div>
-
-
-
     </div>
-
-
   </div>
 
   <div class="field-block">
