@@ -81,7 +81,7 @@
   object-fit: cover;
 }
 
-.card-misson-infos{
+.card-misson-infos {
 
   h2{
     color: black;
@@ -110,6 +110,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0px;
+    color: black;
   }
 }
 
