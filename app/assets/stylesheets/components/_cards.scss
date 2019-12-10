@@ -1,6 +1,9 @@
 .cards-container {
   position: relative;
   z-index: 3;
+}
+
+.card-slide-container {
   padding: 12px;
 }
 
@@ -21,6 +24,7 @@
   margin-top: 12px;
   margin-bottom: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  height: 370px;
   border: thick solid $yellow;
 }
 

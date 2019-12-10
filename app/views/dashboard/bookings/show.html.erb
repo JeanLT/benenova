@@ -7,7 +7,6 @@
 </div>
 
 <!-- CARDS -->
-
   <div class ="container">
     <div class="mission-details">
       <h3><%= @booking.mission.title %></h3>
@@ -64,26 +63,6 @@
   Je souhaite annuler
 </button>
 
-<!-- Modal annulation -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="modal-body">
-        Es-tu sûr sûr sûr de vouloir annuler?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
-        <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <!-- Modal contact supernova en cas d'annulation -->
 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -99,10 +78,11 @@
           <%= @booking.mission.supernova.last_name %>
           <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
       </div>
-      <!-- <div class="modal-footer">
+      <div class="modal-footer">
+        Es-tu sûr sûr sûr de vouloir annuler?
         <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
-        <%#= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
-      </div> -->
+        <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+      </div>
     </div>
   </div>
 </div>
@@ -116,15 +96,3 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-
-<!--
-<script>
-  const supernovaInfoButton = document.getElementById("try")
-  const supernovaInfoPopover = document.querySelector(".help-popover")
-
-  supernovaInfoButton.addEventListener("click", function(){
-    console.log(supernovaInfoPopover)
-    supernovaInfoPopover.style.opacity = 1
-  });
-</script> -->

@@ -15,3 +15,5 @@ initAutocomplete();
 import '../components/display_radius';
 
 import '../components/display_date_form';
+
+import '../plugins/init_siema';
