@@ -24,6 +24,21 @@
   justify-content: center;
 }
 
+.fa-question-circle {
+  color: $green;
+}
+
+.help-popover {
+  position: absolute;
+  background-color: $yellow;
+  color: $green;
+  border-radius: 4px;
+  z-index: 2;
+  padding: 15px;
+  top:-170px;
+  opacity: 0;
+}
+
 
 // BANNER
 
@@ -32,8 +47,8 @@
   height: 200px;
   position: relative;
   background-size: cover;
-  margin-left: -16px; 
-  margin-right: -16px; 
+  margin-left: -16px;
+  margin-right: -16px;
 
   img {
     position: absolute;
@@ -42,7 +57,7 @@
     border: 2px solid white;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    
+
   }
 }
 
@@ -57,7 +72,7 @@
     right: 15px;
     bottom: 15px;
     margin: 0;
-    margin-bottom: 37px; 
+    margin-bottom: 37px;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
 
   h2 {
@@ -75,7 +90,7 @@
     margin: 0;
   }
 
-  p{	
+  p{
     color:$white;
   }
 }
@@ -123,13 +138,13 @@
 }
 
 .alignement-description-logo > .partner-logo {
-	margin-top: 10px; 
+	margin-top: 10px;
 	border: 1.5px solid $green;
-	float:left;   
+	float:left;
 	margin-right: 20px;
 }
 
-// DETAILS MISSION 
+// DETAILS MISSION
 
 .mission-infos {
 	background-color: $white;
@@ -142,17 +157,17 @@
 }
 
 .datetime, .duration, .address {
-	display: flex; 
+	display: flex;
 
 	.far, .fas {
-		color: $middle-gray; 
-		font-size: 25px;  
+		color: $middle-gray;
+		font-size: 25px;
 	}
-  
+
   p {
-		margin-top: 4px; 
-		margin-left: 13px; 
-		color: $gray; 
+		margin-top: 4px;
+		margin-left: 13px;
+		color: $gray;
 	}
 }
 
@@ -168,9 +183,9 @@
 	bottom: 1rem;
 	align-self: flex-end;
 	width: 100%;
-	// background-color: $green; 
-	// box-shadowpadding-top: 15px; 
-	// padding-bottom: 15px; 
+	// background-color: $green;
+	// box-shadowpadding-top: 15px;
+	// padding-bottom: 15px;
 	button {
 	  box-shadow: 0 19px 15px $green;
 	}
@@ -178,6 +193,6 @@
 
 //--- MAP ---
 .show-map {
-  margin-bottom: 10px; 
-  margin-top: 10px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
