@@ -21,11 +21,13 @@
         <p><%= @partner.description %></p>
       </div>
     </div>
-    <div class="supernova">
-    <h4>Votre supernova </h4>
-      <%= @booking.mission.supernova %>
-      <%= @booking.mission.users %>
-      <%= @booking.user.phone_number %>
+    <div class="mission-infos">
+      <h3>Votre supernova <i class="fas fa-question-circle"></i></h3>
+        <div class="datetime">
+          <%= @booking.mission.supernova.first_name %>
+          <%= @booking.mission.supernova.last_name %>
+          <%= @booking.mission.supernova.phone_number %>
+        </div>
     </div>
     <div class="mission-infos">
       <div class="time">
