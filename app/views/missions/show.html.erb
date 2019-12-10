@@ -7,8 +7,8 @@
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);">
 		            <%= display_picto_cause(@mission.cause) %>
 		            <div class="card-count-places">
-		              <h3>Places restantes</h3>
 		              <p><%= @mission.remaining_places %></p>
+		              <h3>Places restantes</h3>
 		            </div>
 				</div>
 			</div>

@@ -1,31 +1,23 @@
-
-//CONTAINER
-
-.mission-couv{
-	height:200px;
-	width: 100%;
-	background-color: $green;
-	img {
-		background-image: cover;
-		margin-left: auto;
-		margin-right: 30px;
-	}
-	p {
-		position:relative;
-		color: $white;
-		top: 17px;
-		right: 95px;
-		font-weight: bold;
-	}
-}
+	//CONTAINER
 
 .flex-container {
   display: flex;
   justify-content: center;
 }
 
-
 // BANNER
+
+.mission-couv{
+	height:200px;
+	width: 100%;
+	background-color: $green;
+	
+	img {
+		background-image: cover;
+		margin-left: auto;
+		margin-right: 30px;
+	}
+}
 
 .mission-banner{
   border-radius: 4px;
@@ -46,6 +38,8 @@
   }
 }
 
+// BANNER // card
+
 .card-count-places{
     background-color: $green;
     text-align: center;
@@ -60,24 +54,20 @@
     margin-bottom: 37px; 
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
 
-  h2 {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
+    p, h3{
+    	font-weight: bold; 
+    	color: $white;
+    	margin-bottom: 0px; 
+    	margin-top: 3px;
+    }
 
-  h3 {
-    font-size: 0.8rem;
-    color: white;
-    margin: 0;
-  }
-
-  p{	
-    color:$white;
-  }
+    p{
+    	margin-top: 3px; 
+    	font-size: 16px; 
+    }
+    h3{
+    	font-size: 12px;  
+    }
 }
 
 // MISSION
