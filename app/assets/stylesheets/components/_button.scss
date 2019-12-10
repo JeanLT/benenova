@@ -7,11 +7,11 @@
   flex-grow: 1;
   // padding-right: 12px;
   // padding-left: 12px;
-  
+
   &.extra-large {
     width: 100%;
   }
-  
+
   &.remove {
     background-color: $light-gray;
   }
@@ -71,5 +71,19 @@
 
 .btn {
   color: white;
+}
+
+.fa-question-circle {
+  color: $green;
+  position: absolute;
+  font-size: 40px;
+}
+
+.btn-question-mark {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 50px;
+  color: $green-very-light !important;
 }
 
