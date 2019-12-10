@@ -14,8 +14,9 @@
   margin-top: 12px;
   margin-bottom: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  order: thick solid $white;
+  border: thick solid $white;
   height: 370px;
+
 }
 
 .card-mission-yellow {
@@ -137,6 +138,7 @@
 .card-body {
   background-color: $yellow;
   color: $green-text;
+  margin: 0px;
 }
 
 // background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
