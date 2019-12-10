@@ -7,6 +7,14 @@
   flex-grow: 1;
   // padding-right: 12px;
   // padding-left: 12px;
+  
+  &.extra-large {
+    width: 100%;
+  }
+  
+  &.remove {
+    background-color: $light-gray;
+  }
 }
 
 .commitment {
