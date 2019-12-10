@@ -83,6 +83,25 @@ ul#horizontal-list li {
 
 // FILTERS
 
+.dates-start-end{
+  display:flex;
+  justify-content: center;
+}
+
+.dates {
+  display: block;
+  justify-content: space-around;
+}
+
+.date-field {
+  text-align: center;
+  width: 100px;
+  font-size: 15px;
+  height: 70px;
+  background-color: $green-very-light;
+  border: none;
+}
+
 .field-block{
     display: block;
     background-color: $green-very-light;

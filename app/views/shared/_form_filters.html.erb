@@ -4,16 +4,36 @@
     <div class="field-label">
       <%= label_tag(:starting_date, "Dates") %>
     </div>
-    <%= date_field_tag :starting_date,
-      params[:starting_date],
-      class: "form-control",
-      placeholder: "Date de début"
-    %>
-    <%= date_field_tag :ending_date,
-      params[:ending_date],
-      class: "form-control",
-      placeholder: "Date de fin"
-    %>
+    <div class="dates-start-end">
+      <div class="dates">
+        <div>
+          <%= date_field_tag :starting_date,
+            params[:starting_date],
+            class: "date-field"
+          %>
+        </div>
+        <div>
+          <%= DateTime.parse(params[:starting_date]).strftime("%A") %>
+        </div>
+        <div>
+          <%= DateTime.parse(params[:starting_date]).strftime("%d %B") %>
+        </div>
+      </div>
+      <div class="dates">
+        <div>
+          <%= date_field_tag :ending_date,
+            params[:ending_date],
+            class: "date-field"
+          %>
+        </div>
+        <div>
+          <%= DateTime.parse(params[:ending_date]).strftime("%A") %>
+        </div>
+        <div>
+          <%= DateTime.parse(params[:ending_date]).strftime("%d %B") %>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="field-block">
