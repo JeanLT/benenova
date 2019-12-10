@@ -72,16 +72,20 @@
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="modal-body">
-        <strong>N’oublies pas de prévenir ton Supernova :</strong>
-        <br>
-          <%= @booking.mission.supernova.first_name %>
-          <%= @booking.mission.supernova.last_name %>
-          <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+        <p>
+          <strong>N’oublies pas de prévenir ton Supernova :</strong>
+          <br>
+            <%= @booking.mission.supernova.first_name %>
+            <%= @booking.mission.supernova.last_name %>
+            <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+        </p>
       </div>
       <div class="modal-footer">
-        Es-tu sûr sûr sûr de vouloir annuler?
-        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
-        <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+        <p>
+          Es-tu sûr sûr sûr de vouloir annuler?
+          <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
+          <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+        </p>
       </div>
     </div>
   </div>

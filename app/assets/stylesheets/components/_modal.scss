@@ -5,10 +5,17 @@
 
 .modal-body {
   color: $green-text;
+  position: relative;
   text-align: center;
-  margin-right: 15px;
-  margin-left: 15px;
   font-size: 16px;
+  p {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+#supernova-talk {
+  margin-top: 15px;
 }
 
 .modal-footer {
