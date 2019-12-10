@@ -121,7 +121,7 @@ partner10.save!
 
 partner11 = Partner.new(
   name: "Handiplanet",
-  description: "Handiplanet a pour mission de faciliter et améliorer la mobilité des personnes en situation de handicap visible ou invisible au travers d’une plateforme collaborative digitale permettant le partage d’expérience de l’accessibilité des établissements touristiques recevant du public (restaurants, hôtels, bars, musées, activités, loisirs....) et ce en fonction de la mobilité de chacun.",
+  description: "Handiplanet a pour mission de faciliter et améliorer la mobilité des personnes en situation de handicap visible ou invisible.au travers d’une plateforme collaborative digitale permettant le partage d’expérience de l’accessibilité des établissements touristiques recevant du public (restaurants, hôtels, bars, musées, activités, loisirs....) et ce en fonction de la mobilité de chacun.",
   address: "7 Rue Emile Redor, 44400 Rezé"
 )
 partner11.remote_logo_url = "https://handiplanet.com/assets/images/icon-app.jpg"

@@ -1,27 +1,48 @@
 <div class ="container-fluid">
-   <h3>Mon tableau de bord</h3>
-    <div class="profil">
+   <h3>Mes missions</h3>
+   <p>Voici le récapitulatif des missions auxquelles tu t'es engagé.</p>
+<!--     <div class="profil">
       <%= cl_image_tag current_user.avatar, crop: :thumb, gravity: :face, width: 50, height: 50, class: "avatar" %>
       <p>
         <%= current_user.last_name %>
         <%= current_user.first_name %>
       </p>
-    </div>
+    </div> -->
 </div>
 
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header"> -->
-        <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="croix" aria-hidden="true">&times;</span>
-        </button>
-      <!-- </div> -->
-      <div class="modal-body">
-        <strong>Super, merci pour ta participation !</strong>
-        <hr>
-        Tu vas recevoir un email avec les coordonnées de ton Supernova (ton interlocuteur privilégié).</div>
+<!-- PARTIAL -->
+<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <%#= render 'shared/partial' %>
+</div> -->
+
+<div class="cards-container">
+    <div class="cards">
+      <div class="row">
+        <div class="missions-to-come-realised">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">A venir</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Réalisées</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <% @bookings_to_come.each do |booking_to_come| %>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <%= render 'users/mission', booking: booking_to_come %>
+                </div>
+              <% end %>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <% @bookings_realised.each do |booking_realised| %>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <%= render 'users/mission', booking: booking_realised %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
