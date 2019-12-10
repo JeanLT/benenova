@@ -12,10 +12,3 @@ $(window).on('load',function(){
 import { initAutocomplete } from '../plugins/init_autocomplete';
 initAutocomplete();
 
-
-
-// const question_mark = document.querySelector('fa-question-circle');
-// question_mark.addEventListener('click', (event) => {
-//   console.log(help-popover(style: 'opacity: 1'));
-// });
-
