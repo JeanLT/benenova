@@ -7,7 +7,7 @@
 </div>
 
 <!-- CARDS -->
-  <div class ="container-btn">
+  <div class ="container">
     <div class="mission-details">
       <h3><%= @booking.mission.title %></h3>
       <h4>MISSION</h4>
@@ -28,22 +28,87 @@
       <%= @booking.user.phone_number %>
     </div>
     <div class="mission-infos">
-      <div class="time">
-        <%= image_tag "calendar.png", class: "icon" %>
-        <p><%= @booking.mission.datetime %></p>
-        <%= image_tag "heure.png", class: "icon" %>
-        <p><%= @booking.mission.duration %></p>
+      <h3>Votre supernova </h3>
+        <p>
+          <button class="btn btn-question-mark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-question-circle"></i>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <p>
+              Votre <b>supernova</b> qu’est ce que c’est?
+              C’est <b>LE bénévole référent</b> présent sur une action pour faire du lien entre les bénévoles, le partenaire et Benenova.
+            </p>
+          </div>
+        </div>
+        <div class="supernova">
+          <%= @booking.mission.supernova.first_name %>
+          <%= @booking.mission.supernova.last_name %>
+          <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+        </div>
+    </div>
+
+    <div class="mission-infos">
+
+      <div class="datetime">
+        <i class="far fa-calendar-alt"></i>
+        <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
       </div>
-      <div class="localisation">
-        <%= image_tag "adresse-icone-png-7.png", class: "icon" %>
+      <div class="duration">
+        <i class="fas fa-history"></i>
+        <p><%= @booking.mission.duration %>  heures</p>
+      </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
         <p><%= @booking.mission.address %></p>
       </div>
     </div>
   </div>
 
-  <button type="button" class="btn btn-info confirm commitment cancel" data-toggle="modal" data-target="#exampleModalLong">
-    Je souhaite annuler
-  </button>
+<button type="button" class="btn btn-info confirm commitment cancel" data-toggle="modal" data-target="#exampleModalLong">
+  Je souhaite annuler
+</button>
+
+<!-- Modal annulation -->
+<!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        Es-tu sûr sûr sûr de vouloir annuler?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
+        <%#= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal contact supernova en cas d'annulation -->
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <strong>N’oublies pas de prévenir ton Supernova :</strong>
+        <br>
+          <%= @booking.mission.supernova.first_name %>
+          <%= @booking.mission.supernova.last_name %>
+          <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
+        <%#= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
+      </div> -->
+    </div>
+  </div>
+</div>
 
 <!-- MAP -->
 <br>
@@ -55,41 +120,14 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header"> -->
-        <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
-        <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      <!-- </div> -->
-      <div class="modal-body">
-        Es-tu sûr sûr sûr de vouloir annuler?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button>
-        <%= link_to "Oui", cancel_dashboard_booking_path(@booking), class: "btn btn-info oui", method: :patch %>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header"> -->
-        <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="croix" aria-hidden="true">&times;</span>
-                                                                                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                                                                                          <!-- </div> -->
-                                                                                                                                                                                                                                                                                                          <div class="modal-body">
-                                                                                                                                                                                                                                                                                                            N’oublies pas de prévenir ton Supernova
-                                                                                                                                                                                                                                                                                                            <br>
-                                                                                                                                                                                                                                                                                                            <%=                                                                                        %>
-                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                      </div>
-                                                                                                                                                                                                                                                                                                    </div>
+<!--
+<script>
+  const supernovaInfoButton = document.getElementById("try")
+  const supernovaInfoPopover = document.querySelector(".help-popover")
+
+  supernovaInfoButton.addEventListener("click", function(){
+    console.log(supernovaInfoPopover)
+    supernovaInfoPopover.style.opacity = 1
+  });
+</script> -->

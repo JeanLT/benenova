@@ -1,60 +1,79 @@
-<div class ="container">
-  
-  <h2>Gérez votre profil</h2>
-  <%= cl_image_tag @user.avatar, crop: :thumb, gravity: :face, width: 80, height: 80, class: "avatar-extra-large", alt: "avatar-bordered" %>
+<div class ="container flex-container">
+
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+    <h2>Gérez votre profil</h2>
+    <%= cl_image_tag @user.avatar, crop: :thumb, gravity: :face, width: 80, height: 80, class: "avatar-extra-large", alt: "avatar-bordered" %>
 
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-
-      <%= f.input :avatar %>
-      <%= f.input :avatar_cache, as: :hidden %>
-      <%= f.input :email, required: true, autofocus: true %>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-      <% end %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
 
 
-      <%= f.input :first_name, 
-                  label: "Prénom",
-                  hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de prénom",
-                  required: false,
-                  input_html: { autocomplete: "nouveau mot de passe" } %>
+      <% if @user.supernova = true %>
 
-      <%= f.input :last_name,
-                  label: "Nom",
-                  hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de nom",
-                  required: false,
-                  input_html: { autocomplete: "nouveau nom" } %>
-      <%= f.input :phone_number,
-                  label: "Téléphone",
-                  hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de numéro de téléphone",
-                  required: false,
-                  input_html: { autocomplete: "nouveau numéro de téléphone" } %>
-      <br>
-      <h3>Changer votre mot de passe</h3>
-      <%= f.input :password,
-                  hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de mot de passe",
-                  required: false,
-                  input_html: { autocomplete: "nouveau mot de passe" } %>
-      <%= f.input :password_confirmation,
-                  required: false,
-                  input_html: { autocomplete: "nouveau mot de passe" } %>
-      <%= f.input :current_password,
-                  hint: "Nous avons besoin de votre mot de passe pour confirmer vos changements",
-                  required: true,
-                  input_html: { autocomplete: "Ce champ est obligatoire" } %>
-    </div>
+<!--         <div class="star"> -->
+        <i class="fas fa-star"></i>
+ <!--      </div> -->
 
-    <div class="form-actions btn btn-info confirm extra-large">
-      <%= f.button :submit, "Mettre à jour vos informations" %>
-    </div>
-  <% end %>
+      <%end %>
 
-  <div class="btn btn-secondary btn-sm"><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes-vous sûr ?" }, method: :delete %></div>
 
-  <p><%= link_to "Back", :back %></p>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :avatar %>
+        <%= f.input :avatar_cache, as: :hidden %>
+        <%= f.input :email, required: true, autofocus: true %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
+
+
+            <%= f.input :first_name,
+                        placeholder: "Prénom",
+                        label: "Prénom :",
+                        hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de prénom",
+                        required: false,
+                        input_html: { autocomplete: "nouveau mot de passe" } %>
+
+        <%= f.input :first_name,
+                    label: "Prénom",
+                    hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de prénom",
+                    required: false,
+                    input_html: { autocomplete: "nouveau mot de passe" } %>
+
+        <%= f.input :last_name,
+                    label: "Nom",
+                    hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de nom",
+                    required: false,
+                    input_html: { autocomplete: "nouveau nom" } %>
+        <%= f.input :phone_number,
+                    label: "Téléphone",
+                    hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de numéro de téléphone",
+                    required: false,
+                    input_html: { autocomplete: "nouveau numéro de téléphone" } %>
+        <br>
+        <h3>Changer votre mot de passe</h3>
+        <%= f.input :password,
+                    hint: "Ne remplissez pas ce champ si vous ne souhaitez pas changer de mot de passe",
+                    required: false,
+                    input_html: { autocomplete: "nouveau mot de passe" } %>
+        <%= f.input :password_confirmation,
+                    required: false,
+                    input_html: { autocomplete: "nouveau mot de passe" } %>
+        <%= f.input :current_password,
+                    hint: "Nous avons besoin de votre mot de passe pour confirmer vos changements",
+                    required: true,
+                    input_html: { autocomplete: "Ce champ est obligatoire" } %>
+      </div>
+
+      <div class="form-actions btn btn-info confirm extra-large">
+        <%= f.button :submit, "Mettre à jour vos informations" %> <% end %>
+      </div>
+
+      <div class="btn btn-secondary btn-sm"><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Etes-vous sûr ?" }, method: :delete %>
+      </div>
+    <% end %>
+  </div>
 </div>
+

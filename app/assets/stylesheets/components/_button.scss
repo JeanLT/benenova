@@ -7,11 +7,11 @@
   flex-grow: 1;
   // padding-right: 12px;
   // padding-left: 12px;
-  
+
   &.extra-large {
     width: 100%;
   }
-  
+
   &.remove {
     background-color: $light-gray;
   }
@@ -67,9 +67,37 @@
   position: absolute;
   top: 5px;
   right: 10px;
+  font-size: 35px;
+}
+
+.close {
+  font-size: 35px;
 }
 
 .btn {
   color: white;
 }
 
+.fa-question-circle {
+  color: $green;
+  position: absolute;
+  font-size: 40px;
+}
+
+.btn-question-mark {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 50px;
+  color: $green-very-light !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.btn-sm {
+  margin-top: 20px;
+  margin-bottom: 20px;  
+  width: 70%;
+}

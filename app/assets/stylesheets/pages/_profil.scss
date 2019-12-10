@@ -4,8 +4,16 @@
 }
 
 .btn-sm {
-	width: 100%; 
 	margin-top: 20px;
 	margin-bottom: 20px; 
 	color: $light-gray;  
+}
+
+.fa-star {
+	color: $yellow;
+	font-size: 30px;
+	position: absolute;
+	margin-left: 165px; 
+	margin-top: -125px;  
+
 }
