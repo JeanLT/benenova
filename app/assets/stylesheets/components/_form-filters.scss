@@ -1,0 +1,202 @@
+// CHECKBOX
+.causes-picto{
+  display: flex;
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+}
+
+ul#horizontal-list li {
+  display: inline;
+}
+
+// BUTTON
+.confirm-filters {
+  border-radius: 10px;
+  color: $green-text;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
+  flex-grow: 1;
+  background-color: $yellow;
+  font-size: 20px;
+  }
+
+.recherche {
+  background-color: $yellow;
+  border-radius: 4px;
+  margin: 36px 12px 24px 12px;
+  color: $green-text;
+}
+
+// MODAL
+
+.modal-content-filters {
+ background-color: $green;
+ border-radius: 10px;
+ margin: 0;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-bottom: none;
+}
+
+.modal-body {
+  color: $green-text;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+#ma-recherche{
+  color: white;
+  font-size: 24px;
+}
+
+.close-filters{
+  color: white;
+}
+
+.new-form {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+// FILTERS
+
+.date-day-and-month{
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.dates-start-end{
+  display:flex;
+  justify-content: space-around;
+}
+
+.dates {
+  display: block;
+  justify-content: space-around;
+  padding: 15px;
+  position: relative;
+}
+
+.date-field {
+  text-align: center;
+  width: 100px;
+  font-size: 15px;
+  height: 1px;
+  background-color: $green-very-light;
+  border: none;
+}
+
+#starting_date_label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $green-very-light;
+}
+
+#ending_date_label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $green-very-light;
+}
+
+.field-block{
+    display: block;
+    background-color: $green-very-light;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.field-label{
+  color: $green;
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.form-button-filters{
+  text-align: left;
+
+}
+
+.radius-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -12px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: $green-text;
+}
+
+.radius-value{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: -12px;
+  font-weight: lighter;
+  color: $green-very-light;
+  font-size: 13px;
+  padding-left: 28px;
+  padding-right: 20px;
+  font-weight: bolder;
+  margin-top: -11px;
+
+  p {
+    margin: 6px;
+  }
+}
+
+.radius-on{
+  color: $green-text;
+}
+
+.duration-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -12px;
+  padding-top: 12px;
+  font-weight: bold;
+  color: $green-text;
+}
+
+.form-control {
+    border: 0;
+    background-color: $green-very-light;
+}
+
+
+
+
+
+

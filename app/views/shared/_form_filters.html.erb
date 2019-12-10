@@ -1,41 +1,122 @@
 <%= form_tag missions_path, method: :get do %>
-  <%= label_tag(:starting_date, "Dates") %>
-  <%= date_field_tag :starting_date,
-    params[:starting_date],
-    class: "form-control",
-    placeholder: "Date de début"
-  %>
-  <%= date_field_tag :ending_date,
-    params[:ending_date],
-    class: "form-control",
-    placeholder: "Date de fin"
-  %>
-  <%= label_tag(:address, "Adresse") %>
-  <%= text_field_tag :address,
-    params[:address],
-    class: "form-control",
-    placeholder: "Adresse"
-  %>
-  <%= label_tag(:radius, "Dans un rayon de") %>
-  <%= text_field_tag :radius,
-    params[:radius],
-    class: "form-control",
-    placeholder: "Dans un rayon de"
-  %>
-  <%= label_tag(:duration, "Pour une durée de") %>
-  <%= text_field_tag :duration,
-    params[:duration],
-    class: "form-control",
-    placeholder: "Pour une durée de"
-  %>
-  <%= label_tag(:causes, "Cause (plusieurs choix possibles)") %>
-  <ul>
-    <% Mission::CAUSES.each do |cause| %>
-        <li>
-          <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause) %>
-          <%= h cause %>
-        </li>
-    <% end %>
-  </ul>
-  <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:starting_date, "Dates") %>
+    </div>
+
+    <div class="dates-start-end">
+      <div class="dates">
+          <%= date_field_tag :starting_date,
+                             params[:starting_date],
+                             class: "date-field"
+          %>
+        <label for="starting_date" id="starting_date_label">
+          <div class="date-fullday">
+          </div>
+          <div class="date-day-and-month">
+          </div>
+        </label>
+      </div>
+      <div class="dates">
+          <%= date_field_tag :ending_date,
+                             params[:ending_date],
+                             class: "date-field"
+          %>
+        <label for="ending_date" id="ending_date_label">
+          <div class="date-fullday">
+          </div>
+          <div class="date-day-and-month">
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:address, "Adresse") %>
+    </div>
+    <%= text_field_tag :address,
+      params[:address],
+      class: "form-control",
+      placeholder: "Adresse"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:radius, "Dans un rayon de") %>
+    </div>
+    <div class="radius-text">
+      <p>0km</p>
+      <p>50km</p>
+    </div>
+    <%= range_field_tag :radius,
+      params[:radius],
+      # class: "form-control",
+      placeholder: "Dans un rayon de",
+      class: "custom-range",
+      name: "radius",
+      min: "0",
+      max: "50",
+      step: "5"
+    %>
+    <div class="radius-value">
+
+      <% (5..45).step(5).each do |step| %>
+        <% active_class = params[:radius].to_i == step ? "radius-on" : "" %>
+        <p data-radius-value="<%= step %>" class="<%= active_class %>"><%= step %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:duration, "Pour une durée maximum de") %>
+    </div>
+    <div class="duration-text">
+      <p>1h</p>
+      <p>2h</p>
+      <p>3h</p>
+      <p>4h</p>
+    </div>
+    <%= range_field_tag :duration,
+      params[:duration],
+      class: "form-control",
+      placeholder: "Dans un rayon de",
+      class: "custom-range",
+      name: "duration",
+      min: "1",
+      max: "4",
+      step: "1"
+    %>
+  </div>
+
+  <div class="field-block">
+    <div class="field-label">
+      <%= label_tag(:causes, "Cause(s)") %>
+    </div>
+      <div class="d-flex justify-content-between">
+        <% Mission::CAUSES.each do |cause| %>
+            <span class="cause-option">
+              <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause), id:'cause_' + cause.parameterize(separator:"_"), hidden: true %>
+              <%= label_tag 'cause_' + cause.parameterize(separator:"_"), class: "picto-cause" do %>
+                <%= render "shared/icons/#{cause.parameterize(separator:"_")}" %>
+              <% end %>
+            </span>
+        <% end %>
+      </div>
+  </div>
+
+  <div>
+    <button type="sumbit" class="btn btn-info confirm-filters">C'est parti !</button>
+  </div>
 <% end %>
+
+
+
+
+
+
+

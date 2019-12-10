@@ -1,0 +1,17 @@
+.picto-cause {
+  background-color: $yellow;
+  border-radius: 50%;
+  border: $green;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  display: flex;
+}
+
+.cause-option {
+  input[type="checkbox"]:checked + label.picto-cause {
+    border: 2px solid $green;
+  }
+}

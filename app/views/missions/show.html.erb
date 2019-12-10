@@ -1,5 +1,31 @@
 
 <!-- CARDS -->
+
+<div class ="container">
+	<div class="mission-details">
+		<h4>MISSION</h4>
+		<h3><%= @mission.title %></h3>
+		<p><%= @mission.description %></p>
+	</div>
+	<div class="association-details">
+		<h3><%= @partner.name %></h3>
+		<h4>PARTENAIRE</h4>
+		<div class="alignement-description-logo">
+			<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
+			<p><%= @partner.description %></p>
+		</div>
+	</div>
+	<div class="mission-infos">
+		<div class="time">
+			<%= image_tag "calendar.png", class: "icon" %>
+			<p><%= @mission.datetime.strftime("%d.%m.%Y") %></p>
+			<%= image_tag "heure.png", class: "icon" %>
+			<p><%= @mission.duration %> h</p>
+		</div>
+		<div class="localisation">
+			<%= image_tag "adresse-icone-png-7.png", class: "icon" %>
+			<p><%= @mission.address %></p>
+
 <div class ="container flex-container">
 	<div class="row">
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
@@ -26,10 +52,10 @@
 				</div>
 			</div>
 			<div class="mission-infos">
+
 				<div class="datetime">
 					<i class="far fa-calendar-alt"></i>
 					<p><%= @mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
-
 				</div>
 				<div class="duration">
 					<i class="fas fa-history"></i>
@@ -41,13 +67,13 @@
 				</div>
 			</div>
 				<div class=" sticky-button">
-					
+
 					<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
 					  Je m'engage
 					</button>
 
 				</div>
-			
+
 
 		</div>
 		<div class="col-12 col-sm-6 col-md-6 col-lg-6">
@@ -70,8 +96,7 @@
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <!-- <div class="modal-header"> -->
-        <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+      <!-- <div class="modal-hexpleModalLongTitle">Modal title</h5> -->
         <button type="button" class="close croix" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
