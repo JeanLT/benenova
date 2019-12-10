@@ -14,4 +14,4 @@ initAutocomplete();
 
 import '../components/display_radius';
 
-import "../plugins/flatpickr";
+import '../components/display_date_form';

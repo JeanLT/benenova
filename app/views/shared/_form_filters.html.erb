@@ -15,30 +15,29 @@
                              params[:starting_date],
                              class: "date-field"
           %>
-      <label for="starting_date" id="starting_date_label">
-        <div>
-          <%= DateTime.parse(params[:starting_date] || DateTime.now.to_s).strftime("%A") %>
-        </div>
-        <div class="date-fullday">
-          <%= DateTime.parse(params[:starting_date] || DateTime.now.to_s).strftime("%d %B") %>
-        </div>
-      </label>
+        <label for="starting_date" id="starting_date_label">
+          <div class="date-day-and-month">
+          </div>
+          <div class="date-fullday">
+          </div>
+        </label>
       </div>
 
-
       <div class="dates">
-        <div>
           <%= date_field_tag :ending_date,
                              params[:ending_date],
                              class: "date-field"
           %>
-        </div>
-        <div>
-          <%= DateTime.parse(params[:ending_date] || DateTime.now.to_s).strftime("%A") %>
-        </div>
-        <div class="date-fullday">
-          <%= DateTime.parse(params[:ending_date] || DateTime.now.to_s).strftime("%d %B") %>
-        </div>
+        <label for="ending_date" id="ending_date_label">
+          <div class="date-day-and-month">
+          </div>
+          <div class="date-fullday">
+          </div>
+        </label>
+      </div>
+
+
+
       </div>
 
 

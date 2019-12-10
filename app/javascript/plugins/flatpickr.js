@@ -5,7 +5,12 @@ flatpickr(".datepicker", {})
 
 const startingDateInput = document.getElementById('input#starting_date')
 const startingDateLabel = document.getElementById('label#starting_date_label')
+const currentValue      = startingDateInput.value
 
-startingDateLabel.addEventListener('click', () => {
-  startingDateInput.focus()
-})
+// startingDateLabel.addEventListener('click', () => {
+//   startingDateInput.focus()
+// })
+
+startingDateInput.addEventListener("input", (event) => {
+    startingDateLabel.value = '${currentValue}';
+  });
