@@ -1,6 +1,24 @@
 
 //CONTAINER
 
+.mission-couv{
+	height:200px;
+	width: 100%;
+	background-color: $green;
+	img {
+		background-image: cover;
+		margin-left: auto;
+		margin-right: 30px;
+	}
+	p {
+		position:relative;
+		color: $white;
+		top: 17px;
+		right: 95px;
+		font-weight: bold;
+	}
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
@@ -65,20 +83,19 @@
 // MISSION
 
 .mission-details {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	margin-top: -34px; 
+	position: relative;
+	margin-top: -34px;
 	box-shadow: 0 0 15px rgba(0,0,0,0.6);
 
 	h4 {
-		font-family: $headers-font; 
-		color: $green; 
-		font-size: 17px; 
-		font-weight: bold; 
-	} 
-
+		font-family: $headers-font;
+		color: $green;
+		font-size: 17px;
+		font-weight: bold;
+	}
 	p {
 		text-align: justify;
 	}
@@ -87,41 +104,40 @@
 // PARTNER
 
 .association-details {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
-	margin-top: 12px; 
+	position: relative;
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+	margin-top: 12px;
 	margin-bottom: 12px;
 	h4 {
-		font-family: $headers-font; 
-		color: $green; 
-		font-size: 17px; 
-		font-weight: bold; 
-	} 
+		font-family: $headers-font;
+		color: $green;
+		font-size: 17px;
+		font-weight: bold;
+	}
 	p {
 		text-align: justify;
 	}
 }
 
-.alignement-description-logo > .partner-logo{
+.alignement-description-logo > .partner-logo {
 	margin-top: 10px; 
 	border: 1.5px solid $green;
 	float:left;   
-	margin-right: 20px; 
-
+	margin-right: 20px;
 }
 
 // DETAILS MISSION 
 
 .mission-infos {
-	background-color: $white; 
+	background-color: $white;
 	padding: 15px 15px 2px 15px;
 	border-radius: 4px;
-	position: relative; 
-	box-shadow: 0 0 15px rgba(0,0,0,0.6); 
-	margin-top: 12px; 
+	position: relative;
+	box-shadow: 0 0 15px rgba(0,0,0,0.6);
+	margin-top: 12px;
 	margin-bottom: 12px;
 }
 
@@ -132,15 +148,13 @@
 		color: $middle-gray; 
 		font-size: 25px;  
 	}
-
-	p {
+  
+  p {
 		margin-top: 4px; 
 		margin-left: 13px; 
 		color: $gray; 
 	}
 }
-
-
 
 //--- BUTTON ----
 
@@ -158,13 +172,12 @@
 	// box-shadowpadding-top: 15px; 
 	// padding-bottom: 15px; 
 	button {
-
-	box-shadow: 0 19px 15px $green;
-	 }
+	  box-shadow: 0 19px 15px $green;
+	}
 }
 
 //--- MAP ---
-.show-map{
-margin-bottom: 10px; 
-margin-top: 10px; 
+.show-map {
+  margin-bottom: 10px; 
+  margin-top: 10px; 
 }
