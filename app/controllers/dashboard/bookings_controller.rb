@@ -5,8 +5,7 @@ module Dashboard
       @address = @booking.mission.address
       @partner = @booking.mission.partner
 
-      # @markers = [{ lng: @mission.longitude, lat: @mission.latitude,
-      #     infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }) }]
+      @markers = [{ lng: @booking.mission.longitude, lat: @booking.mission.latitude}]
     end
 
     def cancel
