@@ -15,7 +15,7 @@
         <div>
           <%= DateTime.parse(params[:starting_date]).strftime("%A") %>
         </div>
-        <div>
+        <div class="date-fullday">
           <%= DateTime.parse(params[:starting_date]).strftime("%d %B") %>
         </div>
       </div>
@@ -29,7 +29,7 @@
         <div>
           <%= DateTime.parse(params[:ending_date]).strftime("%A") %>
         </div>
-        <div>
+        <div class="date-fullday">
           <%= DateTime.parse(params[:ending_date]).strftime("%d %B") %>
         </div>
       </div>

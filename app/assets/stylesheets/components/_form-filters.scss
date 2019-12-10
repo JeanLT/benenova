@@ -83,6 +83,10 @@ ul#horizontal-list li {
 
 // FILTERS
 
+.date-fullday{
+  font-weight: bold;
+}
+
 .dates-start-end{
   display:flex;
   justify-content: center;
@@ -91,6 +95,7 @@ ul#horizontal-list li {
 .dates {
   display: block;
   justify-content: space-around;
+  padding: 15px;
 }
 
 .date-field {
