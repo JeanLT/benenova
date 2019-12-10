@@ -13,3 +13,5 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 initAutocomplete();
 
 import '../components/display_radius';
+
+import "../plugins/flatpickr";

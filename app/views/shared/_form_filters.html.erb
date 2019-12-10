@@ -4,36 +4,48 @@
     <div class="field-label">
       <%= label_tag(:starting_date, "Dates") %>
     </div>
+
+
     <div class="dates-start-end">
+
+
+
       <div class="dates">
-        <div>
           <%= date_field_tag :starting_date,
-            params[:starting_date],
-            class: "date-field"
+                             params[:starting_date],
+                             class: "date-field"
           %>
-        </div>
+      <label for="starting_date" id="starting_date_label">
         <div>
-          <%= DateTime.parse(params[:starting_date]).strftime("%A") %>
+          <%= DateTime.parse(params[:starting_date] || DateTime.now.to_s).strftime("%A") %>
         </div>
         <div class="date-fullday">
-          <%= DateTime.parse(params[:starting_date]).strftime("%d %B") %>
+          <%= DateTime.parse(params[:starting_date] || DateTime.now.to_s).strftime("%d %B") %>
         </div>
+      </label>
       </div>
+
+
       <div class="dates">
         <div>
           <%= date_field_tag :ending_date,
-            params[:ending_date],
-            class: "date-field"
+                             params[:ending_date],
+                             class: "date-field"
           %>
         </div>
         <div>
-          <%= DateTime.parse(params[:ending_date]).strftime("%A") %>
+          <%= DateTime.parse(params[:ending_date] || DateTime.now.to_s).strftime("%A") %>
         </div>
         <div class="date-fullday">
-          <%= DateTime.parse(params[:ending_date]).strftime("%d %B") %>
+          <%= DateTime.parse(params[:ending_date] || DateTime.now.to_s).strftime("%d %B") %>
         </div>
       </div>
+
+
+
     </div>
+
+
   </div>
 
   <div class="field-block">
@@ -68,7 +80,7 @@
     <div class="radius-value">
 
       <% (5..45).step(5).each do |step| %>
-        <% active_class = params[:radius].to_i == step ? "radius-on" : "" %>
+        <% active_class = params[:radius].to_i == step || step == 25 ? "radius-on" : "" %>
         <p data-radius-value="<%= step %>" class="<%= active_class %>"><%= step %></p>
       <% end %>
     </div>
