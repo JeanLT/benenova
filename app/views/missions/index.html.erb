@@ -41,10 +41,8 @@ Affiner ma recherche
 
 <div class="cards-container">
   <% if @missions.any? %>
-  <div class="cards">
-    <div class="row">
       <% @missions.each do |mission| %>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card-slide-container">
           <%= link_to mission_path(mission) do %>
             <div class="card-mission">
               <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
@@ -65,8 +63,6 @@ Affiner ma recherche
           <% end %>
         </div>
       <% end %>
-    </div>
-  </div>
   <% else %>
     <p>Pas de missions 😳</p>
   <% end %>
