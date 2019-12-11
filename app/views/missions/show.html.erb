@@ -13,15 +13,15 @@
 				</div>
 			</div>
 			<div class="mission-details">
-				<h3><%= @mission.title %></h3>
 				<h4><%= @mission.cause.upcase %></h4>
+				<h3><%= @mission.title %></h3>
 				<p><%=  @mission.description %></p>
 			</div>
 			<div class="association-details">
-				<h3><%= @partner.name %></h3>
 				<h4>PARTENAIRE</h4>
+				<h3><%= @partner.name %></h3>
 				<div class="alignement-description-logo">
-					<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
+					<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
 					<p><%= @partner.description %></p>
 				</div>
 			</div>
@@ -29,11 +29,11 @@
 
 				<div class="datetime">
 					<i class="far fa-calendar-alt"></i>
-					<p><%= @mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
+					<p><%= @mission.datetime.strftime("%d.%m.%Y à %HH%M") %></p>
 				</div>
 				<div class="duration">
 					<i class="fas fa-history"></i>
-					<p><%= @mission.duration %>  heures</p>
+					<p><%= @mission.duration %> H</p>
 				</div>
 				<div class="address">
 					<i class="fas fa-map-marker-alt"></i>
