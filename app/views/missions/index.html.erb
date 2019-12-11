@@ -39,12 +39,12 @@ Affiner ma recherche
   <% if @missions.any? %>
       <% @missions.each_with_index do |mission, index| %>
         <div class="card-slide-container" data-card-index="<%= index %>" data-mission-id="<%= mission.id %>">
-          <%= link_to mission_path(mission) do %>
+          <%= link_to mission_path(mission), class: "lien" do %>
             <div class="card-mission">
               <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
                 <%= display_picto_cause(mission.cause) %>
                 <div class="card-count-places">
-                  <h2><%= mission.maxcapacity %></h2>
+                  <h2><%= mission.remaining_places %></h2>
                   <h3>places restantes</h3>
                 </div>
               </div>
@@ -60,7 +60,9 @@ Affiner ma recherche
         </div>
       <% end %>
   <% else %>
-    <p>Pas de missions 😳</p>
+    <div class="no-mission">
+      <p>Pas de missions 😳</p>
+    </div>
   <% end %>
 </div>
 

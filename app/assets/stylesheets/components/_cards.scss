@@ -1,3 +1,7 @@
+.lien:hover {
+  text-decoration: none;
+}
+
 .cards-container {
   position: relative;
   z-index: 3;
@@ -60,9 +64,10 @@
     position: absolute;
     right: 15px;
     top: 15px;
-    border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+    height: 45px;
+    width: 45px;
   }
 
   .card-count-places{
@@ -102,6 +107,7 @@
 }
 
 .card-misson-infos {
+  text-decoration: none;
 
   h2{
     color: black;
@@ -133,6 +139,10 @@
     margin: 0px;
     color: black;
   }
+}
+
+.card-misson-infos:active {
+  text-decoration: none;
 }
 
 .filter-container{
