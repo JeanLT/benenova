@@ -9,6 +9,12 @@ class MissionsController < ApplicationController
                                 .max_duration(params[:duration])
                                 .causes_selection(params[:causes])
 
+    ### Not displaying missions where user already volunteered
+    if user_signed_in?
+      missions_ids_already_volunteered = current_user.bookings.pluck(:mission_id)
+      @missions = @missions.where.not(id: missions_ids_already_volunteered)
+    end
+
     ### GEOCODING ###
 
     @markers = @missions.map do |mission|
