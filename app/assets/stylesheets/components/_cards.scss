@@ -172,3 +172,31 @@
   color: $green-text;
   margin: 0px;
 }
+
+
+.no-mission {
+  display: flex;
+  // justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 50px 24px;
+
+  h5 {
+    color: white;
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 24px 0;
+    color: $yellow;
+  }
+
+  h6{
+    color: white;
+    font-size: 20px;
+
+    }
+
+  p {
+    color: white;
+    font-size: 40px;
+  }
+}
