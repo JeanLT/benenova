@@ -57,15 +57,17 @@
   margin-left: -16px;
   margin-right: -16px;
 
-  img {
-    position: absolute;
-    right: 21px;
-    top: 15px;
-    border: 2px solid white;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+ img {
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   border-radius: 50%;
+   border: 2px solid white;
+   box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+   height: 45px;
+   width: 45px;
+ }
 
-  }
 }
 
 // BANNER // card
@@ -138,7 +140,13 @@
 	}
 	p {
 		text-align: justify;
+		margin-top: 13px; 
 	}
+}
+
+.mission-full {
+	color: $white;
+	margin: auto;  
 }
 
 // PARTNER
