@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 
+
 .home-pic {
   background-image: asset-url("home-pic.jpg");
   height: 100vh;
@@ -13,6 +14,8 @@
   padding-top: 100px;
   margin-bottom: 20px;
   font-weight: bold;
+  font-family: Lobster;
+  letter-spacing: 1px;
 }
 
 .home-pic h4 {
