@@ -196,6 +196,7 @@
   p {
 		margin-top: 4px;
 		margin-left: 13px;
+		margin-bottom: 10px; 
 		color: $gray;
 	}
 }
@@ -213,7 +214,7 @@
 	align-self: flex-end;
 	width: 100%;
 	button {
-	  box-shadow: 0 19px 15px $green;
+	  box-shadow: 0 15px 15px rgba(53, 150, 148, 0.4);
 	  margin-left: 0px;
 	}
 }
