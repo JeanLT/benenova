@@ -27,7 +27,7 @@ const fitMapToMarkers = (map, markers) => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    console.log(marker);
+    // console.log(marker);
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
         // Create a HTML element for your custom marker
     const element = document.createElement('div');

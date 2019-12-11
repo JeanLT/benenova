@@ -5,7 +5,15 @@ module Dashboard
       @address = @booking.mission.address
       @partner = @booking.mission.partner
 
-      @markers = [{ lng: @booking.mission.longitude, lat: @booking.mission.latitude}]
+      # @markers = [{ lng: @booking.mission.longitude, lat: @booking.mission.latitude}]
+      @markers = [
+      {
+        lng: @booking.mission.longitude,
+        lat: @booking.mission.latitude,
+        infoWindow: render_to_string(partial: "missions/info_window", locals: { mission: @booking.mission }),
+        imageUrl: helpers.asset_url("location-pin-yellow.png")
+      }
+    ]
     end
 
     def cancel
