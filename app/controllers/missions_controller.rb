@@ -3,7 +3,6 @@ class MissionsController < ApplicationController
 
   def index
     ### FORM ###
-
     @missions = Mission.geocoded.within_time_range(params[:starting_date], params[:ending_date])
                                 .nearby(params[:address], params[:radius])
                                 .max_duration(params[:duration])

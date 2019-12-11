@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking.mission = @mission
 
     if @booking.save!
-      redirect_to dashboard_path
+      redirect_to dashboard_path(booking_created: true)
     else
       redirect_to mission_path(@mission)
     end
