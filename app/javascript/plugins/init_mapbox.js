@@ -27,15 +27,15 @@ const fitMapToMarkers = (map, markers) => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
+    console.log(marker);
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
         // Create a HTML element for your custom marker
     const element = document.createElement('div');
     element.className = 'marker mission-marker mission-marker-' + marker.id;
-    // element.style.backgroundImage = `url("../assets/images/location-pin-green.png")`;
-    element.style.backgroundColor = 'green'
+    element.style.backgroundImage = `url(${marker.imageUrl})`;
+    // element.style.backgroundColor = 'green'
     element.style.backgroundSize = 'contain';
-    element.style.width = '25px';
-    element.style.height = '25px';
+
 
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])

@@ -1,8 +1,12 @@
 .mission-marker {
   position: relative;
+  height: 25px;
+  width: 25px;
+  transition: .15s;
   &.highlight {
     z-index: 1;
-    // background-image: url("../assets/images/location-pin-green.png") !important;
-    background-color: red !important;
+    background-image: asset-url("location-pin-yellow.png") !important;
+    height: 40px;
+    width: 40px;
   }
 }
