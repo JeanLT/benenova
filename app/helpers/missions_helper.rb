@@ -25,9 +25,8 @@ module MissionsHelper
     end
   end
 
-  def remaining_places(maxcapacity)
-    remaining = maxcapacity
-    return remaining
+  def label_for_remaining_places(remaining_places)
+    pluralize(remaining_places, 'place restante', plural: 'places restantes').gsub(/\d+/, "")
   end
 
 end

@@ -62,7 +62,6 @@
    right: 15px;
    top: 15px;
    border-radius: 50%;
-   border: 2px solid white;
    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
    height: 45px;
    width: 45px;
@@ -85,25 +84,6 @@
     margin: 0;
     margin-bottom: 37px;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
-
-// h2 {
-//   color: white;
-//   font-weight: bold;
-//   font-size: 1.5rem;
-//   display: inline;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// h3 {
-//   font-size: 0.8rem;
-//   color: white;
-//   margin: 0;
-// }
-
-// p{
-//   color:$white;
-// }
 
     p, h3{
     	font-weight: bold;
@@ -146,7 +126,7 @@
 
 .mission-full {
 	color: $white;
-	margin: auto;  
+	margin: auto;
 }
 
 // PARTNER
@@ -193,6 +173,11 @@
   }
 }
 
+.flex-container{
+	display: flex;
+	justify-content: left;
+}
+
 .datetime, .duration, .address {
 	display: flex;
 
@@ -207,6 +192,10 @@
 		margin-bottom: 10px; 
 		color: $gray;
 	}
+}
+
+.duration{
+	margin-left: 30px; 
 }
 
 //--- BUTTON ----
