@@ -9,6 +9,12 @@ class MissionsController < ApplicationController
                                 .max_duration(params[:duration])
                                 .causes_selection(params[:causes])
 
+    ### Not displaying missions where user already volunteered
+    if user_signed_in?
+      missions_ids_already_volunteered = current_user.bookings.where.not(status: "declined").pluck(:mission_id)
+      @missions = @missions.where.not(id: missions_ids_already_volunteered)
+    end
+
     ### GEOCODING ###
 
     @markers = @missions.map do |mission|
@@ -16,8 +22,8 @@ class MissionsController < ApplicationController
         lat: mission.latitude,
         lng: mission.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { mission: mission }),
-        id: mission.id
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        id: mission.id,
+        imageUrl: helpers.asset_url("location-pin-green.png")
       }
     end
   end

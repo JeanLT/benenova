@@ -1,3 +1,7 @@
+.lien:hover {
+  text-decoration: none;
+}
+
 .cards-container {
   position: relative;
   z-index: 3;
@@ -8,16 +12,36 @@
 }
 
 .card-mission {
+  position: relative;
   background-color: white;
   border-radius: 4px;
   padding: 15px;
   margin-top: 12px;
   margin-bottom: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  border: thick solid $white;
   height: 370px;
-
 }
+
+.card-mission.canceled {
+  .canceled-mission {
+    background-color: rgba(50, 50, 50, 0.4);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+}
+
 
 .card-mission-yellow {
   background-color: white;
@@ -40,9 +64,10 @@
     position: absolute;
     right: 15px;
     top: 15px;
-    border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+    height: 45px;
+    width: 45px;
   }
 
   .card-count-places{
@@ -81,7 +106,8 @@
   object-fit: cover;
 }
 
-.card-misson-infos{
+.card-misson-infos {
+  text-decoration: none;
 
   h2{
     color: black;
@@ -110,7 +136,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0px;
+    color: black;
   }
+}
+
+.card-misson-infos:active {
+  text-decoration: none;
 }
 
 .filter-container{
@@ -140,5 +172,3 @@
   color: $green-text;
   margin: 0px;
 }
-
-// background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
