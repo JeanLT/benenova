@@ -1,9 +1,16 @@
 <%= link_to dashboard_booking_path(booking) do %>
   <div class="card-mission <%= 'canceled' if booking.status == 'declined' %>">
+    <% if booking.status == 'declined' %>
+      <div class="canceled-mission">
+        <p>
+          Annulée
+        </p>
+      </div>
+    <% end %>
     <div class="card-picture" style="background-image: url(<%= cl_image_path(booking.mission.picture, height: 200, crop: :fill) %>);">
       <%= display_picto_cause(booking.mission.cause) %>
       <div class="card-count-places">
-        <h2><%= booking.mission.maxcapacity %></h2>
+        <p><%= booking.mission.remaining_places %></p>
         <h3>places restantes</h3>
       </div>
     </div>

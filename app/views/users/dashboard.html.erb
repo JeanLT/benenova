@@ -5,34 +5,52 @@
 </div>
 
 <!-- PARTIAL -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-  <%#= render 'shared/modal' %>
-</div> -->
+
+
+
+
+
+<% if params[:booking_created] %>
+  <!-- <button type="button" class="btn btn-primary non" data-dismiss="modal">Non</button> -->
+  <%#= link_to "Oui", mission_bookings_path(@mission), class: "btn btn-info oui", method: :post %>
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3"> -->
+  <%= render 'shared/modal' %>
+    <!-- </div> -->
+<% end %>
+
+
+
+
+
+
+
 
 <div class="cards-container">
     <div class="cards">
       <div class="row">
-        <div class="missions-to-come-realised">
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">A venir</a>
-              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Réalisées</a>
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <% @bookings_to_come.each do |booking_to_come| %>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                  <%= render 'users/mission', booking: booking_to_come %>
-                </div>
-              <% end %>
-            </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-              <% @bookings_realised.each do |booking_realised| %>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                  <%= render 'users/mission', booking: booking_realised %>
-                </div>
-              <% end %>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="missions-to-come-realised">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">A venir</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Réalisées</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <% @bookings_to_come.each do |booking_to_come| %>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <%= render 'users/mission', booking: booking_to_come %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <% @bookings_realised.each do |booking_realised| %>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <%= render 'users/mission', booking: booking_realised %>
+                  </div>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
