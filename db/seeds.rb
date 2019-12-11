@@ -426,7 +426,7 @@ mission6 = Mission.new(
   supernova: user2,
   partner: partner5,
 )
-mission6.remote_picture_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0151r000006siAvAAI&oid=00D0O000000rjwMUAQ"
+mission6.remote_picture_url = "https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/27164023_354564671619841_8747964910346247855_o.jpg?_nc_cat=101&_nc_ohc=1D3RAkvhGBcAQkbqTal1w6YCgsWED1cbco9Gv1zDRW59V94PPVL9fvgpw&_nc_ht=scontent-cdt1-1.xx&oh=f12c07830bea523f04e471387c2c036d&oe=5E8121AA"
 mission6.save!
 
 mission18 = Mission.new(
