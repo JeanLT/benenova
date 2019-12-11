@@ -60,12 +60,15 @@ Affiner ma recherche
               </div>
             </div>
           <% else %>
-            <div class="card-mission card-misson-full">
+            <div class="card-mission">
+              <div class="card-mission-full">
+                <h2>Cette mission est complète !</h2>
+              </div>
               <div class="card-picture" style="background-image: url(<%= cl_image_path(mission.picture, height: 200, crop: :fill) %>);">
                 <%= display_picto_cause(mission.cause) %>
-                <div class="card-full-places">
-                  <h2>Cette mission est complète !</h2>
-                </div>
+              <!--   <div class="card-full-places">
+
+                </div> -->
               </div>
               <div class="card-misson-infos">
                 <div>
