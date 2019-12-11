@@ -11,7 +11,7 @@ class MissionsController < ApplicationController
 
     ### Not displaying missions where user already volunteered
     if user_signed_in?
-      missions_ids_already_volunteered = current_user.bookings.pluck(:mission_id)
+      missions_ids_already_volunteered = current_user.bookings.where.not(status: "declined").pluck(:mission_id)
       @missions = @missions.where.not(id: missions_ids_already_volunteered)
     end
 
