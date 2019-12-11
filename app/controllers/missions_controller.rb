@@ -34,7 +34,13 @@ class MissionsController < ApplicationController
     @address = @mission.address
     @partner = @mission.partner
     @booking = Booking.new
-    @markers = [{ lng: @mission.longitude, lat: @mission.latitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }) }]
+    @markers = [
+      {
+        lng: @mission.longitude,
+        lat: @mission.latitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }),
+        imageUrl: helpers.asset_url("location-pin-yellow.png")
+      }
+    ]
   end
 end
