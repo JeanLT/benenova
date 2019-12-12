@@ -167,7 +167,7 @@ puts 'Creating missions...'
 mission1 = Mission.new(
   title: "A fond les ballons",
   city: "Nantes",
-  datetime: DateTime.parse("2019-12-3 18:30"),
+  datetime: DateTime.parse("2019-12-23 18:30"),
   duration: 2,
   description: "Le groupe est composé d'une vingtaine de sportifs disposant de capacités différentes, avec des degrés d'autonomie variable. Habituellement l'encadrement est de l'ordre de 1 bénévole pour 5 personnes. Afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité, l'Elan cherche 3 bénévoles supplémentaires pour les aider. ",
   cause: "Handicap",
@@ -218,7 +218,7 @@ mission14.save!
 mission2 = Mission.new(
   title: "Pédalons pour les déchets - Agronaute",
   city: "Nantes",
-  datetime: DateTime.parse("2019-12-5 09:00"),
+  datetime: DateTime.parse("2019-12-15 09:00"),
   duration: 3,
   description: "Le rendez-vous se fera au niveau du portail blanc rue du Sénégal (ancien MIN). Ensuite, une personne de l'association vous accompagnera jusqu'au local pour récupérer un vélo. La tournée se dirigera vers l'île de Nantes pour collecter auprès des restaurants les déchets organiques. Une fois la tournée terminée, vous reviendrez au lieu de départ pour décharger les épluchures et nettoyer les bacs.",
   cause: "Environnement",
@@ -308,14 +308,14 @@ mission12 = Mission.new(
   supernova: user2,
   partner: partner8,
 )
-mission12.remote_picture_url = "https://positivr.fr/wp-content/uploads/2017/12/proteger-la-planete-en-nettoyant-votre-boite-mail-application-cleanfox-une.jpg"
+mission12.remote_picture_url = "https://izneoblogbibliotheque.files.wordpress.com/2015/04/3.jpg"
 mission12.save!
 
 ######## PRECARITE #############
 mission3 = Mission.new(
   title: "Rangement au Solidari'meubles",
   city: "Nantes",
-  datetime: DateTime.parse("2019-12-5 13:30"),
+  datetime: DateTime.parse("2019-12-15 13:30"),
   duration: 2,
   description: "Solidari'meubles intervient prioritairement sur le maintien au logement, et permet ainsi aux personnes en situation financière difficile de se meubler dignement : accès à l'électroménager, table, lits, commodes, livres, vaisselle, puériculture, etc... à participation symbolique.",
   cause: "Précarité",
