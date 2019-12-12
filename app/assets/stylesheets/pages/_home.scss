@@ -8,6 +8,10 @@
 //   background-size: cover;
 // }
 
+.home-pic {
+
+}
+
 .home-pic h1 {
   color: white !important;
   text-align: center;
@@ -38,17 +42,11 @@
 }
 
 .home-btn {
-  // margin-right: 8px;
-  // margin-left: 8px;
-  // position: relative;
-  // top: 150px;
-  // display: flex;
-  // justify-content: space-evenly;
-  // height: 350px;
   display: grid;
   grid-template-columns: 120px 120px;
   grid-gap: 16px;
-  margin: auto;
+  width: 256px;
+  margin: 12px auto;
 }
 
 .card-category {
@@ -65,4 +63,15 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+.card-logo {
+  background-size: cover;
+  background-position: center;
+  height: 208px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+
 }
