@@ -1,12 +1,38 @@
 <div class="home-pic">
   <h1>Benenova</h1>
-    <div class="home-btn">
-      <%= link_to "Nantes", missions_path(address: "Nantes", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Paris", missions_path(address: "Paris", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Angers", missions_path(address: "Angers", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Lille", missions_path(address: "Lille", radius: 5), class: "btn btn-info city" %>
-    </div>
-    <div class="city-btn">
+    <div class="baseline">
       <h4>S’engager n’a jamais été aussi simple</h2>
     </div>
+    <div class="home-btn">
+      <%= link_to missions_path(address: "Nantes", radius: 5) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/images/elephantnantes.jpg)">
+          Nantes
+        </div>
+      <% end %>
+      <%= link_to missions_path(address: "Paris", radius: 5) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          Paris
+        </div>
+      <% end %>
+      <%= link_to missions_path(address: "Angers", radius: 5) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          Angers
+        </div>
+      <% end %>
+      <%= link_to missions_path(address: "Lille", radius: 5) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          Lille
+        </div>
+      <% end %>
+    </div>
+<!--   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Nantes
+  </div> -->
 </div>
+
+
+
+<%#= link_to "Nantes", missions_path(address: "Nantes", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Paris", missions_path(address: "Paris", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Angers", missions_path(address: "Angers", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Lille", missions_path(address: "Lille", radius: 5), class: "btn btn-info city" %>
