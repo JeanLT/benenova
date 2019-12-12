@@ -1,12 +1,45 @@
 <div class="home-pic">
-  <h1>Benenova</h1>
-    <div class="home-btn">
-      <%= link_to "Nantes", missions_path(address: "Nantes", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Paris", missions_path(address: "Paris", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Angers", missions_path(address: "Angers", radius: 5), class: "btn btn-info city" %>
-      <%= link_to "Lille", missions_path(address: "Lille", radius: 5), class: "btn btn-info city" %>
+  <div d-flex justify-content-center>
+    <div class="card-logo" style="background-image: url(<%= image_path "Benenova-logo-ok.png" %>);">
     </div>
-    <div class="city-btn">
-      <h4>S’engager n’a jamais été aussi simple</h2>
+  </div>
+    <h4>S’engager n’a jamais été aussi simple</h2>
+    <div class="baseline">
+      <div id="baseline-city">
+        Découvrez le bénévolat dans votre ville :
+      </div>
+      <div class="home-btn">
+        <%= link_to missions_path(address: "Nantes", radius: 5) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)), url(<%= image_path "elephantnantes.jpg" %>);">
+            Nantes
+          </div>
+        <% end %>
+        <%= link_to missions_path(address: "Paris", radius: 5) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)), url(<%= image_path "Paris.jpg" %>);">
+            Paris
+          </div>
+        <% end %>
+        <%= link_to missions_path(address: "Angers", radius: 5) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)), url(<%= image_path "angers.jpg" %>);">
+            Angers
+          </div>
+        <% end %>
+        <%= link_to missions_path(address: "Lille", radius: 5) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+            rgba(0,0,0,0.3)), url(<%= image_path "lille.jpg" %>);">
+            Lille
+          </div>
+        <% end %>
+      </div>
     </div>
 </div>
+
+
+
+<%#= link_to "Nantes", missions_path(address: "Nantes", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Paris", missions_path(address: "Paris", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Angers", missions_path(address: "Angers", radius: 5), class: "btn btn-info city" %>
+<%#= link_to "Lille", missions_path(address: "Lille", radius: 5), class: "btn btn-info city" %>
