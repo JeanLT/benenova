@@ -157,6 +157,12 @@ ul#horizontal-list li {
     height: 150px;
 }
 
+.causes-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .field-label{
   color: $green;
   text-align: left;
