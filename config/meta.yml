@@ -1,7 +1,7 @@
 meta_product_name: "Benenova"
 meta_title: "Benenova - Le bénévolat autrement"
 meta_description: "Benenova développe des actions de bénévolat concrètes, courtes, ponctuelles et collectives. Sans minimum d'engagement et selon leurs disponibilités, les bénévoles peuvent agir sur le terrain pour le mieux-vivre ensemble, auprès d'acteurs de la solidarité locale, en Ile-de-France, à Nantes, à Angers et à Lille."
-meta_image: "benenova-cover.png" # should exist in `app/assets/images/`
+meta_image: "benenova-cover-ok.jpg" # should exist in `app/assets/images/`
 twitter_account: "@Benenova_fr"   # required for Twitter Cards
 
 
