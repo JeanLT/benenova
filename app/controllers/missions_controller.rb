@@ -4,6 +4,16 @@ class MissionsController < ApplicationController
   def index
     ### FORM ###
 
+    # cookie
+
+    if params[:address].present? && params[:radius].present?
+      cookies.permanent[:address_filter] = params[:address]
+      cookies.permanent[:radius_filter] = params[:radius]
+    else
+      params[:address] = cookies[:address_filter]
+      params[:radius] = cookies[:radius_filter]
+    end
+
     @missions = Mission.geocoded.within_time_range(params[:starting_date], params[:ending_date])
                                 .nearby(params[:address], params[:radius])
                                 .max_duration(params[:duration])
@@ -26,6 +36,9 @@ class MissionsController < ApplicationController
         imageUrl: helpers.asset_url("location-pin-green.png")
       }
     end
+
+
+
   end
 
   def show
