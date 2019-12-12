@@ -11,7 +11,7 @@
 
 .home-pic h4 {
   color: $yellow;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -22,7 +22,7 @@
 
 #baseline-city {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   display: flex;
   position: absolute;
@@ -35,15 +35,11 @@
   justify-content: space-evenly;
   margin-left: 28px;
   margin-right: 28px;
-  margin-top: 70px;
+  margin-top: 50px;
   border-radius: 4px;
   height: 360px;
   position: relative;
 }
-
-// #background-image {
-//   margin-top: 10px;
-// }
 
 .home-btn {
   display: grid;
