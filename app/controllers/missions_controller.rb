@@ -21,7 +21,7 @@ class MissionsController < ApplicationController
       {
         lat: mission.latitude,
         lng: mission.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { mission: mission }),
+        # infoWindow: render_to_string(partial: "info_window", locals: { mission: mission }),
         id: mission.id,
         imageUrl: helpers.asset_url("location-pin-green.png")
       }
@@ -38,7 +38,7 @@ class MissionsController < ApplicationController
       {
         lng: @mission.longitude,
         lat: @mission.latitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }),
+        # infoWindow: render_to_string(partial: "info_window", locals: { mission: @mission }),
         imageUrl: helpers.asset_url("location-pin-yellow.png")
       }
     ]
