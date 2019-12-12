@@ -121,7 +121,7 @@
 
 .mission-details {
 	background-color: $white;
-	padding: 15px 15px 2px 15px;
+	padding: 15px 21px 2px 21px;
 	border-radius: 4px;
 	position: relative;
 	margin-top: -34px;
@@ -149,7 +149,7 @@
 
 .association-details {
 	background-color: $white;
-	padding: 15px 15px 2px 15px;
+	padding: 15px 21px 2px 21px;
 	border-radius: 4px;
 	position: relative;
 	box-shadow: 0 0 15px rgba(0,0,0,0.6);
@@ -218,6 +218,8 @@
 
 .commitment {
 	width: 100%;
+	border-radius: 4px;
+	color: #234E52;
 }
 
 .sticky-button{
