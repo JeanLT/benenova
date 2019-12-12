@@ -13,7 +13,7 @@
         </div>
       <% else %>
         <div class="mission-full" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-          <div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill,) %>);"><%= display_picto_cause(@mission.cause) %>
+          <div class="mission-banner" style="background-image: url(<%= cl_image_path(@booking.mission.picture, width: 377, height: 200, crop: :fill,) %>);"><%= display_picto_cause(@booking.mission.cause) %>
               <div class="mission_banner-abort">
                 <p>Cette mission est complète ! </p>
               </div>
