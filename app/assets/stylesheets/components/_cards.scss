@@ -22,6 +22,10 @@
   height: 370px;
 }
 
+.tab-content:hover {
+  text-decoration: none !important;
+}
+
 .card-mission-full {
   position: absolute;
   background-color: rgba(0,0,0,0.7);
@@ -189,8 +193,12 @@
   background-color: $yellow;
   color: $green-text;
   margin: 0px;
+  padding: 16px;
 }
 
+#collapseExample {
+  margin-top: 16px;
+}
 
 .no-mission {
   display: flex;
