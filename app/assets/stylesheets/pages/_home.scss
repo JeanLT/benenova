@@ -1,52 +1,80 @@
 // Specific CSS for your home-page
 
-
-.home-pic {
-  background-image: asset-url("home-pic.jpg");
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-}
-
 .home-pic h1 {
   color: white !important;
   text-align: center;
-  padding-top: 100px;
-  margin-bottom: 20px;
+  padding-top: 32px;
   font-weight: bold;
-  font-family: Lobster;
+  font-family: 'Gelasio', serif;
   letter-spacing: 1px;
 }
 
 .home-pic h4 {
-  color: white;
+  color: $yellow;
+  font-size: 15px;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 30px;
   margin-bottom: 20px;
   font-weight: bold;
   margin-right: 20px;
   margin-left: 20px;
-
 }
 
-.city-btn {
+#baseline-city {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  top: 23px;
+}
+
+.baseline {
   background-color: rgba(250, 250, 250, 0.2);
   display: flex;
   justify-content: space-evenly;
-  margin-right: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-left: 16px;
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-top: 70px;
   border-radius: 4px;
-  height: 80px;
+  height: 360px;
   position: relative;
-  top: 350px;
 }
 
+// #background-image {
+//   margin-top: 10px;
+// }
+
 .home-btn {
-  // margin-right: 8px;
-  // margin-left: 8px;
-  position: relative;
-  top: 350px;
-  left: 10px;
+  display: grid;
+  grid-template-columns: 120px 120px;
+  grid-gap: 36px;
+  margin: 65px auto;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+.card-logo {
+  background-size: cover;
+  background-position: center;
+  height: 208px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }

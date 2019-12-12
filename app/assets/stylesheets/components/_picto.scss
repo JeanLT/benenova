@@ -2,16 +2,23 @@
   background-color: $yellow;
   border-radius: 50%;
   border: $green;
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   justify-content: center;
   align-items: center;
   margin: 2px;
-  display: flex;
+  display: inline-flex;
 }
 
 .cause-option {
   input[type="checkbox"]:checked + label.picto-cause {
     border: 2px solid $green;
+  }
+  flex: 0 0 33%;
+
+  p{
+    font-size: 10px;
+    padding: 1px;
+    margin: 8px 0px 19px 0;
   }
 }
