@@ -26,7 +26,7 @@
 				<div class="mission-details">
 					<h4><%= @mission.cause.upcase %></h4>
 					<h3><%= @mission.title %></h3>
-					<p><%=  @mission.description %></p>
+					<%= simple_format @mission.description %> 
 				</div>
 				<div class="mission-infos">
 					<h4>INFORMATIONS</h4>
@@ -54,7 +54,7 @@
 					<h3><%= @partner.name %></h3>
 					<div class="alignement-description-logo">
 						<%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
-						<p><%= @partner.description %></p>
+						<p><%= simple_format @partner.description %></p>
 					</div>
 				</div>
 				<% if @mission.remaining_places > 0 %>
