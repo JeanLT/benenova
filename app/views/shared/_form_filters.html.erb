@@ -1,6 +1,6 @@
 <%= form_tag missions_path, method: :get do %>
 
-  <div class="field-block">
+  <div class="field-block-dates">
     <div class="field-label">
       <%= label_tag(:starting_date, "Dates") %>
     </div>
@@ -102,13 +102,14 @@
     <div class="field-label">
       <%= label_tag(:causes, "Cause(s)") %>
     </div>
-      <div class="d-flex justify-content-between">
+      <div class="causes-container">
         <% Mission::CAUSES.each do |cause| %>
             <span class="cause-option">
               <%= check_box_tag 'causes[]', cause, params[:causes]&.include?(cause), id:'cause_' + cause.parameterize(separator:"_"), hidden: true %>
               <%= label_tag 'cause_' + cause.parameterize(separator:"_"), class: "picto-cause" do %>
                 <%= render "shared/icons/#{cause.parameterize(separator:"_")}" %>
               <% end %>
+              <p><%= cause %></p>
             </span>
         <% end %>
       </div>
