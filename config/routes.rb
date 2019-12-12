@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: 'pages#home'
 
   resources :missions, only:[:show, :index] do
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
 
   # resource :dashboard, only: :show
   # => GET   /dashboard(.:format)   dashboards#show

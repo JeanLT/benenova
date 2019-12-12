@@ -19,7 +19,6 @@
 			    	<div class="mission_banner-abort">
 			    		<p>Cette mission est complète ! </p>
 			    	</div>
-			    	
 				</div>
 			</div>
 			<% end %>
@@ -29,6 +28,27 @@
 					<h3><%= @mission.title %></h3>
 					<p><%=  @mission.description %></p>
 				</div>
+				<div class="mission-infos">
+					<h4>INFORMATIONS</h4>
+						<div class="datetime">
+							<div class="datetime-logo">
+								<i class="far fa-calendar-alt"></i>
+							</div>
+							<p><%=@mission.datetime.strftime("%d.%m.%Y à %HH%M") %></p>
+						</div>
+						<div class="duration">
+							<div class="duration-logo">
+								<i class="fas fa-history"></i>
+							</div>
+							<p><%=@mission.duration %> H</p>
+						</div>
+					<div class="address">
+						<div class="address-logo">
+							<i class="fas fa-map-marker-alt"></i>						
+						</div>
+						<p><%=@mission.address %></p>
+					</div>
+				</div>
 				<div class="association-details">
 					<h4>PARTENAIRE</h4>
 					<h3><%= @partner.name %></h3>
@@ -37,25 +57,9 @@
 						<p><%= @partner.description %></p>
 					</div>
 				</div>
-				<div class="mission-infos">
-					<div class="time flex-container">
-						<div class="datetime">
-							<i class="far fa-calendar-alt"></i>
-							<p><%= @mission.datetime.strftime("%d.%m.%Y à %HH%M") %></p>
-						</div>
-						<div class="duration">
-							<i class="fas fa-history"></i>
-							<p><%= @mission.duration %> H</p>
-						</div>
-					</div>
-					<div class="address">
-						<i class="fas fa-map-marker-alt"></i>
-						<p><%= @mission.address %></p>
-					</div>
-				</div>
 				<% if @mission.remaining_places > 0 %>
 					<div class=" sticky-button">
-						<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+						<button type="button" class="btn btn-info commitment" data-toggle="modal" data-target="#exampleModalLong">
 						  Je m'engage
 						</button>
 					</div>
