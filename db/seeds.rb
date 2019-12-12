@@ -44,7 +44,7 @@ partner1 = Partner.new(
   description: "L'association Elan sport adapté propose des activités sportives à des personnes en situation de handicap mental.Les sportifs âgés de 15 à 70 ans peuvent pratiquer entre autres : foot, tir à l'arc, natation, randonnée, activité motrice, etc.",
   address: "16 Boulevard Auguste Peneau, 44300 Nantes"
 )
-partner1.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055Lz3QAE&oid=00D0O000000rjwMUAQ"
+partner1.remote_logo_url = "http://sportadapte44.org/wp-content/uploads/2012/05/elan.jpg"
 partner1.save!
 
 partner2 = Partner.new(
@@ -52,7 +52,7 @@ partner2 = Partner.new(
   description: "La Tricyclerie collecte la matière organique des restaurants et des entreprises (épluchures, marc de café, ...) à vélo pour un compostage de proximité et une distribution du compost produit.",
   address: "5 Rue Perelle, 44000 Nantes"
 )
-partner2.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LyUQAU&oid=00D0O000000rjwMUAQ"
+partner2.remote_logo_url = "https://www.latricyclerie.fr/img/logo_nb.svg"
 partner2.save!
 
 partner3 = Partner.new(
@@ -60,23 +60,23 @@ partner3 = Partner.new(
   description: "Le Secours populaire français agit contre la pauvreté et l'exclusion, et notamment auprès des familles en difficulté (aide alimentaire, vestimentaire, loisirs, culture, santé, vacances, mobilier, ...).",
   address: "1163 Rue Paul Bellamy, 44000 Nantes"
 )
-partner3.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LzXQAU&oid=00D0O000000rjwMUAQ"
+partner3.remote_logo_url = "https://www.secourspopulaire.fr/44/sites/all/themes/custom/prototype_spf/logo.png"
 partner3.save!
 
 partner4 = Partner.new(
   name: "Les Rencontres Enchantées",
-  description: "L'association 'Les Rencontres Enchantées' a pour objectif de mieux s'exprimer dans les domaines artistiques et culturels. Elle propose à tous les premiers vendredis de chaque mois des soirées à thèmes avec une scène ouverte ainsi qu'une restauration sur place.",
+  description: "L'association 'Les Rencontres Enchantées' a pour objectif de mieux s'exprimer dans les domaines artistiques et culturels.\n\n  Elle propose à tous les premiers vendredis de chaque mois des soirées à thèmes avec une scène ouverte ainsi qu'une restauration sur place.",
   address: "147 Route de Sainte-Luce, 44300 Nantes"
 )
-partner4.remote_logo_url = "https://cdn0.handsonconnect.org/0234/logo%20rencontres%20enchantees.png_1"
+partner4.remote_logo_url = "https://c.eu12.content.force.com/servlet/servlet.ImageServer?id=0151r000006siAvAAI&oid=00D0O000000rjwMUAQ"
 partner4.save!
 
 partner5 = Partner.new(
   name: "Nantes lit dans la rue",
-  description: "L’association Nantes lit dans la rue vise à familiariser les enfants et adolescents des quartiers populaires de Nantes à la lecture, à l’écriture et à la prise de parole. Elle encourage les capacités d’expression les plus diverses, sollicitant leur curiosité et leur imaginaire. Elle se donne pour priorité d’aller vers les enfants rencontrés sur l’espace public notamment par le biais de Bibliothèques de Rue. Elle accompagne la création de relations inter-personnelles pour apprendre le monde et développer des compétences. Elle propose un espace de partage d’expériences et de réflexion aux personnes qui s’impliquent dans la «Lecture Hors les Murs».",
+  description: "L’association Nantes lit dans la rue vise à familiariser les enfants et adolescents des quartiers populaires de Nantes à la lecture, à l’écriture et à la prise de parole. \n\n  Elle encourage les capacités d’expression les plus diverses, sollicitant leur curiosité et leur imaginaire. Elle se donne pour priorité d’aller vers les enfants rencontrés sur l’espace public notamment par le biais de Bibliothèques de Rue. Elle accompagne la création de relations inter-personnelles pour apprendre le monde et développer des compétences. Elle propose un espace de partage d’expériences et de réflexion aux personnes qui s’impliquent dans la «Lecture Hors les Murs».",
   address: "14  Place Marc Elder, 44000 Nantes"
 )
-partner5.remote_logo_url = "https://cdn0.handsonconnect.org/0234/logo%20nantes%20lit%20dans%20la%20rue.png_2"
+partner5.remote_logo_url = "http://www.nanteslitdanslarue.fr/wp-content/themes/pachyderm/img/zoo.png"
 partner5.save!
 
 partner6 = Partner.new(
@@ -84,20 +84,20 @@ partner6 = Partner.new(
   description: "Depuis 1946, les Petits Frères des Pauvres luttent contre l'isolement et la solitude des personnes âgées, prioritairement les plus démunies.",
   address: "114 rue César Franck, 44000 Nantes"
 )
-partner6.remote_logo_url = "https://upload.wikimedia.org/wikipedia/fr/b/b3/Logo_PFP_2019.jpg"
+partner6.remote_logo_url = "https://www.petitsfreresdespauvres.fr/noel/assets/img/logo-footer.png"
 partner6.save!
 
 partner7 = Partner.new(
   name: "Ferme des Olivettes",
-  description: "La Ferme des Olivettes a pour objectif de créer du lien et entretenir la mixité sociale sur le Quartier Madeleine Champ de Mars. Rendre accessible aux habitants des produits fermiers et artisanaux de qualité et à des prix raisonnables en privilégiant les échanges entre producteurs et consommateurs",
+  description: "La Ferme des Olivettes a pour objectif de créer du lien et entretenir la mixité sociale sur le Quartier Madeleine Champ de Mars. \n\n  Rendre accessible aux habitants des produits fermiers et artisanaux de qualité et à des prix raisonnables en privilégiant les échanges entre producteurs et consommateurs",
   address: "2 rue des Olivettes, 44000 Nantes"
 )
-partner7.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LytQAE&oid=00D0O000000rjwMUAQ"
+partner7.remote_logo_url = "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/10354176_681668925214344_5624759340911753409_n.jpg?_nc_cat=105&_nc_ohc=BnRNt-wwqrAAQlIKHg75hVuubfYpg--DHRqS1RBPAsolqty-aq7M_Nzrg&_nc_ht=scontent-cdt1-1.xx&oh=1c655a5141fba62293aa2fcdd78b0aa6&oe=5E88ECF8"
 partner7.save!
 
 partner8 = Partner.new(
   name: "Empowernantes",
-  description: "Empowernantes a pour objet de permettre aux citoyens de se mobiliser facilement sur des actions de bénévolat courtes, ponctuelles et collectives. Cette mobilisation constitue un moyen puissant de soutenir les acteurs de la solidarité locale. A ce jour, l'association développe deux projets : Solingua et Benenova Nantes.",
+  description: "Empowernantes a pour objet de permettre aux citoyens de se mobiliser facilement sur des actions de bénévolat courtes, ponctuelles et collectives.\n\n  Cette mobilisation constitue un moyen puissant de soutenir les acteurs de la solidarité locale.\n A ce jour, l'association développe deux projets : Solingua et Benenova Nantes.",
   address: "1 Rue André Gide, 44300 Nantes"
 )
 partner8.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LzhQAE&oid=00D0O000000rjwMUAQ"
@@ -113,7 +113,7 @@ partner9.save!
 
 partner10 = Partner.new(
   name: "La Ressourcerie de l'île",
-  description: "L’association la Ressourcerie de l’île collecte, trie, valorise et vend des objets encore en état d’usage mais devenus inutiles pour leurs propriétaires. Par cette action, les objets sont détournés des bennes pour retrouver une seconde vie, et les publics sont sensibilisés à une consommation plus responsable.",
+  description: "L’association la Ressourcerie de l’île collecte, trie, valorise et vend des objets encore en état d’usage mais devenus inutiles pour leurs propriétaires.\n\n  Par cette action, les objets sont détournés des bennes pour retrouver une seconde vie, et les publics sont sensibilisés à une consommation plus responsable.",
   address: "90 Rue de la Basse Île, 44400 Rezé"
 )
 partner10.remote_logo_url = "https://eu9.salesforce.com///servlet/servlet.ImageServer?id=0150O0000055LyyQAE&oid=00D0O000000rjwMUAQ"
@@ -121,7 +121,7 @@ partner10.save!
 
 partner11 = Partner.new(
   name: "Handiplanet",
-  description: "Handiplanet a pour mission de faciliter et améliorer la mobilité des personnes en situation de handicap visible ou invisible.au travers d’une plateforme collaborative digitale permettant le partage d’expérience de l’accessibilité des établissements touristiques recevant du public (restaurants, hôtels, bars, musées, activités, loisirs....) et ce en fonction de la mobilité de chacun.",
+  description: "Handiplanet a pour mission de faciliter et améliorer la mobilité des personnes en situation de handicap visible ou invisible au travers d’une plateforme collaborative digitale.\n\n  Elle permet le partage d’expérience de l’accessibilité des établissements touristiques recevant du public (restaurants, hôtels, bars, musées, activités, loisirs....) et ce en fonction de la mobilité de chacun.",
   address: "7 Rue Emile Redor, 44400 Rezé"
 )
 partner11.remote_logo_url = "https://handiplanet.com/assets/images/icon-app.jpg"
@@ -129,18 +129,18 @@ partner11.save!
 
 partner12 = Partner.new(
   name: "M.A.S. Fraîche Pasquier",
-  description: "La Maison d’Accueil Spécialisée Fraîche Pasquier de (Couëron) est un établissement médico-social de 60 places qui accueil des adultes polyhandicapés. Elle assure l’hébergement et les besoins de la vie quotidienne, les soins médicaux et paramédicaux et les activités occupationnelles, d’éveil, d’épanouissement, d’animation et l’ouverture à la vie sociale et culturelle.",
+  description: "La Maison d’Accueil Spécialisée Fraîche Pasquier de (Couëron) est un établissement médico-social de 60 places qui accueil des adultes polyhandicapés.\n\n  Elle assure l’hébergement et les besoins de la vie quotidienne, les soins médicaux et paramédicaux et les activités occupationnelles, d’éveil, d’épanouissement, d’animation et l’ouverture à la vie sociale et culturelle.",
   address: "Route de Saint-Étienne-de Montluc, 44220 Couëron"
 )
-partner12.remote_logo_url = "http://www.masdecoueron.com/IMG/siteon0.png?1458314476Q"
+partner12.remote_logo_url = "https://www.coopterri.fr/media/logo_fraiche_pasquier_esat.jpg"
 partner12.save!
 
 partner13 = Partner.new(
   name: "Le Paysan Urbain",
-  description: "Le Paysan Urbain a pour but de recréer le lien entre les citadins et l'agriculture, par la proximité immédiate entre l'humain et son environnement. L'association souhaite sensibiliser les habitants à la consommation locale, aux circuits courts, à l'agriculture biologique au travers le développement de fermes urbaines agroécologiques, viables et inscrites dans le territoire.",
+  description: "Le Paysan Urbain a pour but de recréer le lien entre les citadins et l'agriculture, par la proximité immédiate entre l'humain et son environnement.\n\n  L'association souhaite sensibiliser les habitants à la consommation locale, aux circuits courts, à l'agriculture biologique au travers le développement de fermes urbaines agroécologiques, viables et inscrites dans le territoire.",
   address: "64 avenue Gaston Roussel, 93230 Romainville"
 )
-partner13.remote_logo_url = "https://cdn0.handsonconnect.org/0234/Paysan%20Urbain.png"
+partner13.remote_logo_url = "http://lepaysanurbain.fr/wp-content/uploads/2016/05/Pr%C3%A9sentation-sans-titre-4.jpg"
 partner13.save!
 
 partner14 = Partner.new(
@@ -169,7 +169,7 @@ mission1 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2019-12-23 18:30"),
   duration: 2,
-  description: "Le groupe est composé d'une vingtaine de sportifs disposant de capacités différentes, avec des degrés d'autonomie variable. Habituellement l'encadrement est de l'ordre de 1 bénévole pour 5 personnes. Afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité, l'Elan cherche 3 bénévoles supplémentaires pour les aider. ",
+  description: "Le groupe est composé d'une vingtaine de sportifs disposant de capacités différentes, avec des degrés d'autonomie variable.\n\n Habituellement l'encadrement est de l'ordre de 1 bénévole pour 5 personnes. \n\nAfin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité, l'Elan cherche 3 bénévoles supplémentaires pour les aider. ",
   cause: "Handicap",
   address: "16 Boulevard Auguste Peneau, 44300 Nantes",
   mincapacity: 1,
@@ -201,7 +201,7 @@ mission14 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-03-28 10:00"),
   duration: 1,
-  description: "Chaque personne dispose de capacités différentes, avec des degrés d'autonomie variable réclamant plus d’attention. Le groupe est composé d'une vingtaine de sportifs avec 1 coach bénévole pour 5 personnes. Venez jouer les assistants afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité !",
+  description: "Chaque personne dispose de capacités différentes, avec des degrés d'autonomie variable réclamant plus d’attention.\n\nLe groupe est composé d'une vingtaine de sportifs avec 1 coach bénévole pour 5 personnes.\n\n Venez jouer les assistants afin d'augmenter les échanges et permettre à tous les participants de profiter au mieux de leur activité !",
   cause: "Handicap",
   address: "6 rue des artisans, 44300 Nantes",
   mincapacity: 1,
@@ -220,7 +220,7 @@ mission2 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2019-12-15 09:00"),
   duration: 3,
-  description: "Le rendez-vous se fera au niveau du portail blanc rue du Sénégal (ancien MIN). Ensuite, une personne de l'association vous accompagnera jusqu'au local pour récupérer un vélo. La tournée se dirigera vers l'île de Nantes pour collecter auprès des restaurants les déchets organiques. Une fois la tournée terminée, vous reviendrez au lieu de départ pour décharger les épluchures et nettoyer les bacs.",
+  description: "Le rendez-vous se fera au niveau du portail blanc rue du Sénégal (ancien MIN). Ensuite, une personne de l'association vous accompagnera jusqu'au local pour récupérer un vélo.\n\n La tournée se dirigera vers l'île de Nantes pour collecter auprès des restaurants les déchets organiques.\n\n Une fois la tournée terminée, vous reviendrez au lieu de départ pour décharger les épluchures et nettoyer les bacs.",
   cause: "Environnement",
   address: "Rue du Sénégal, 44000 Nantes",
   mincapacity: 2,
@@ -236,7 +236,7 @@ mission8 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2019-12-14 12:00"),
   duration: 2,
-  description: "La ferme organise des marchés une fois par trimestre et propose un repas aux habitants à la fin de chaque marché, dans le but de permettre à tous de se rencontrer et d'échanger. L'équipe de bénévoles a besoin d'aide pour préparer et accueillir les habitants à ce repas.",
+  description: "La ferme organise des marchés une fois par trimestre et propose un repas aux habitants à la fin de chaque marché, dans le but de permettre à tous de se rencontrer et d'échanger.\n\n L'équipe de bénévoles a besoin d'aide pour préparer et accueillir les habitants à ce repas.",
   cause: "Environnement",
   address: "2 rue des Olivettes, 44000 Nantes",
   mincapacity: 1,
@@ -252,7 +252,7 @@ mission9 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-01-07 09:30"),
   duration: 3,
-  description: "La Renouée du Japon qui est une plante invasive est présente sur les bords de Loire et il est crucial d'intervenir pour limiter sa propagation. Elle est un vrai fléau pour l'écosystême car elle sécrète des substances qui font mourir les racines des autres plantes et la densité de son feuillage empêche le développement d’autres espèces. Le fauchage est l'un des moyens pour lutter concrètement contre son invasion.",
+  description: "La Renouée du Japon qui est une plante invasive est présente sur les bords de Loire et il est crucial d'intervenir pour limiter sa propagation.\n\n Elle est un vrai fléau pour l'écosystême car elle sécrète des substances qui font mourir les racines des autres plantes et la densité de son feuillage empêche le développement d’autres espèces.\n\n Le fauchage est l'un des moyens pour lutter concrètement contre son invasion.",
   cause: "Environnement",
   address: "28 Boulevard des Pas Enchantés, 44230 Saint Sebastien sur Loire",
   mincapacity: 6,
@@ -268,7 +268,7 @@ mission10 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-03-13 09:30"),
   duration: 3,
-  description: "L'entretien ou la restauration des marais sont cruciaux. Cela permet de conserver leur rôle d'accueil de la biodiversité dont des espèces protégées, de nettoyer l'eau naturellement et de limiter les inondations et la sécheresse.",
+  description: "L'entretien ou la restauration des marais sont cruciaux.\n\n Cela permet de conserver leur rôle d'accueil de la biodiversité dont des espèces protégées, de nettoyer l'eau naturellement et de limiter les inondations et la sécheresse.",
   cause: "Environnement",
   address: "533 route de Saint-Joseph, 44300 Nantes",
   mincapacity: 3,
@@ -284,7 +284,7 @@ mission11 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-04-07 09:30"),
   duration: 1,
-  description: "Chaque semaine de nombreux produits (accessoires, meubles, jouets, ...) sont apportés à la Ressourcerie de l'île. Une équipe s'occupe de trier tous les produits qui arrivent afin de vérifier s'ils sont vendables ou non.",
+  description: "Chaque semaine de nombreux produits (accessoires, meubles, jouets, ...) sont apportés à la Ressourcerie de l'île.\n\n Une équipe s'occupe de trier tous les produits qui arrivent afin de vérifier s'ils sont vendables ou non.",
   cause: "Environnement",
   address: "90 rue de Basse-île 44400 Rezé",
   mincapacity: 2,
@@ -300,7 +300,7 @@ mission12 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-01-24 09:30"),
   duration: 2,
-  description: "L'association en partenariat avec l'Ecole Centrale de Nantes a décidé de proposer une action de sensibilisation sur l'impact du numérique et notammant de la pollution que engendre nos boîtes mails. L'objectif est ici de passer un moment sympa pour mieux comprendre comment nos comportements peuvent avoir un impact à grande échelle.",
+  description: "L'association en partenariat avec l'Ecole Centrale de Nantes a décidé de proposer une action de sensibilisation sur l'impact du numérique et notammant de la pollution que engendre nos boîtes mails.\n\n L'objectif est ici de passer un moment sympa pour mieux comprendre comment nos comportements peuvent avoir un impact à grande échelle.",
   cause: "Environnement",
   address: "1 rue de la Noe, 44300 Nantes",
   mincapacity: 4,
@@ -333,7 +333,7 @@ mission5 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-02-16 14:00"),
   duration: 3,
-  description: "Chaque semaine, des centaines de kilos de produits alimentaires ainsi que des vêtements arrivent dans le local du Secours populaire. L'équipe de bénévoles a besoin d'aide pour ranger toute la marchandise par catégorie. Les produits sont ensuite livrés dans les différents lieux de l'association pour assurer les prochaines distributions alimentaires et vestimentaires.",
+  description: "Chaque semaine, des centaines de kilos de produits alimentaires ainsi que des vêtements arrivent dans le local du Secours populaire.\n\n L'équipe de bénévoles a besoin d'aide pour ranger toute la marchandise par catégorie. \n\nLes produits sont ensuite livrés dans les différents lieux de l'association pour assurer les prochaines distributions alimentaires et vestimentaires.",
   cause: "Précarité",
   address: "2 rue des Pays Bas, 44300 Nantes",
   mincapacity: 1,
@@ -400,7 +400,7 @@ mission17 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-01-9 14:15"),
   duration: 1,
-  description: "Les résidents et l'équipe d'animation ont décidé de créer un conte pour les fêtes de fin d'année. Ce projet sera organisé avec plusieurs ateliers (atelier d'écriture, image, chanson, jeux, ...) pour permettre l'expression de tous.  L'équipe d'animation a besoin d'aide pour accompagner le groupe de 5/10 résidents à créer ce conte.",
+  description: "Les résidents et l'équipe d'animation ont décidé de créer un conte pour les fêtes de fin d'année.\n\n Ce projet sera organisé avec plusieurs ateliers (atelier d'écriture, image, chanson, jeux, ...) pour permettre l'expression de tous.  L'équipe d'animation a besoin d'aide pour accompagner le groupe de 5/10 résidents à créer ce conte.",
   cause: "Lien intergénérationnel",
   address: "1 rue André Gide, 44300 Nantes",
   mincapacity: 1,
@@ -418,7 +418,7 @@ mission6 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2019-12-20 15:50"),
   duration: 2,
-  description: "L'atelier Pass’âge réunit l’association Nanteslitdanslarue, l’Entraide Scolaire Amicale et l’Accoord le temps d’une après-midi de 16h à 18h. L’objectif est de faire vivre un square situé rue d’Angleterre et ainsi créer du lien entre tous.",
+  description: "L'atelier Pass’âge réunit l’association Nanteslitdanslarue, l’Entraide Scolaire Amicale et l’Accoord le temps d’une après-midi de 16h à 18h.\n\n L’objectif est de faire vivre un square situé rue d’Angleterre et ainsi créer du lien entre tous.",
   cause: "Education",
   address: "15 rue d’Angleterre, 44000 Nantes",
   mincapacity: 1,
@@ -434,7 +434,7 @@ mission18 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-02-20 19:00"),
   duration: 2,
-  description: "D'ici 2022, l'ensemble des démarches administratives seront dématérialisées. La Cantine numérique souhaite préparer ses bénéficiaires en luttant activement contre la fracture numérique, et lance ses ateliers numériques sur tablettes et smartphones. Pour que ces ateliers se développent et soient un succès, le foyer a besoin d'un coup de main ! :)",
+  description: "D'ici 2022, l'ensemble des démarches administratives seront dématérialisées.\n\n La Cantine numérique souhaite préparer ses bénéficiaires en luttant activement contre la fracture numérique, et lance ses ateliers numériques sur tablettes et smartphones.\n\n Pour que ces ateliers se développent et soient un succès, le foyer a besoin d'un coup de main ! :)",
   cause: "Education",
   address: "11 Rue La Noue Bras de Fer, 44200 Nantes",
   mincapacity: 5,
@@ -484,7 +484,7 @@ mission20 = Mission.new(
   city: "Nantes",
   datetime: DateTime.parse("2020-03-16 16:30"),
   duration: 1,
-  description: "Vous connaissez bien un sujet, une grande figure de l'histoire, un pays, une ville, un monument..., vous avez envie de partager vos connaissances avec des résidents d'hôpitaux ou de maisons de retraite. Vous ferez des conférences d'une heure avec l'appui d'images numérisées.",
+  description: "Vous connaissez bien un sujet, une grande figure de l'histoire, un pays, une ville, un monument..., vous avez envie de partager vos connaissances avec des résidents d'hôpitaux ou de maisons de retraite.\n\n Vous ferez des conférences d'une heure avec l'appui d'images numérisées.",
   cause: "Arts, culture et loisirs",
   address: "10 Rue Georges Clemenceau, 44000 Nantes",
   mincapacity: 1,
@@ -518,7 +518,7 @@ mission22 = Mission.new(
   city: "Paris",
   datetime: DateTime.parse("2019-12-18 9:30"),
   duration: 3,
-  description: "L'équipe organise tous les jeudis matins des activités ouvertes à tou.te.s : jardinage agroécologique et chantiers participatifs avec construction en matériel de récupération ! L’idée, c’est de créer un échange entre l'équipe du Paysan Urbain avec leurs savoir-faire et leurs produits, et des bénévoles qui veulent mettre le main à la terre et participer au projet en donnant un coup de main ! :)",
+  description: "L'équipe organise tous les jeudis matins des activités ouvertes à tou.te.s : jardinage agroécologique et chantiers participatifs avec construction en matériel de récupération !\n\n L’idée, c’est de créer un échange entre l'équipe du Paysan Urbain avec leurs savoir-faire et leurs produits, et des bénévoles qui veulent mettre le main à la terre et participer au projet en donnant un coup de main ! :)",
   cause: "Environnement",
   address: "64 avenue Gaston Roussel, 93230 Romainville",
   mincapacity: 2,
@@ -554,7 +554,7 @@ mission24 = Mission.new(
   city: "Lille",
   datetime: DateTime.parse("2019-12-15 12:00"),
   duration: 4,
-  description: "Lisières organise dans le jardin écologique de Lille, 'La fête du Solstice d'hiver', un évènement autour du bien-être et de la nature. Rejoignez leur équipe de bénévoles pour cet évènement !",
+  description: "Lisières organise dans le jardin écologique de Lille, 'La fête du Solstice d'hiver', un évènement autour du bien-être et de la nature.\n\n Rejoignez leur équipe de bénévoles pour cet évènement !",
   cause: "Arts, culture et loisirs",
   address: "74, rue royale, 59000 Lille",
   mincapacity: 2,
