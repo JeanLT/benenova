@@ -49,17 +49,13 @@
   margin-left: 3px;
 }
 
-.non {
+.non, .oui {
   width: 123px;
   border-radius: 10px;
+  font-weight: bold;
 }
 
-.oui {
-  width: 123px;
-  border-radius: 10px;
-}
-
-.oui p {
+.modal-footer a {
   color: $green-text;
 }
 
