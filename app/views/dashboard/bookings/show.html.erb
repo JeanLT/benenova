@@ -7,7 +7,7 @@
           <%= display_picto_cause(@booking.mission.cause) %>
           <div class="card-count-places">
             <p><%= @booking.mission.remaining_places %></p>
-            <h3>Places restantes</h3>
+            <h3><%= label_for_remaining_places(@booking.mission.remaining_places) %></h3>
           </div>
         </div>
       </div>

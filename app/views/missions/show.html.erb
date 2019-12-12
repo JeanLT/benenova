@@ -9,7 +9,7 @@
 				<div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill) %>);"><%= display_picto_cause(@mission.cause) %>
 		         	<div class="card-count-places">
 			            <p><%= @mission.remaining_places %></p>
-			            <h3><%= label_for_remaining_places(@mission.remaining_places) %></h3>	
+			            <h3><%= label_for_remaining_places(@mission.remaining_places) %></h3>
 			        </div>
 				</div>
 			</div>
@@ -19,7 +19,7 @@
 			    	<div class="mission_banner-abort">
 			    		<p>Cette mission est complète ! </p>
 			    	</div>
-			    	
+
 				</div>
 			</div>
 			<% end %>
@@ -55,7 +55,7 @@
 				</div>
 				<% if @mission.remaining_places > 0 %>
 					<div class=" sticky-button">
-						<button type="button" class="btn btn-info confirm commitment" data-toggle="modal" data-target="#exampleModalLong">
+						<button type="button" class="btn btn-info recherche commitment" data-toggle="modal" data-target="#exampleModalLong">
 						  Je m'engage
 						</button>
 					</div>
