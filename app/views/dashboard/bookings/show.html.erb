@@ -2,83 +2,99 @@
 <div class ="container flex-container">
   <div class="row">
     <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-      <div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
-        <div class="mission-banner" style="background-image: url(<%= cl_image_path(@booking.mission.picture, width: 377, height: 200, crop: :fill) %>);">
-          <%= display_picto_cause(@booking.mission.cause) %>
-          <div class="card-count-places">
-            <p><%= @booking.mission.remaining_places %></p>
-            <h3><%= label_for_remaining_places(@booking.mission.remaining_places) %></h3>
+      <% if @booking.mission.remaining_places > 0 %>
+        <div class="mission-couv  " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+          <div class="mission-banner" style="background-image: url(<%= cl_image_path(@booking.mission.picture, width: 377, height: 200, crop: :fill) %>);"><%= display_picto_cause(@booking.mission.cause) %>
+                <div class="card-count-places">
+                    <p><%= @booking.mission.remaining_places %></p>
+                    <h3><%= label_for_remaining_places(@booking.mission.remaining_places) %></h3>
+                </div>
           </div>
         </div>
-      </div>
+      <% else %>
+        <div class="mission-full" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+          <div class="mission-banner" style="background-image: url(<%= cl_image_path(@mission.picture, width: 377, height: 200, crop: :fill,) %>);"><%= display_picto_cause(@mission.cause) %>
+              <div class="mission_banner-abort">
+                <p>Cette mission est complète ! </p>
+              </div>
+          </div>
+        </div>
+      <% end %>
       <div class="mission-details">
-        <h3><%= @booking.mission.title %></h3>
         <h4><%= @booking.mission.cause.upcase %></h4>
+        <h3><%= @booking.mission.title %></h3>
         <p><%=  @booking.mission.description %></p>
       </div>
+      <div class="mission-infos">
+        <h4>INFORMATIONS</h4>
+          <div class="datetime">
+            <div class="datetime-logo">
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <p><%=@booking.mission.datetime.strftime("%d.%m.%Y à %HH%M") %></p>
+          </div>
+          <div class="duration">
+            <div class="duration-logo">
+              <i class="fas fa-history"></i>
+            </div>
+            <p><%=@booking.mission.duration %> H</p>
+          </div>
+        <div class="address">
+          <div class="address-logo">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <p><%=@booking.mission.address %></p>
+        </div>
+      </div>
       <div class="association-details">
-        <h3><%= @partner.name %></h3>
         <h4>PARTENAIRE</h4>
+        <h3><%= @partner.name %></h3>
         <div class="alignement-description-logo">
-          <%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-extra-large partner-logo" %>
+          <%= cl_image_tag @partner.logo, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar-large partner-logo" %>
           <p><%= @partner.description %></p>
         </div>
       </div>
+
       <div class="mission-infos">
-        <div class="datetime">
-          <i class="far fa-calendar-alt"></i>
-          <p><%= @booking.mission.datetime.strftime("%d.%m.%Y à %H:%M") %></p>
-        </div>
-        <div class="duration">
-          <i class="fas fa-history"></i>
-          <p><%= @booking.mission.duration %>  heures</p>
-        </div>
-        <div class="address">
-          <i class="fas fa-map-marker-alt"></i>
-          <p><%= @booking.mission.address %></p>
-        </div>
-      </div>
-    <div class="mission-infos">
-      <h3>Votre supernova </h3>
-        <p>
-          <button class="btn btn-question-mark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-question-circle"></i>
-          </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
+        <h3>Votre supernova </h3>
+          <p>
+            <button class="btn btn-question-mark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-question-circle"></i>
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <p>
+                Votre <b>supernova</b> qu’est ce que c’est ?
+                <br>
+                <br>
+                C’est <b>LE bénévole référent</b> présent sur une action pour faire du lien entre les bénévoles, le partenaire et Benenova.
+              </p>
+            </div>
+          </div>
+          <div class="supernova">
             <p>
-              Votre <b>supernova</b> qu’est ce que c’est ?
-              <br>
-              <br>
-              C’est <b>LE bénévole référent</b> présent sur une action pour faire du lien entre les bénévoles, le partenaire et Benenova.
+              <strong><%= @booking.mission.supernova.first_name %>
+              <%= @booking.mission.supernova.last_name %> :</strong>
+              <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
             </p>
           </div>
-        </div>
-        <div class="supernova">
-          <p>
-            <strong><%= @booking.mission.supernova.first_name %>
-            <%= @booking.mission.supernova.last_name %> :</strong>
-            <%= number_to_phone(@booking.mission.supernova.phone_number, delimiter: ' ', pattern: /(\d{2})/) %>
-          </p>
-        </div>
-    </div>
-    <button type="button" class="btn btn-primary cancel" data-toggle="modal" data-target="#exampleModalLong">
-      Je souhaite annuler
-    </button>
+      </div>
+      <button type="button" class="btn btn-primary cancel" data-toggle="modal" data-target="#exampleModalLong">
+        Je souhaite annuler
+      </button>
 
-    </div>
-    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-      <div class="show-map" style="height: 100%">
-        <div
-          id="map"
-          style="width: 100%;
-          height: 100%;
-          min-height: 250px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="show-map" style="height: 100%">
+          <div
+            id="map"
+            style="width: 100%;
+            height: 100%;
+            min-height: 250px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
